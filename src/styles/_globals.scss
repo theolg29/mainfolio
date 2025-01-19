@@ -1,0 +1,47 @@
+@use '_variables' as vars;
+
+h1 {
+  font-family: BricolageGrotesque;
+  font-size: 3.5em;
+  color: vars.$black;
+  font-weight: bold;
+  line-height: 110%;
+}
+
+h2 {
+  font-family: BricolageGrotesque;
+  font-size: 3em;
+  color: vars.$black;
+  font-weight: bold;
+  line-height: 110%;
+}
+
+h3 {
+  
+}
+
+p {
+  font-family: Satoshi;
+  font-size: 1.1em;
+  color: vars.$text;
+}
+
+.black-button {
+  font-weight: 500;
+  color: vars.$white;
+  padding: 10px 23px;
+  border-radius: vars.$rounded;
+  background: linear-gradient(#262626, #050505);
+  border: 1px solid linear-gradient(#313131, #060606);
+  box-shadow: inset 0 5px 1px 1px rgba(255, 255, 255, 1);
+  box-shadow: inset 0 -3px 5px #000000;
+}
+
+.white-button {
+  font-weight: 500;
+  color: vars.$black;
+  padding: 10px 23px;
+  border-radius: vars.$rounded;
+  background-color: vars.$white;
+  border: 1px solid vars.$border-stroke;
+}

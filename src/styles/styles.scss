@@ -1,0 +1,60 @@
+@use "_tailwind";
+@use "_variables" as vars;
+@use "_globals";
+
+.container {
+  border-left: 1px solid vars.$border-stroke;
+  border-right: 1px solid vars.$border-stroke;
+  width: 50%;
+  padding: 0px 100px;
+  margin: 0 auto;
+}
+
+/* For The Content */
+
+.content {
+  margin: 100px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .head {
+    margin-bottom: 50px;
+    h2 {margin-bottom: 10px;}
+    p {text-align: center;}
+  }
+
+}
+
+.about-me {
+  justify-content: center;
+}
+
+/* Other Styles */
+
+nav {
+  border-bottom: 1px solid vars.$border-stroke;
+  font-family: Satoshi;
+
+  a {
+    margin-bottom: -1px;
+    margin-left: -1px;
+    padding: 25px 50px;
+    border: 1px solid vars.$border-stroke;
+    color: rgb(56, 55, 55, 0.6);
+  }
+  :hover {
+    background-color: #f8f8f8;
+  }
+}
+
+.head {
+  img {
+    border-radius: vars.$rounded;
+  }
+}
+
+.map {
+  border: 1px solid vars.$border-stroke;
+  border-radius: vars.$rounded;
+}

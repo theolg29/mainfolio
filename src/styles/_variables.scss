@@ -1,0 +1,85 @@
+// Variables
+$black : #202020;
+$border-stroke: #E8E8E8;
+$text: #797979;
+$white: #FFFFFF;
+$grey: #FEFEFE;
+$rounded: 11px;
+
+// FONT
+/* Bricolage Grotesque */
+@font-face {
+    font-family: 'BricolageGrotesque';
+    src: url('../assets/fonts/bricolage/BricolageGrotesque-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'BricolageGrotesque';
+    src: url('../assets/fonts/bricolage/BricolageGrotesque-Light.woff2') format('woff2');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'BricolageGrotesque';
+    src: url('../assets/fonts/bricolage/BricolageGrotesque-Regular.woff2') format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'BricolageGrotesque';
+    src: url('../assets/fonts/bricolage/BricolageGrotesque-Medium.woff2') format('woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'BricolageGrotesque';
+    src: url('../assets/fonts/bricolage/BricolageGrotesque-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'BricolageGrotesque';
+    src: url('../assets/fonts/bricolage/BricolageGrotesque-Bold.woff2') format('woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'BricolageGrotesque';
+    src: url('../assets/fonts/bricolage/BricolageGrotesque-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+}
+
+/* Satoshi  */
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../assets/fonts/satoshi/Satoshi-Black.woff2') format('woff2');
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../assets/fonts/satoshi/Satoshi-Bold.woff2') format('woff2');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../assets/fonts/satoshi/Satoshi-Medium.woff2') format('woff2');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../assets/fonts/satoshi/Satoshi-Regular.woff2') format('woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Satoshi';
+    src: url('../assets/fonts/satoshi/Satoshi-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+
+}
+

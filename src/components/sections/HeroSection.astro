@@ -1,0 +1,22 @@
+---
+import Marqueee from '@/components/Marqueee';
+import Button from '@/components/Button.astro';
+
+// Images
+import { Image } from "astro:assets";
+import ProfilePicture from "@/assets/images/profile-picture.png";
+import Map from "@/assets/images/map.png";
+---
+
+<div class="head">
+    <Image src={ProfilePicture} alt="Theo" />
+</div>
+
+<h1 class="mt-4 mb-4">Enchanté, je suis Théo, Designer & Développeur basé en Bretagne <span><Image class="map" src={Map} alt="Theo" /></span></h1>
+
+<p>Passionné par le Design UI/UX et le développement web, je crée des sites attrayants et performants.</p>
+<div class="flex gap-5">
+  <Button theme="black-button" link="/contact" text="Contactez-moi" />
+  <Button theme="white-button" link="/portfolio" text="Découvrir mon portfolio" />
+</div>
+<Marqueee />

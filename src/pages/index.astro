@@ -1,8 +1,25 @@
 ---
-import MainLayout from '../layouts/MainLayout.astro';
-import '@/styles/globals.css'; 
+import Navigation from "@/components/Navigation.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+
+// Import different sections
+import HeroSection from "@/components/sections/HeroSection.astro";
+import AboutSection from "@/components/sections/AboutSection.astro";
 ---
 
 <MainLayout>
-	
+  <Navigation />
+  <section class="container">
+    
+    <HeroSection />
+
+    <section class="content about-me">
+      <AboutSection />
+    </section>
+
+    <section class="content projects">
+      <AboutSection />
+    </section>
+
+  </section>
 </MainLayout>
