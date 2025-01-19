@@ -1,5 +1,10 @@
 @use '_variables' as vars;
 
+
+// ---------------
+// Global HTML Tags
+// ---------------
+
 h1 {
   font-family: BricolageGrotesque;
   font-size: 3.5em;
@@ -26,7 +31,26 @@ p {
   color: vars.$text;
 }
 
+nav {
+  border-bottom: 1px solid vars.$border-stroke;
+  a {
+    margin-bottom: -1px;
+    margin-left: -1px;
+    padding: 20px 40px;
+    border: 1px solid vars.$border-stroke;
+    color: rgb(56, 55, 55, 0.6);
+  }
+  :hover {
+    background-color: #f8f8f8;
+  }
+}
+
+// ---------------
+// Buttons
+// ---------------
+
 .black-button {
+  font-size: 0.9em;
   font-weight: 500;
   color: vars.$white;
   padding: 10px 23px;
@@ -38,10 +62,43 @@ p {
 }
 
 .white-button {
+  font-size: 0.9em;
   font-weight: 500;
   color: vars.$black;
   padding: 10px 23px;
   border-radius: vars.$rounded;
   background-color: vars.$white;
   border: 1px solid vars.$border-stroke;
+  transition: 200ms ease;
+
+  &:hover {
+    background-color: #f7f7f7;
+  }
+}
+
+
+// ---------------
+// Container
+// ---------------
+
+.container {
+  border-left: 1px solid vars.$border-stroke;
+  border-right: 1px solid vars.$border-stroke;
+  width: 50%;
+  padding: 0px 100px;
+  margin: 0 auto;
+}
+
+.content {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .head {
+    margin-bottom: 50px;
+    h2 {margin-bottom: 10px;}
+    p {text-align: center;}
+  }
 }

@@ -2,26 +2,34 @@ import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
 
 const projects = [
-  {
-    name: "Jack",
-    img: "https://avatar.vercel.sh/jack",
-  },
-  {
-    name: "Jill",
-    img: "https://avatar.vercel.sh/jill",
-  },
-  {
-    name: "John",
-    img: "https://avatar.vercel.sh/john",
-  },
-  {
-    name: "Jane",
-    img: "https://avatar.vercel.sh/jane",
-  },
-  {
-    name: "Jenny",
-    img: "https://avatar.vercel.sh/jenny",
-  },
+    {
+        name: "Ghz",
+        img: "/src/assets/images/thumbnails/ghz.png",
+    },
+    {
+        name: "linkdup",
+        img: "/src/assets/images/thumbnails/linkdup.png",
+    },
+    {
+        name: "omnivore",
+        img: "/src/assets/images/thumbnails/omnivore.png",
+    },
+    {
+        name: "pinfig",
+        img: "/src/assets/images/thumbnails/pinfig.png",
+    },
+    {
+        name: "placeholder",
+        img: "/src/assets/images/thumbnails/placeholder.png",
+    },
+    {
+        name: "revixio",
+        img: "/src/assets/images/thumbnails/revixio.png",
+    },
+    {
+        name: "scopeo",
+        img: "/src/assets/images/thumbnails/scopeo.png",
+    },
 ];
 
 const row = projects.slice(0, projects.length / 2);
@@ -36,7 +44,7 @@ const ReviewCard = ({
   return (
     <figure
       className={cn(
-        "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
+        "relative cursor-pointer mt-12 overflow-hidden rounded-xl border p-4",
         // light styles
         "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
         // dark styles
@@ -44,12 +52,7 @@ const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
-        <div className="flex flex-col">
-          <figcaption className="text-sm font-medium dark:text-white">
-            {name}
-          </figcaption>
-        </div>
+        <img  width="300" height="350" alt="" src={img} />
       </div>
     </figure>
   );

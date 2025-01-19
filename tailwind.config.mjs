@@ -67,11 +67,17 @@ export default {
     				to: {
     					transform: 'translateY(calc(-100% - var(--gap)))'
     				}
+    			},
+    			gradient: {
+    				to: {
+    					backgroundPosition: 'var(--bg-size) 0'
+    				}
     			}
     		},
     		animation: {
     			marquee: 'marquee var(--duration) infinite linear',
-    			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
+    			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
+    			gradient: 'gradient 8s linear infinite'
     		}
     	}
     },

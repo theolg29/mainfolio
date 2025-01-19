@@ -5,15 +5,18 @@ import MainLayout from "../layouts/MainLayout.astro";
 // Import different sections
 import HeroSection from "@/components/sections/HeroSection.astro";
 import AboutSection from "@/components/sections/AboutSection.astro";
+
 ---
 
 <MainLayout>
   <Navigation />
   <section class="container">
     
+    <section class="hero-section">
     <HeroSection />
+    </section>
 
-    <section class="content about-me">
+    <section class="content aboutmme-section">
       <AboutSection />
     </section>
 
