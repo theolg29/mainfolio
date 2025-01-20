@@ -1,5 +1,6 @@
 ---
-import '@/styles/styles.scss'; 
+import '../styles/styles.scss'; 
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -9,7 +10,8 @@ import '@/styles/styles.scss';
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Portfolio - Théo Le Gourrierec</title>
+		<title>{title}</title>
+		<meta name="description" content={description} />
 	</head>
 	<body>
 		<slot />
