@@ -7,8 +7,38 @@ import Button from '@/components/Button.astro';
 
 <MainLayout>
   <Navigation />
-  <section class="content">
-    <h1>Me contacter</h1>
-    <p>C’est simple, il suffit de remplir le formulaire juste en dessous</p>
+  <section class="container">
+    <section class="content hero-section">
+    <div class="head">
+      <h1>Me contacter</h1>
+      <p>C’est simple, il suffit de remplir le formulaire juste en dessous</p>
+    </div>
+    <form class="flex flex-col" action="https://api.web3forms.com/submit" method="POST">
+
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+      <div class="flex">
+      <label for="prenom" class="sr-only">Prénom:</label>
+      <input type="text" id="prenom" name="prenom" placeholder="Prénom" required>
+      
+      <label for="nom" class="sr-only">Nom:</label>
+      <input type="text" id="nom" name="nom" placeholder="Nom" required>
+      </div>
+      
+      <label for="email" class="sr-only">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+      
+      <label for="objet" class="sr-only">Objet:</label>
+      <input type="text" id="objet" name="objet" placeholder="Objet" required>
+      
+      <label for="message" class="sr-only">Message:</label>
+      <textarea id="message" name="message" placeholder="Message" required style="height: 100px;"></textarea>
+
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+      <input type="hidden" name="redirect" value="https://mywebsite.com/thanks.html">
+
+      <Button theme="black-button" type="submit" text="Envoyer" />
+    </form>
+  </section>
   </section>
 </MainLayout>
