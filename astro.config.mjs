@@ -14,6 +14,6 @@ export default defineConfig({
     react(),
     playformCompress(),
   ],
-  output: "static", 
+  output: "server", 
   adapter: vercel(),
 });
