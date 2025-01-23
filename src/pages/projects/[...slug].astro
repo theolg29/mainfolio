@@ -1,0 +1,43 @@
+---
+import { getCollection } from "astro:content";
+
+import Navigation from "@/components/Navigation.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await project.render();
+---
+
+<MainLayout title={project.data.title} description={project.data.description}>
+  <Navigation />
+  <section class="container">
+    <section class="content content-project">
+      
+      <article>
+        <div class="back">
+            <a href="/projects"> ← Retour aux projets</a>
+          </div>
+        {
+          project.data.heroImage && (
+            <img src={project.data.heroImage} alt={project.data.title} />
+          )
+        }
+        <h1>{project.data.title}</h1>
+        <div class="tags">
+          {project.data.tags.map((tag) => <span class="tag">{tag}</span>)}
+        </div>
+        <section class="markdown flex flex-col gap-12 mt-12">
+          <Content />
+        </section>
+      </article>
+    </section>
+  </section>
+</MainLayout>

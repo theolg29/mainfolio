@@ -1,0 +1,47 @@
+---
+import { Image } from "astro:assets";
+import Navigation from "@/components/Navigation.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+
+import { getCollection } from "astro:content";
+const projects = await getCollection("projects");
+
+import Button from "@/components/Button.astro";
+
+// For Projects Home Section
+// const pinnedProjects = projects.filter(project => project.data.pin);
+---
+
+<MainLayout title="Mes Projets">
+  <Navigation />
+  <section class="container">
+    <section class="content hero-section">
+      <div class="head">
+        <h1>Mes Projets</h1>
+        <p>C’est ici que tous mes projets y sont publié</p>
+      </div>
+      <div>
+        <ul>
+          {
+            projects.map((project) => (
+              <li class="project-card">
+                <a href={`/projects/${project.slug}`}>
+                  <img src={project.data.heroImage} alt={project.data.title} />
+                  <div class="flex justify-between mt-3">
+                    <h2>{project.data.title}</h2>
+                    <div class="tags">
+                      {project.data.tags.map((tag) => (
+                        <span class="tag">{tag}</span>
+                      ))}
+                    </div>
+                    <Button theme="black-button" link={`/projects/${project.slug}`} text="->" />
+                  </div>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+  </section>
+</MainLayout>

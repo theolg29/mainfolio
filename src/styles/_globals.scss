@@ -26,7 +26,7 @@ h3 {
 }
 
 p {
-  font-family: Satoshi;
+  font-family: 'Satoshi', sans-serif;
   font-size: 1.1em;
   color: vars.$text;
 }
@@ -121,5 +121,75 @@ form {
       outline: none;
       border-color: #727272;
     }
+  }
+}
+
+// ---------------
+// Projects
+// ---------------
+
+.project-card {
+
+  img {
+    width: 100%;
+    border-radius: vars.$rounded;
+    border: 1px solid vars.$border-stroke;
+  }
+
+  h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+}
+.tag {
+  border: 1px solid vars.$border-stroke;
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+.content-project {
+  gap: 20px;
+  
+  .back {
+    width: 100%;
+    border-bottom: 1px solid vars.$border-stroke;
+    margin-bottom: 20px;
+
+    a {
+      font-size: 1.5em;
+      color: vars.$black;
+      font-weight: 700;
+    }
+
+  }
+
+  img {
+    width: 100%;
+    border-radius: vars.$rounded;
+    border: 1px solid vars.$border-stroke;
+    margin-bottom: 10px;
+  }
+
+  .markdown {
+
+    h2 {
+      font-family: 'Satoshi', sans-serif ;
+      font-size: 2em;
+      padding-bottom: 10px;
+      border-bottom: 1px solid vars.$border-stroke;
+      margin-bottom: 15px;
+    }
+    
+  }
+
+  .head {
+    margin-bottom: 30px;
+    h1, h2 {text-align: center; margin-bottom: 10px;}
+    p {text-align: center;}
   }
 }
