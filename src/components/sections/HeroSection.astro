@@ -7,6 +7,7 @@ import ProfilePicture from "@/assets/images/profile-picture.png";
 import Map from "@/assets/images/map.png";
 import Marquee from "@/components/Marquee";
 import AnimatedGradientText from "@/components/AnimatedGradientText";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
 ---
 
 <div class="head flex items-center">
@@ -28,8 +29,14 @@ import AnimatedGradientText from "@/components/AnimatedGradientText";
 </p>
 
 <div class="flex gap-5 mt-6">
-  <Button theme="black-button" link="/contact" text="Contactez-moi" />
+  <ShimmerButton className="shimmer-black-button">
+    <span>
+    Contactez-moi
+    </span>
+  </ShimmerButton>
   <Button theme="white-button" link="/portfolio" text="Découvrir mon portfolio"/>
 </div>
 
-<Marquee />
+<div class="mt-8">
+  <Marquee />
+</div>

@@ -5,15 +5,15 @@ import MainLayout from "../layouts/MainLayout.astro";
 // Import different sections
 import HeroSection from "@/components/sections/HeroSection.astro";
 import AboutSection from "@/components/sections/AboutSection.astro";
-
+import MarqueeDemo from "@/components/Marquee";
 ---
 
-<MainLayout>
+<MainLayout title="Portfolio - Théo Le Gourrierec" description="Portfolio de Théo Le Gourrierec, Designer & Développeur Web">
   <Navigation />
+
   <section class="container">
-    
     <section class="hero-section">
-    <HeroSection />
+      <HeroSection />
     </section>
 
     <section class="content aboutmme-section">
@@ -23,6 +23,5 @@ import AboutSection from "@/components/sections/AboutSection.astro";
     <section class="content projects">
       <AboutSection />
     </section>
-
   </section>
 </MainLayout>

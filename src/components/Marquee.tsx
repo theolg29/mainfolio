@@ -4,31 +4,31 @@ import Marquee from "@/components/ui/marquee";
 const projects = [
     {
         name: "Ghz",
-        img: "/src/assets/images/thumbnails/ghz.png",
+        img: "./src/assets/images/thumbnails/ghz.png",
     },
     {
         name: "linkdup",
-        img: "/src/assets/images/thumbnails/linkdup.png",
+        img: "./src/assets/images/thumbnails/linkdup.png",
     },
     {
         name: "omnivore",
-        img: "/src/assets/images/thumbnails/omnivore.png",
+        img: "./src/assets/images/thumbnails/omnivore.png",
     },
     {
         name: "pinfig",
-        img: "/src/assets/images/thumbnails/pinfig.png",
+        img: "./src/assets/images/thumbnails/pinfig.png",
     },
     {
         name: "placeholder",
-        img: "/src/assets/images/thumbnails/placeholder.png",
+        img: "./src/assets/images/thumbnails/placeholder.png",
     },
     {
         name: "revixio",
-        img: "/src/assets/images/thumbnails/revixio.png",
+        img: "./src/assets/images/thumbnails/revixio.png",
     },
     {
         name: "scopeo",
-        img: "/src/assets/images/thumbnails/scopeo.png",
+        img: "./src/assets/images/thumbnails/scopeo.png",
     },
 ];
 
@@ -44,7 +44,7 @@ const ReviewCard = ({
   return (
     <figure
       className={cn(
-        "relative cursor-pointer mt-12 overflow-hidden rounded-xl border p-4",
+        "relative cursor-pointer overflow-hidden rounded-xl border p-4",
         // light styles
         "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
         // dark styles
@@ -60,7 +60,7 @@ const ReviewCard = ({
 
 export default function MarqueeDemo() {
   return (
-    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background">
+    <div className="full-width-marquee relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background">
       <Marquee pauseOnHover className="[--duration:20s]">
         {row.map((review) => (
           <ReviewCard key={review.img} {...review} />

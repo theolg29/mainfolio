@@ -75,7 +75,7 @@ nav {
 // Buttons
 // ---------------
 
-.black-button {
+.black-button, .form-button, .shimmer-black-button {
   font-size: 0.9em;
   font-weight: 500;
   color: vars.$white;
@@ -85,6 +85,9 @@ nav {
   border: 1px solid linear-gradient(#313131, #060606);
   box-shadow: inset 0 5px 1px 1px rgba(255, 255, 255, 1);
   box-shadow: inset 0 -3px 5px #000000;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .white-button {
