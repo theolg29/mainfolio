@@ -2,34 +2,34 @@ import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/marquee";
 
 const projects = [
-    {
-        name: "Ghz",
-        img: "./src/assets/images/thumbnails/ghz.png",
-    },
-    {
-        name: "linkdup",
-        img: "./src/assets/images/thumbnails/linkdup.png",
-    },
-    {
-        name: "omnivore",
-        img: "./src/assets/images/thumbnails/omnivore.png",
-    },
-    {
-        name: "pinfig",
-        img: "./src/assets/images/thumbnails/pinfig.png",
-    },
-    {
-        name: "placeholder",
-        img: "./src/assets/images/thumbnails/placeholder.png",
-    },
-    {
-        name: "revixio",
-        img: "./src/assets/images/thumbnails/revixio.png",
-    },
-    {
-        name: "scopeo",
-        img: "./src/assets/images/thumbnails/scopeo.png",
-    },
+  {
+      name: "Ghz",
+      img: "/thumbnails/ghz.png",
+  },
+  {
+      name: "linkdup",
+      img: "/thumbnails/linkdup.png",
+  },
+  {
+      name: "omnivore",
+      img: "/thumbnails/omnivore.png",
+  },
+  {
+      name: "pinfig",
+      img: "/thumbnails/pinfig.png",
+  },
+  {
+      name: "placeholder",
+      img: "/thumbnails/placeholder.png",
+  },
+  {
+      name: "revixio",
+      img: "/thumbnails/revixio.png",
+  },
+  {
+      name: "scopeo",
+      img: "/thumbnails/scopeo.png",
+  },
 ];
 
 const row = projects.slice(0, projects.length / 2);
