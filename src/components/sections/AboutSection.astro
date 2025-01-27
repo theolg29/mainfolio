@@ -1,4 +1,8 @@
 ---
+import { Image } from "astro:assets";
+import Button from "../Button.astro";
+import ProfilePicture from "@/assets/images/profile-picture.png";
+import downloadIcon from "@/assets/icons/dl-icon.svg"
 
 ---
 
@@ -8,8 +12,16 @@
   </div>
   
   <div class="flex align-center gap-5">
-    img
-    <p>Salut, moi c'est Théo, j’ai 20 ans<br><br>
+
+    <div>
+      <div class="picture-card">
+        <Image src={ProfilePicture} alt="Photo de Théo Legourrierec" />
+        <p class="text-center mt-4">C'est moi ici</p>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-5 items-start">
+      <p>Salut, moi c'est Théo, j’ai 20 ans<br><br>
 
       Je suis actuellement en troisième et dernière année du BUT Métiers du multimédia et de l'internet (MMI) à Lannion avec une spécialité Développement Web et Dispositifs Interactifs.<br><br>
       
@@ -19,4 +31,8 @@
       Polyvalent, motivé et passionné sont les trois mots qui me représente.<br><br>
       
       Aujourd'hui, mon objectif est de devenir Designer UI/UX & Intégrateur Web pour créer des sites internet attrayants et performants.</p>
+    
+      <Button theme="black-button" link="@/assets/file/CV_THEOLEGOURRIEREC.pdf" text="Télécharger mon CV" icon={downloadIcon} />
+    </div>
+
   </div>
