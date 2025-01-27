@@ -2,7 +2,7 @@
 const { theme, link, text, icon } = Astro.props;
 ---
 
-<a class={theme} href={link}>
-    <span class="icon">{icon}</span>
+<a class={`flex gap-2 ${theme}`} href={link}>
+    {icon && <img src={icon} alt="icon" class="icon" />}
     {text}
 </a>

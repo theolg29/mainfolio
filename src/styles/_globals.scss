@@ -5,6 +5,11 @@
 // Global HTML Tags
 // ---------------
 
+html {
+  overflow-x: hidden;
+}
+
+
 h1 {
   font-family: BricolageGrotesque;
   font-size: 3.5em;
@@ -28,6 +33,7 @@ h3 {
 p {
   font-family: 'Satoshi', sans-serif;
   font-size: 1.1em;
+  font-weight: 500;
   color: vars.$text;
 }
 
@@ -52,7 +58,7 @@ nav {
 .container {
   border-left: 1px solid vars.$border-stroke;
   border-right: 1px solid vars.$border-stroke;
-  width: 50%;
+  width: 60%;
   padding: 0px 100px;
   margin: 0 auto;
 }
