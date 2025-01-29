@@ -6,14 +6,22 @@ import { Image } from "astro:assets";
 import ProfilePicture from "@/assets/images/profile-picture.png";
 import Map from "@/assets/images/map.png";
 import Marquee from "@/components/Marquee";
-import AnimatedGradientText from "@/components/AnimatedGradientText";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
+
+const night = new Date().getHours() >= 18 || new Date().getHours() < 8;
+
+
 ---
 
 <div class="head flex items-center">
   <Image src={ProfilePicture} alt="Photo de moi" />
   <div class="ml-4">
-    <AnimatedGradientText />
+    <div class={night ? "available available-night" : "available available-day"}>
+        <div class={night ? "dot dot-night" : "dot dot-day"}></div>
+        <span>
+          {night ? "Actuellement pas disponible" : "Actuellement disponible"}
+        </span>
+    </div>
     <p>Théo Le Gourrierec</p>
     <p><em>20 ans</em></p>
   </div>
