@@ -19,7 +19,7 @@ const night = new Date().getHours() >= 18 || new Date().getHours() < 8;
     <div class={night ? "available available-night" : "available available-day"}>
         <div class={night ? "dot dot-night" : "dot dot-day"}></div>
         <span>
-          {night ? "Actuellement pas disponible" : "Actuellement disponible"}
+          {night ? "Actuellement indisponible" : "Actuellement disponible"}
         </span>
     </div>
     <p>Théo Le Gourrierec</p>
