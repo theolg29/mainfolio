@@ -2,26 +2,45 @@
 import Navigation from "@/components/Navigation.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 
-// Import different sections
+// Sections
 import HeroSection from "@/components/sections/HeroSection.astro";
 import AboutSection from "@/components/sections/AboutSection.astro";
 import FormationSection from "@/components/sections/FormationSection.astro";
+
+// Components
+import { TextReveal } from "@/components/ui/text-reveal";
+
 ---
 
 <MainLayout title="Portfolio - Théo Le Gourrierec" description="Portfolio de Théo Le Gourrierec, Designer & Développeur Web">
   <Navigation />
 
   <section class="container">
+
+    <!-- Hero Section -->
     <section class="hero-section">
       <HeroSection />
     </section>
 
+    <!-- About Section -->
     <section class="content aboutmme-section">
       <AboutSection />
     </section>
 
+    <!-- Formation Section -->
     <section class="content projects">
       <FormationSection />
     </section>
+
+    <!-- Scroll Reveal - Outils -->
+    <div class="outil-reveal z-10 flex min-h-64 items-center justify-center">
+      <TextReveal client:load text="Parce que le web regorge d'outils fantastiques, voici ceux que j'utilise" />
+    </div>
+
+    <!-- Scroll Reveal - Mon Objectif -->
+    <div class="goal-reveal z-10 flex min-h-64 items-center justify-center">
+      <TextReveal client:load text="Mon objectif est de créer des sites web modernes, rapides et optimisés pour le référencement." />
+    </div>
+
   </section>
 </MainLayout>
