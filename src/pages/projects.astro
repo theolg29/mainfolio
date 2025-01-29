@@ -1,12 +1,21 @@
 ---
-import { Image } from "astro:assets";
+// Basics
 import Navigation from "@/components/Navigation.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 
+// Components
+import Button from "@/components/Button.astro";
+import { Image } from "astro:assets";
+
+// Assets
 import { getCollection } from "astro:content";
 const projects = await getCollection("projects");
 
-import Button from "@/components/Button.astro";
+
+// Basics
+// Sections
+// Components
+// Assets
 
 // For Projects Home Section
 // const pinnedProjects = projects.filter(project => project.data.pin);
@@ -18,7 +27,7 @@ import Button from "@/components/Button.astro";
     <section class="content hero-section">
       <div class="head">
         <h1>Mes Projets</h1>
-        <p>C’est ici que tous mes projets y sont publié</p>
+        <p>C'est quand même mieux du concret</p>
       </div>
       <div>
         <ul>

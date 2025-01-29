@@ -1,4 +1,5 @@
 ---
+// Basics
 import Navigation from "@/components/Navigation.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 
@@ -34,12 +35,12 @@ import { TextReveal } from "@/components/ui/text-reveal";
 
     <!-- Scroll Reveal - Outils -->
     <div class="outil-reveal z-10 flex min-h-64 items-center justify-center">
-      <TextReveal client:load text="Parce que le web regorge d'outils fantastiques, voici ceux que j'utilise" />
+      <TextReveal client:visible text="Parce que le web regorge d'outils fantastiques, voici ceux que j'utilise" />
     </div>
 
     <!-- Scroll Reveal - Mon Objectif -->
     <div class="goal-reveal z-10 flex min-h-64 items-center justify-center">
-      <TextReveal client:load text="Mon objectif est de créer des sites web modernes, rapides et optimisés pour le référencement." />
+      <TextReveal client:visible text="Mon objectif est de créer des sites web modernes, rapides et optimisés pour le référencement." />
     </div>
 
   </section>
