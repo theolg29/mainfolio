@@ -5,23 +5,16 @@ import Button from "@/components/Button.astro";
 import { Image } from "astro:assets";
 import ProfilePicture from "@/assets/images/profile-picture.png";
 import Map from "@/assets/images/map.png";
+import downloadIcon from "@/assets/icons/dl-icon.svg";
 import Marquee from "@/components/Marquee";
 import { ShimmerButton } from "@/components/ui/shimmer-button";
-
-const night = new Date().getHours() >= 18 || new Date().getHours() < 8;
-
-
+import AvailabilityIndicator from "@/components/AvailabilityIndicator";
 ---
 
 <div class="head flex items-center">
   <Image src={ProfilePicture} alt="Photo de moi" />
   <div class="ml-4">
-    <div class={night ? "available available-night" : "available available-day"}>
-        <div class={night ? "dot dot-night" : "dot dot-day"}></div>
-        <span>
-          {night ? "Actuellement indisponible" : "Actuellement disponible"}
-        </span>
-    </div>
+    <AvailabilityIndicator client:load />
     <p>Théo Le Gourrierec</p>
     <p><em>20 ans</em></p>
   </div>
@@ -37,12 +30,12 @@ const night = new Date().getHours() >= 18 || new Date().getHours() < 8;
 </p>
 
 <div class="flex gap-5 mt-6">
-  <ShimmerButton className="shimmer-black-button">
+  <ShimmerButton client:load className="shimmer-black-button">
     <span>
     Contactez-moi
     </span>
   </ShimmerButton>
-  <Button theme="white-button" link="/portfolio" text="Découvrir mon portfolio"/>
+  <Button theme="white-button" link="/portfolio" text="Découvrir mon portfolio" />
 </div>
 
 <div class="mt-8">
