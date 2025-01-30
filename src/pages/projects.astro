@@ -10,15 +10,6 @@ import { Image } from "astro:assets";
 // Assets
 import { getCollection } from "astro:content";
 const projects = await getCollection("projects");
-
-
-// Basics
-// Sections
-// Components
-// Assets
-
-// For Projects Home Section
-// const pinnedProjects = projects.filter(project => project.data.pin);
 ---
 
 <MainLayout title="Mes Projets">
@@ -29,13 +20,15 @@ const projects = await getCollection("projects");
         <h1>Mes Projets</h1>
         <p>C'est quand même mieux du concret</p>
       </div>
-      <div>
+
+      <!-- Map des projets -->
+      <div class="projects-list">
         <ul>
           {
             projects.map((project) => (
               <li class="project-card">
                 <a href={`/projects/${project.slug}`}>
-                  <img src={project.data.heroImage} alt={project.data.title} />
+                  <img class="thumbnail" src={project.data.heroImage} alt={project.data.title} />
                   <div class="flex justify-between mt-3">
                     <h2>{project.data.title}</h2>
                     <div class="tags">
