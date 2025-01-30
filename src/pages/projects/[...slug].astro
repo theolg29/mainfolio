@@ -1,8 +1,10 @@
 ---
-import { getCollection } from "astro:content";
-
+// Basics
 import Navigation from "@/components/Navigation.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
+
+// Assets
+import { getCollection } from "astro:content";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");

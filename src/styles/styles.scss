@@ -6,7 +6,7 @@
 // Home Page
 // ---------------
 
-// Hero Section
+// ----Hero Section ----
 .hero-section {
   padding-top: 70px;
 }
@@ -34,6 +34,7 @@
 }
 
 
+// Available Indicator
 .available {
   display: flex;
   align-items: center;
@@ -87,9 +88,6 @@
   &::after {background-color: rgba(255, 0, 0, 0.5);}
 }
 
-
-
-
 @keyframes pulse {
   0% {
     transform: translate(-50%, -50%) scale(1);
@@ -101,7 +99,8 @@
   }
 }
 
-// AboutMe Section
+
+// ---- AboutMe Section ----
 .picture-card {
   padding: 20px;
   background-color: vars.$white;
@@ -122,7 +121,7 @@
 
 }
 
-// Formations Section
+// ---- Formations Section ----
 .forma {
   width: 70%;
   margin: 0 auto;
@@ -175,40 +174,4 @@
   background: none;
   padding: 0;
   margin-top: 8px;
-}
-
-
-// Scroll Reveals
-.outil-reveal span:nth-child(7) span:nth-child(2),
-.outil-reveal span:nth-child(7) span:nth-child(1),
-.goal-reveal span:nth-child(9) span:nth-child(1),
-.goal-reveal span:nth-child(9) span:nth-child(2),
-.goal-reveal span:nth-child(10) span:nth-child(1),
-.goal-reveal span:nth-child(10) span:nth-child(2),
-.goal-reveal span:nth-child(15) span:nth-child(1),
-.goal-reveal span:nth-child(15) span:nth-child(2) {
-  font-family: Tartuffo, sans-serif;
-  font-style: italic;
-}
-
-.outil-reveal span:nth-child(7) span:nth-child(2),
-.goal-reveal span:nth-child(9) span:nth-child(2),
-.goal-reveal span:nth-child(10) span:nth-child(2),
-.goal-reveal span:nth-child(15) span:nth-child(2) {
-  background: vars.$gradient;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradient-animation 2s ease-in-out infinite alternate;
-}
-
-@keyframes gradient-animation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }

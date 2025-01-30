@@ -1,6 +1,5 @@
 @use '_variables' as vars;
 
-
 // ---------------
 // Global HTML Tags
 // ---------------
@@ -222,5 +221,44 @@ form {
     margin-bottom: 30px;
     h1, h2 {text-align: center; margin-bottom: 10px;}
     p {text-align: center;}
+  }
+}
+
+
+// ---------------
+// Others
+// ---------------
+// Scroll Reveals
+.outil-reveal span:nth-child(7) span:nth-child(2),
+.outil-reveal span:nth-child(7) span:nth-child(1),
+.goal-reveal span:nth-child(9) span:nth-child(1),
+.goal-reveal span:nth-child(9) span:nth-child(2),
+.goal-reveal span:nth-child(10) span:nth-child(1),
+.goal-reveal span:nth-child(10) span:nth-child(2),
+.goal-reveal span:nth-child(15) span:nth-child(1),
+.goal-reveal span:nth-child(15) span:nth-child(2) {
+  font-family: Tartuffo, sans-serif;
+  font-style: italic;
+}
+
+.outil-reveal span:nth-child(7) span:nth-child(2),
+.goal-reveal span:nth-child(9) span:nth-child(2),
+.goal-reveal span:nth-child(10) span:nth-child(2),
+.goal-reveal span:nth-child(15) span:nth-child(2) {
+  background: vars.$gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-animation 2s ease-in-out infinite alternate;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

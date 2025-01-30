@@ -1,15 +1,16 @@
 ---
-import { Image } from "astro:assets";
+// Components
 import Button from "../Button.astro";
-import ProfilePicture from "@/assets/images/profile-picture.png";
+import { SparklesText } from "@/components/ui/sparkles-text";
+
 // Assets
-import arrowRight from '../../assets/icons/arrow-right.svg';
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 const projects = await getCollection("projects");
-// For Projects Home Section
+import ProfilePicture from "@/assets/images/profile-picture.png";
+import arrowRight from '../../assets/icons/arrow-right.svg';
 const pinnedProjects = projects.filter((project) => project.data.pin);
 
-import { SparklesText } from "@/components/ui/sparkles-text";
 ---
 
 <div class="head">
