@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets";
+import Button from "../Button.astro";
+import ProfilePicture from "@/assets/images/profile-picture.png";
+// Assets
+import arrowRight from '../../assets/icons/arrow-right.svg';
+import { getCollection } from "astro:content";
+const projects = await getCollection("projects");
+// For Projects Home Section
+const pinnedProjects = projects.filter((project) => project.data.pin);
+
+import { SparklesText } from "@/components/ui/sparkles-text";
+---
+
+<div class="head">
+  <h2 class="inline-flex items-center gap-2">Mes projets <span><SparklesText className="sparkles" client:load sparklesCount={5} colors={{ first: '#C8179B', second: '#E32E45' }} text="pépites" /></span></h2>
+  <p>Pour en savoir un peu plus qui je suis 👀</p>
+</div>
+
+
+<div class="flex align-center gap-5">
+  
+  <!-- Map des projets épinglés -->
+  <div class="projects-list">
+    <ul>
+      {
+        pinnedProjects.map((project) => (
+          <li class="project-card">
+            <a href={`/projects/${project.slug}`}>
+              <img class="thumbnail" src={project.data.heroImage} alt={project.data.title} />
+              <div class="flex justify-between mt-3">
+                <h2>{project.data.title}</h2>
+                <div class="tags">
+                  {project.data.tags.map((tag) => (
+                    <span class="tag">{tag}</span>
+                  ))}
+                </div>
+                <Button
+                  theme="black-button"
+                  link={`/projects/${project.slug}`}
+                  icon={arrowRight.src} 
+                />
+              </div>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
+<div class="flex flex-col items-center gap-5 mt-12">
+    <h3>Et bien plus encore</h3>
+    <Button theme="black-button" link="/projects" text="En cliquant juste ici"/>
+</div>

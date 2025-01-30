@@ -68,6 +68,11 @@ export default {
     					transform: 'translateY(calc(-100% - var(--gap)))'
     				}
     			},
+    			gradient: {
+    				to: {
+    					backgroundPosition: 'var(--bg-size) 0'
+    				}
+    			},
     			'shimmer-slide': {
     				to: {
     					transform: 'translate(calc(100cqw - 100%), 0)'
@@ -91,6 +96,9 @@ export default {
     		animation: {
     			marquee: 'marquee var(--duration) infinite linear',
     			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
+    			gradient: 'gradient 8s linear infinite',
+    			'shimmer-slide': 'shimmer-slide var(--speed) ease-in-out infinite alternate',
+    			'spin-around': 'spin-around calc(var(--speed) * 2) infinite linear'
     		}
     	}
     },

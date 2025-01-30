@@ -29,10 +29,6 @@ h2 {
   line-height: 110%;
 }
 
-h3 {
-  
-}
-
 p {
   font-family: 'Satoshi', sans-serif;
   font-size: 1.1em;
@@ -52,6 +48,11 @@ nav {
   :hover {
     background-color: #f8f8f8;
   }
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
 }
 
 // ---------------
@@ -75,8 +76,19 @@ nav {
 
   .head {
     margin-bottom: 30px;
-    h1, h2 {text-align: center; margin-bottom: 10px;}
-    p {text-align: center;}
+    h1, h2 {
+      text-align: center; 
+      margin-bottom: 10px; 
+      text-transform: capitalize !important;
+    }
+    p {text-align: center;}*
+    .sparkles span {
+      font-family: 'Tartuffo';
+      font-style: italic;
+      background: vars.$gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 }
 
@@ -137,10 +149,20 @@ form {
 // Projects
 // ---------------
 
+.projects-list ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
 .project-card {
 
-  img {
-    width: 100%;
+  .thumbnail {
+    width: 424px;
+    height: 300px;
+    object-fit: cover;
     border-radius: vars.$rounded;
     border: 1px solid vars.$border-stroke;
   }
