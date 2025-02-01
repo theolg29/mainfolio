@@ -147,18 +147,20 @@ form {
   }
 }
 
-.popup-contact {
-  background-color: vars.$black;
-  color: vars.$white;
-  padding: 15px;
-  border-radius: 100px;
+
+.bottom-action {
   position: fixed;
   bottom: 20px;
   right: 20px;
 
-  img {
-    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(193deg) brightness(107%) contrast(101%);
+  button {
+    background-color: vars.$black;
+    color: vars.$white;
+    padding: 15px;
+    border-radius: vars.$rounded;
   }
+  .popup-contact img {filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(193deg) brightness(107%) contrast(101%);}
+  .to-top {img{transform: rotate(-90deg);}}
 
 }
 
@@ -168,10 +170,10 @@ form {
 
 .projects-list ul {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 50px;
+  justify-content: center;
 }
 
 .project-card {

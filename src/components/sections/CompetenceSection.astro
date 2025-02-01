@@ -1,0 +1,61 @@
+---
+// Assets
+import { Image } from "astro:assets";
+import Button from "../Button.astro";
+import ProfilePicture from "@/assets/images/profile-picture.png";
+import downloadIcon from "@/assets/icons/dl-icon.svg";
+import { MagicCard } from "@/components/ui/magic-card";
+
+---
+
+<div class="head">
+    <h2>Mes compétences</h2>
+    <p>Ce que je suis capable de faire</p>
+</div>
+
+<div class="skill-container">
+
+    <!-- Développement web -->
+    <MagicCard client:visible class="skill-card" gradientColor={"#D9D9D955"}>
+        <div class="skill-top">
+            <Image src={ProfilePicture} alt="Icône de téléchargement" />
+            <h3>Développement web</h3>
+        </div>
+        <div class="skill-desc">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri tamen permagna accessio potest, si aliquod aeternum et infinitum impendere malum nobis opinemur. Quod idem licet transferre in voluptatem, ut postea variari voluptas distinguique possit, augeri amplificarique non possit. At etiam.</p>
+        </div>
+    </MagicCard>
+
+    <!-- Référencement -->
+    <MagicCard client:visible class="skill-card" gradientColor={"#D9D9D955"}>
+        <div class="skill-top">
+            <Image src={ProfilePicture} alt="Icône de téléchargement" />
+            <h3>Référencement</h3>
+        </div>
+        <div class="skill-desc">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri tamen permagna accessio potest, si aliquod aeternum et infinitum impendere malum nobis opinemur. Quod idem licet transferre in voluptatem, ut postea variari voluptas distinguique possit, augeri amplificarique non possit. At etiam.</p>
+        </div>
+    </MagicCard>
+
+    <!-- Design UI -->
+    <MagicCard client:visible class="skill-card" gradientColor={"#D9D9D955"}>
+        <div class="skill-top">
+            <Image src={ProfilePicture} alt="Icône de téléchargement" />
+            <h3>Design UI</h3>
+        </div>
+        <div class="skill-desc">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri tamen permagna accessio potest, si aliquod aeternum et infinitum impendere malum nobis opinemur. Quod idem licet transferre in voluptatem, ut postea variari voluptas distinguique possit, augeri amplificarique non possit. At etiam.</p>
+        </div>
+    </MagicCard>
+
+    <!-- Design UX -->
+    <MagicCard client:visible class="skill-card" gradientColor={"#D9D9D955"}>
+        <div class="skill-top">
+            <Image src={ProfilePicture} alt="Icône de téléchargement" />
+            <h3>Design UX</h3>
+        </div>
+        <div class="skill-desc">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri tamen permagna accessio potest, si aliquod aeternum et infinitum impendere malum nobis opinemur. Quod idem licet transferre in voluptatem, ut postea variari voluptas distinguique possit, augeri amplificarique non possit. At etiam.</p>
+        </div>
+    </MagicCard>
+</div>
