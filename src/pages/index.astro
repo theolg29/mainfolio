@@ -8,6 +8,8 @@ import HeroSection from "@/components/sections/HeroSection.astro";
 import AboutSection from "@/components/sections/AboutSection.astro";
 import FormationSection from "@/components/sections/FormationSection.astro";
 import ProjectsSection from "@/components/sections/ProjectsSection.astro";
+import ExeprienceSection from "@/components/sections/ExperienceSection.astro";
+import CompetenceSection from "@/components/sections/CompetenceSection.astro";
 
 // Components
 import { TextReveal } from "@/components/ui/text-reveal";
@@ -15,13 +17,23 @@ import { Image } from "astro:assets";
 
 // Assets
 import contactIcon from "@/assets/icons/contact.svg";
+import arrowRightIcon from "@/assets/icons/arrow-right.svg";
 ---
 
 <MainLayout title="Portfolio - Théo Le Gourrierec" description="Portfolio de Théo Le Gourrierec, Designer & Développeur Web">
   <Navigation />
-  <button class="popup-contact" data-tally-open="mKWJQA" data-tally-width="350" data-tally-emoji-text="👀" data-tally-emoji-animation="none">
-    <Image src={contactIcon} alt="Icône de contact" />
-  </button>
+
+  <div class="bottom-action flex gap-5 items-center justify-center">
+
+    <button class="popup-contact" data-tally-open="mKWJQA" data-tally-width="350" data-tally-emoji-text="👀" data-tally-emoji-animation="none">
+      <Image src={contactIcon} alt="Icône de contact" />
+    </button>
+    <button class="to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+      <Image src={arrowRightIcon} alt="Icône de contact" />
+    </button>
+  </div>
+
+
 
   <section class="container">
 
@@ -40,7 +52,12 @@ import contactIcon from "@/assets/icons/contact.svg";
       <FormationSection />
     </section>
 
-     <!-- Formation Section -->
+  <!-- Experience Section -->
+  <section class="content">
+    <ExeprienceSection />
+  </section>
+
+     <!-- Projets Section -->
      <section class="content projects">
       <ProjectsSection />
     </section>
@@ -49,6 +66,14 @@ import contactIcon from "@/assets/icons/contact.svg";
     <div class="outil-reveal z-10 flex min-h-64 items-center justify-center">
       <TextReveal client:visible text="Parce que le web regorge d'outils fantastiques, voici ceux que j'utilise" />
     </div>
+
+    <!-- Outils Section -->
+
+
+    <!-- Competences Section -->
+    <section class="content">
+      <CompetenceSection />
+    </section>
 
     <!-- Scroll Reveal - Mon Objectif -->
     <div class="goal-reveal z-10 flex min-h-64 items-center justify-center">
