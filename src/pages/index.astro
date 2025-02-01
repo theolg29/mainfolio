@@ -1,6 +1,5 @@
 ---
 // Basics
-import Navigation from "@/components/Navigation.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 
 // Sections
@@ -13,26 +12,9 @@ import CompetenceSection from "@/components/sections/CompetenceSection.astro";
 
 // Components
 import { TextReveal } from "@/components/ui/text-reveal";
-import { Image } from "astro:assets";
-
-// Assets
-import contactIcon from "@/assets/icons/contact.svg";
-import arrowRightIcon from "@/assets/icons/arrow-right.svg";
 ---
 
 <MainLayout title="Portfolio - Théo Le Gourrierec" description="Portfolio de Théo Le Gourrierec, Designer & Développeur Web">
-  <Navigation />
-
-  <div class="bottom-action flex gap-5 items-center justify-center">
-
-    <button class="popup-contact" data-tally-open="mKWJQA" data-tally-width="350" data-tally-emoji-text="👀" data-tally-emoji-animation="none">
-      <Image src={contactIcon} alt="Icône de contact" />
-    </button>
-    <button class="to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
-      <Image src={arrowRightIcon} alt="Icône de contact" />
-    </button>
-  </div>
-
 
 
   <section class="container">
@@ -43,22 +25,22 @@ import arrowRightIcon from "@/assets/icons/arrow-right.svg";
     </section>
 
     <!-- About Section -->
-    <section class="content aboutmme-section">
+    <section class="content aboutmme-section" id="about">
       <AboutSection />
     </section>
 
     <!-- Formation Section -->
-    <section class="content">
+    <section class="content" id="formations">
       <FormationSection />
     </section>
 
   <!-- Experience Section -->
-  <section class="content">
+  <section class="content" id="experiences">
     <ExeprienceSection />
   </section>
 
      <!-- Projets Section -->
-     <section class="content projects">
+     <section class="content projects" id="projets">
       <ProjectsSection />
     </section>
 
@@ -71,7 +53,7 @@ import arrowRightIcon from "@/assets/icons/arrow-right.svg";
 
 
     <!-- Competences Section -->
-    <section class="content">
+    <section class="content" id="competences">
       <CompetenceSection />
     </section>
 

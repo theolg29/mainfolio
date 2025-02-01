@@ -1,6 +1,5 @@
 ---
 // Basics
-import Navigation from "@/components/Navigation.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 
 // Components
@@ -13,7 +12,6 @@ const projects = await getCollection("projects");
 ---
 
 <MainLayout title="Mes Projets">
-  <Navigation />
   <section class="container">
     <section class="content hero-section">
       <div class="head">
