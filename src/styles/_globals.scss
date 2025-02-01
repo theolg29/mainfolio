@@ -6,6 +6,7 @@
 
 html {
   overflow-x: hidden;
+  scroll-margin-top: 50px;
 }
 
 body {
@@ -40,13 +41,39 @@ nav {
   a {
     margin-bottom: -1px;
     margin-left: -1px;
-    padding: 20px 40px;
+    padding: 25px 45px;
     border: 1px solid vars.$border-stroke;
     color: rgb(56, 55, 55, 0.6);
   }
   :hover {
     background-color: #f8f8f8;
   }
+}
+
+
+footer {
+  margin: 0 auto;
+  height: 50vh;
+  background-color: vars.$black;
+  border-radius: 50px 50px 0 0;
+  padding: 50px;
+  color: vars.$white;
+
+  h3 {
+    font-family: BricolageGrotesque;
+    font-size: 3em;
+    font-weight: 700;
+  }
+
+  p {color: vars.$white;}
+
+  .bottom {
+    border-top: 1px solid #343434;
+
+    p {color:#707070}
+
+  }
+
 }
 
 .icon {
@@ -58,11 +85,15 @@ nav {
 // Container
 // ---------------
 
-.container {
+body {
   border-left: 1px solid vars.$border-stroke;
   border-right: 1px solid vars.$border-stroke;
   width: 60%;
-  padding: 0px 100px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 80%;
   margin: 0 auto;
 }
 
