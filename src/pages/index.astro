@@ -11,10 +11,17 @@ import ProjectsSection from "@/components/sections/ProjectsSection.astro";
 
 // Components
 import { TextReveal } from "@/components/ui/text-reveal";
+import { Image } from "astro:assets";
+
+// Assets
+import contactIcon from "@/assets/icons/contact.svg";
 ---
 
 <MainLayout title="Portfolio - Théo Le Gourrierec" description="Portfolio de Théo Le Gourrierec, Designer & Développeur Web">
   <Navigation />
+  <button class="popup-contact" data-tally-open="mKWJQA" data-tally-width="350" data-tally-emoji-text="👀" data-tally-emoji-animation="none">
+    <Image src={contactIcon} alt="Icône de contact" />
+  </button>
 
   <section class="container">
 

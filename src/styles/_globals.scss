@@ -31,7 +31,7 @@ h2 {
 p {
   font-family: 'Satoshi', sans-serif;
   font-size: 1.1em;
-  font-weight: 500;
+  font-weight: 400;
   color: vars.$text;
 }
 
@@ -130,6 +130,9 @@ nav {
 // ---------------
 
 form {
+
+  width: 50%;
+
   input, textarea {
     margin: 5px;
     background-color: vars.$grey;
@@ -142,6 +145,21 @@ form {
       border-color: #727272;
     }
   }
+}
+
+.popup-contact {
+  background-color: vars.$black;
+  color: vars.$white;
+  padding: 15px;
+  border-radius: 100px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  img {
+    filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(193deg) brightness(107%) contrast(101%);
+  }
+
 }
 
 // ---------------
