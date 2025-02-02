@@ -176,6 +176,54 @@
   margin-top: 8px;
 }
 
+// ---- Tools Section ----
+.tool-container {
+
+  h3 {
+    font-family: 'BricolageGrotesque', sans-serif;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: vars.$black;
+    margin-bottom: 15px;
+    border-bottom: 1px solid vars.$border-stroke;
+  }
+
+  img {
+    margin-bottom: 10px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .flex-col {
+    position: relative;
+
+    &::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: 120%;
+      left: 50%;
+      transform: translate(-50%, 10px) scale(0.8);
+      background-color: vars.$white;
+      color: vars.$black;
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: 1px solid vars.$border-stroke;
+      white-space: nowrap;
+      box-shadow: 0 8px 8px 0px rgba(27, 33, 44, 0.1);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    &:hover::after {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-50%, 0) scale(1);
+    }
+  }
+}
+
+
 // ---- Skills Section ----
 
 .skill-container {

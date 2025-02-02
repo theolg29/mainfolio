@@ -190,7 +190,13 @@ form {
     padding: 15px;
     border-radius: vars.$rounded;
   }
-  .popup-contact img {filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(193deg) brightness(107%) contrast(101%);}
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .popup-contact img {filter: invert(99%) sepia(80%) saturate(206%) hue-rotate(294deg) brightness(116%) contrast(100%);}
   .to-top {img{transform: rotate(-90deg);}}
 
 }

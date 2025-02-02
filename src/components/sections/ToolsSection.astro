@@ -1,0 +1,98 @@
+---
+import { Image } from "astro:assets";
+import FigmaLogo from "@/assets/logo/figma.svg";
+import PenpotLogo from "@/assets/logo/penpot.svg";
+import AffinityLogo from "@/assets/logo/affinity.svg";
+import ElementorLogo from "@/assets/logo/elementor.svg";
+import FramerLogo from "@/assets/logo/framer.svg";
+import WordPressLogo from "@/assets/logo/wordpress.svg";
+import SupabaseLogo from "@/assets/logo/supabase.svg";
+import ReactLogo from "@/assets/logo/react.svg";
+import PhpLogo from "@/assets/logo/php.svg";
+import JavascriptLogo from "@/assets/logo/javascript.svg";
+import NotesnookLogo from "@/assets/logo/notesnook.svg";
+import NotionLogo from "@/assets/logo/notion.svg";
+import ObsidianLogo from "@/assets/logo/obsidian.svg";
+import SprintLogo from "@/assets/logo/sprint.svg";
+import TicktickLogo from "@/assets/logo/ticktick.svg";
+---
+
+<div class="tool-container flex flex-col gap-10">
+  <div class="uiux">
+    <h3>Design UI / UX</h3>
+    <div class="flex gap-[70px]">
+      <div class="flex flex-col items-center" data-tooltip="La base du UI / UX">
+        <Image src={FigmaLogo} alt="Figma" />
+        <p>Figma</p>
+      </div>
+      <div class="flex flex-col items-center" data-tooltip="L'alternative Open Source">
+        <Image src={PenpotLogo} alt="Penpot" />
+        <p>Penpot</p>
+      </div>
+      <div class="flex flex-col items-center" data-tooltip="Affinity Tooltip">
+        <Image src={AffinityLogo} alt="Affinity" />
+        <p>Affinity</p>
+      </div>
+      <div class="flex flex-col items-center" data-tooltip="Elementor Tooltip">
+        <Image src={ElementorLogo} alt="Elementor" />
+        <p>Elementor</p>
+      </div>
+      <div class="flex flex-col items-center" data-tooltip="Framer Tooltip">
+        <Image src={FramerLogo} alt="Framer" />
+        <p>Framer</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="devweb">
+    <h3>Développement web</h3>
+    <div class="flex gap-[70px]">
+      <div class="flex flex-col items-center" data-tooltip="WordPress Tooltip">
+        <Image src={WordPressLogo} alt="WordPress" />
+        <p>WordPress</p>
+      </div>
+      <div class="flex flex-col items-center" data-tooltip="Supabase Tooltip">
+        <Image src={SupabaseLogo} alt="Supabase" />
+        <p>Supabase</p>
+      </div>
+      <div class="flex flex-col items-center" data-tooltip="React Tooltip">
+        <Image src={ReactLogo} alt="React" />
+        <p>React</p>
+      </div>
+      <div class="flex flex-col items-center" data-tooltip="PHP Tooltip">
+        <Image src={PhpLogo} alt="PHP" />
+        <p>PHP</p>
+      </div>
+      <div class="flex flex-col items-center" data-tooltip="JavaScript Tooltip">
+        <Image src={JavascriptLogo} alt="JavaScript" />
+        <p>JavaScript</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="gpd">
+    <h3>Gestion de projets</h3>
+    <div class="flex gap-[70px]">
+      <div class="flex flex-col items-center" data-tooltip="Notesnook Tooltip">
+        <Image src={NotesnookLogo} alt="Notesnook" />
+        <p>Notesnook</p>
+      </div>
+      <div class="flex flex-col items-center" data-tooltip="Notion Tooltip">
+        <Image src={NotionLogo} alt="Notion" />
+        <p>Notion</p>
+      </div>
+      <div class="flex flex-col items-center" data-tooltip="Obsidian Tooltip">
+        <Image src={ObsidianLogo} alt="Obsidian" />
+        <p>Obsidian</p>
+      </div>
+      <div class="flex flex-col items-center" data-tooltip="Sprint Tooltip">
+        <Image src={SprintLogo} alt="Sprint" />
+        <p>Sprint</p>
+      </div>
+      <div class="flex flex-col items-center" data-tooltip="Ticktick Tooltip">
+        <Image src={TicktickLogo} alt="Ticktick" />
+        <p>Ticktick</p>
+      </div>
+    </div>
+  </div>
+</div>
