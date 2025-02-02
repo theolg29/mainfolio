@@ -2,7 +2,12 @@
 
 ---
 <header>
-    <nav class="flex justify-center">
+
+    <button id="menuButton">
+        <img src="/src/assets/icons/burger.svg" alt="Menu" id="menuIcon" />
+    </button>
+
+    <nav id="main-nav" class="flex justify-between items-center">
         <a href="/#about">Qui suis-je ?</a>
         <a href="/#formations">Formations</a>
         <a href="/#experiences">Expériences</a>
@@ -11,3 +16,22 @@
         <a href="/contact">Contact</a>
     </nav>
 </header>
+
+<script>
+    const menuButton = document.getElementById('menuButton');
+    const mainNav = document.getElementById('mainNav');
+    const menuIcon = document.getElementById('menuIcon');
+    let isMenuOpen = false;
+  
+    menuButton?.addEventListener('click', () => {
+      isMenuOpen = !isMenuOpen;
+      
+      if (isMenuOpen) {
+        mainNav?.classList.remove('translate-x-full');
+        menuIcon?.setAttribute('src', '/src/assets/icons/cross.svg');
+      } else {
+        mainNav?.classList.add('translate-x-full');
+        menuIcon?.setAttribute('src', '/src/assets/icons/burger.svg');
+      }
+    });
+  </script>

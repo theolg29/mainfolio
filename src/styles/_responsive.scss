@@ -1,0 +1,51 @@
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .projects-list ul {grid-template-columns: repeat(1, 1fr);}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+  
+  // My custom tailwind classes
+  .me-col {flex-direction: column;}
+
+  // Globals
+  h1 {font-size: 3em;}
+  h2 {font-size: 2.5em;}
+
+  form {width: 100%;}
+
+  .content {
+    align-items: start;
+
+    .head h1, 
+    .head h2,
+    .head p {
+      text-align: start;
+    }
+  }
+
+  // Pages
+  .forma {width: 100% !important;}
+
+  .tool-container {
+    h3 {font-size: 1.4em;}
+    img {
+      margin-bottom: 10px;
+      width: 30px !important;
+      height: 30px !important;
+    }
+  }
+
+  .skill-container {grid-template-columns: repeat(1, 1fr) !important;}
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (max-width: 992px) {
+  body {
+    width: 100%;
+    border: none;
+  }
+
+}

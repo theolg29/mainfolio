@@ -1,5 +1,5 @@
 // ---------------
-// VARIABLES
+// COLORS
 // ---------------
 
 $black : #202020;
@@ -14,47 +14,59 @@ $gradient: linear-gradient(90deg, #C8179B 0%, #E32E45 50%, #C8179B 100%);
 // FONTS
 // ---------------
 
+$bricolage: 'BricolageGrotesque', sans-serif;
+$satoshi: 'Satoshi', sans-serif;
+$tartuffo: 'Tartuffo', sans-serif;
+
+
 /* Bricolage Grotesque */
 @font-face {
     font-family: 'BricolageGrotesque';
     src: url('../assets/fonts/bricolage/BricolageGrotesque-ExtraLight.woff2') format('woff2');
     font-weight: 200;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'BricolageGrotesque';
     src: url('../assets/fonts/bricolage/BricolageGrotesque-Light.woff2') format('woff2');
     font-weight: 300;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'BricolageGrotesque';
     src: url('../assets/fonts/bricolage/BricolageGrotesque-Regular.woff2') format('woff2');
     font-weight: 400;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'BricolageGrotesque';
     src: url('../assets/fonts/bricolage/BricolageGrotesque-Medium.woff2') format('woff2');
     font-weight: 500;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'BricolageGrotesque';
     src: url('../assets/fonts/bricolage/BricolageGrotesque-SemiBold.woff2') format('woff2');
     font-weight: 600;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'BricolageGrotesque';
     src: url('../assets/fonts/bricolage/BricolageGrotesque-Bold.woff2') format('woff2');
     font-weight: 700;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'BricolageGrotesque';
     src: url('../assets/fonts/bricolage/BricolageGrotesque-ExtraBold.woff2') format('woff2');
     font-weight: 800;
+    font-display: swap;
 }
 
 /* Satoshi  */
@@ -62,24 +74,28 @@ $gradient: linear-gradient(90deg, #C8179B 0%, #E32E45 50%, #C8179B 100%);
     font-family: 'Satoshi';
     src: url('../assets/fonts/satoshi/Satoshi-Black.woff2') format('woff2');
     font-weight: 900;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Satoshi';
     src: url('../assets/fonts/satoshi/Satoshi-Bold.woff2') format('woff2');
     font-weight: bold;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Satoshi';
     src: url('../assets/fonts/satoshi/Satoshi-Medium.woff2') format('woff2');
     font-weight: 500;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Satoshi';
     src: url('../assets/fonts/satoshi/Satoshi-Regular.woff2') format('woff2');
     font-weight: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -89,11 +105,12 @@ $gradient: linear-gradient(90deg, #C8179B 0%, #E32E45 50%, #C8179B 100%);
     font-display: swap;
 }
 
-// Tartuffo 
+/* Tartuffo */
 @font-face {
     font-family: 'Tartuffo';
     src: url('../assets/fonts/tartuffo/Tartuffo_Trial-Bold.otf') format('opentype');
     font-weight: bold;
+    font-display: swap;
 }
 
 @font-face {
@@ -101,12 +118,14 @@ $gradient: linear-gradient(90deg, #C8179B 0%, #E32E45 50%, #C8179B 100%);
     src: url('../assets/fonts/tartuffo/Tartuffo_Trial-BoldItalic.otf') format('opentype');
     font-weight: bold;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Tartuffo';
     src: url('../assets/fonts/tartuffo/Tartuffo_Trial-Light.otf') format('opentype');
     font-weight: 300;
+    font-display: swap;
 }
 
 @font-face {
@@ -114,12 +133,14 @@ $gradient: linear-gradient(90deg, #C8179B 0%, #E32E45 50%, #C8179B 100%);
     src: url('../assets/fonts/tartuffo/Tartuffo_Trial-LightItalic.otf') format('opentype');
     font-weight: 300;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Tartuffo';
     src: url('../assets/fonts/tartuffo/Tartuffo_Trial-Medium.otf') format('opentype');
     font-weight: 500;
+    font-display: swap;
 }
 
 @font-face {
@@ -127,12 +148,14 @@ $gradient: linear-gradient(90deg, #C8179B 0%, #E32E45 50%, #C8179B 100%);
     src: url('../assets/fonts/tartuffo/Tartuffo_Trial-MediumItalic.otf') format('opentype');
     font-weight: 500;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Tartuffo';
     src: url('../assets/fonts/tartuffo/Tartuffo_Trial-Regular.otf') format('opentype');
     font-weight: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -140,12 +163,14 @@ $gradient: linear-gradient(90deg, #C8179B 0%, #E32E45 50%, #C8179B 100%);
     src: url('../assets/fonts/tartuffo/Tartuffo_Trial-RegularItalic.otf') format('opentype');
     font-weight: normal;
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'Tartuffo';
     src: url('../assets/fonts/tartuffo/Tartuffo_Trial-Thin.otf') format('opentype');
     font-weight: 100;
+    font-display: swap;
 }
 
 @font-face {
@@ -153,5 +178,5 @@ $gradient: linear-gradient(90deg, #C8179B 0%, #E32E45 50%, #C8179B 100%);
     src: url('../assets/fonts/tartuffo/Tartuffo_Trial-ThinItalic.otf') format('opentype');
     font-weight: 100;
     font-style: italic;
+    font-display: swap;
 }
-

@@ -1,6 +1,5 @@
 ---
 // Basics
-import Navigation from "@/components/Navigation.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
 
 // Assets
@@ -19,7 +18,6 @@ const { Content } = await project.render();
 ---
 
 <MainLayout title={project.data.title} description={project.data.description}>
-  <Navigation />
   <section class="container">
     <section class="content content-project">
       

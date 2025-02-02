@@ -1,6 +1,7 @@
 @use "_tailwind";
 @use "_variables" as vars;
 @use "_globals";
+@use "_responsive";
 
 // ---------------
 // Home Page
@@ -113,7 +114,7 @@
   }
 
   p {
-    font-family: 'Tartuffo', sans-serif;
+    font-family: vars.$tartuffo;
     font-style: italic;
     font-weight: 300;
     color: vars.$text;
@@ -121,25 +122,29 @@
 
 }
 
-// ---- Formations Section ----
+// ---- Formations & Experiences Section ----
 .forma {
   width: 70%;
   margin: 0 auto;
 
-  img {
-    width: 60px;
-    height: 60px;
-    border-radius: vars.$rounded;
+  .left {
+    min-width: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: 45px;
+      height: 45px;
+      border-radius: vars.$rounded;
+      object-fit: cover;
+    }
   }
+  
 
   .line {
     width: 1px;
     height: 100%;
     background-color: vars.$border-stroke;
-  }
-
-  .left {
-    width: 100%;
   }
 
   .right {
@@ -225,7 +230,6 @@
 
 
 // ---- Skills Section ----
-
 .skill-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -263,4 +267,20 @@
 
 .skill-desc p {
   padding-top: 10px;
+}
+
+
+
+// ---------------
+// Contact Page
+// ---------------
+
+
+// ---------------
+// 404 Page
+// ---------------
+.page-404 {
+  h1 {
+    font-size: 11em;
+  }
 }

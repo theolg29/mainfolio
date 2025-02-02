@@ -14,7 +14,7 @@ body {
 }
 
 h1 {
-  font-family: BricolageGrotesque;
+  font-family: vars.$bricolage;
   font-size: 3.5em;
   color: vars.$black;
   font-weight: bold;
@@ -22,7 +22,7 @@ h1 {
 }
 
 h2 {
-  font-family: BricolageGrotesque;
+  font-family: vars.$bricolage;
   font-size: 3em;
   color: vars.$black;
   font-weight: bold;
@@ -30,20 +30,41 @@ h2 {
 }
 
 p {
-  font-family: 'Satoshi', sans-serif;
+  font-family: vars.$satoshi;
   font-size: 1.1em;
   font-weight: 400;
   color: vars.$text;
 }
 
+
+header {
+  button {
+    padding: 20px;
+    border-radius: 100px;
+    background-color: #f0f0f0;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+
+  }
+}
+
 nav {
   border-bottom: 1px solid vars.$border-stroke;
   a {
+    text-align: center;
+    display: block;
+    width: 100%;
     margin-bottom: -1px;
     margin-left: -1px;
-    padding: 25px 45px;
+    padding: 20px 0px;
     border: 1px solid vars.$border-stroke;
     color: rgb(56, 55, 55, 0.6);
+  }
+  a:last-child {
+    margin-right: -1px;
   }
   :hover {
     background-color: #f8f8f8;
@@ -53,14 +74,13 @@ nav {
 
 footer {
   margin: 0 auto;
-  height: 50vh;
   background-color: vars.$black;
   border-radius: 50px 50px 0 0;
   padding: 50px;
   color: vars.$white;
 
   h3 {
-    font-family: BricolageGrotesque;
+    font-family: vars.$bricolage;
     font-size: 3em;
     font-weight: 700;
   }
@@ -111,9 +131,9 @@ body {
       margin-bottom: 10px; 
       text-transform: capitalize !important;
     }
-    p {text-align: center;}*
+    p {text-align: center;}
     .sparkles span {
-      font-family: 'Tartuffo';
+      font-family: vars.$tartuffo;
       font-style: italic;
       background: vars.$gradient;
       -webkit-background-clip: text;
@@ -161,25 +181,12 @@ body {
 // ---------------
 
 form {
-
   width: 50%;
-
-  input, textarea {
-    margin: 5px;
-    background-color: vars.$grey;
-    padding: 10px 20px;
-    border-radius: vars.$rounded;
-    border: 1px solid vars.$border-stroke;
-
-    &:focus {
-      outline: none;
-      border-color: #727272;
-    }
-  }
 }
 
 
 .bottom-action {
+  z-index: 100;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -195,16 +202,14 @@ form {
     width: 20px;
     height: 20px;
   }
-
-  .popup-contact img {filter: invert(99%) sepia(80%) saturate(206%) hue-rotate(294deg) brightness(116%) contrast(100%);}
   .to-top {img{transform: rotate(-90deg);}}
-
 }
 
 // ---------------
 // Projects
 // ---------------
 
+// Contain Projects List & One Project
 .projects-list ul {
   width: 100%;
   display: grid;
@@ -265,7 +270,7 @@ form {
   .markdown {
 
     h2 {
-      font-family: 'Satoshi', sans-serif ;
+      font-family: vars.$satoshi;
       font-size: 2em;
       padding-bottom: 10px;
       border-bottom: 1px solid vars.$border-stroke;
@@ -294,7 +299,7 @@ form {
 .goal-reveal span:nth-child(10) span:nth-child(2),
 .goal-reveal span:nth-child(15) span:nth-child(1),
 .goal-reveal span:nth-child(15) span:nth-child(2) {
-  font-family: Tartuffo, sans-serif;
+  font-family: vars.$tartuffo;
   font-style: italic;
 }
 

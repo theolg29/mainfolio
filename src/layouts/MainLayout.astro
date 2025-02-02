@@ -21,16 +21,16 @@ import arrowRightIcon from "@/assets/icons/arrow-right.svg";
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<meta name="description" content={description} />
-		<script async src="https://tally.so/widgets/embed.js"></script>
 	</head>
 	<body>
 		<Navigation />
 		<slot />
 		<Footer />
 		<div class="bottom-action flex gap-5 items-center justify-center">
-			<button class="popup-contact" data-tally-open="mKWJQA" data-tally-width="350" data-tally-emoji-text="👀" data-tally-emoji-animation="none">
-			  <Image src={contactIcon} alt="Icône de contact" />
-			</button>
+			
+			<button class="to-top" onclick="window.location.href = '/contact'">
+				<Image src={contactIcon} alt="Icône de contact" />
+			  </button>
 			<button class="to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
 			  <Image src={arrowRightIcon} alt="Icône de contact" />
 			</button>
