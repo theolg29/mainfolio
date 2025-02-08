@@ -7,6 +7,9 @@ import Button from "@/components/Button.astro";
 
 // Assets
 import { Image } from "astro:assets";
+
+// reCAPTCHA
+const RECAPTCHA_SITE_KEY = import.meta.env.RECAPTCHA_SITE_KEY;
 ---
 
 <MainLayout
@@ -19,29 +22,48 @@ import { Image } from "astro:assets";
         <h1>Me contacter</h1>
         <p>C’est simple, il suffit de remplir le formulaire juste en dessous</p>
       </div>
-      <form action="">
+      <form action="" id="contact-form">
         <iframe
           data-tally-src="https://tally.so/embed/mKWJQA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
           loading="lazy"
           width="100%"
           title="Me contacter"></iframe>
-        <script>
-          var d = document,
-            w = "https://tally.so/widgets/embed.js",
-            v = function () {
-              "undefined" != typeof Tally
-                ? Tally.loadEmbeds()
-                : d
-                    .querySelectorAll("iframe[data-tally-src]:not([src])")
-                    .forEach(function (e) {
-                      e.src = e.dataset.tallySrc;
-                    });
-            };
-          if ("undefined" != typeof Tally) v();
-          else if (d.querySelector('script[src="' + w + '"]') == null) {
-            var s = d.createElement("script");
-            (s.src = w), (s.onload = v), (s.onerror = v), d.body.appendChild(s);
+        
+        <!-- reCAPTCHA v3 -->
+        <script src={`https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`}></script>
+        
+        <script is:inline define:vars={{RECAPTCHA_SITE_KEY}}>
+          // Tally Form
+          function loadTally() {
+            var d = document,
+              w = "https://tally.so/widgets/embed.js",
+              v = function() {
+                if (typeof Tally !== "undefined") {
+                  Tally.loadEmbeds();
+                } else {
+                  d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e) {
+                    e.src = e.dataset.tallySrc;
+                  });
+                }
+              };
+            
+            if (typeof Tally !== "undefined") v();
+            else if (d.querySelector('script[src="' + w + '"]') == null) {
+              var s = d.createElement("script");
+              s.src = w;
+              s.onload = v;
+              s.onerror = v;
+              d.body.appendChild(s);
+            }
           }
+
+          // reCAPTCHA
+          grecaptcha.ready(function() {
+            grecaptcha.execute(RECAPTCHA_SITE_KEY, {action: 'load_form'})
+              .then(function(token) {
+                loadTally();
+              });
+          });
         </script>
       </form>
     </section>
