@@ -79,7 +79,7 @@ footer {
   margin: 0 auto;
   background-color: vars.$black;
   border-radius: 50px 50px 0 0;
-  padding: 50px;
+  padding: 50px 50px 20px 50px;
   color: vars.$white;
 
   h3 {
@@ -88,13 +88,13 @@ footer {
     font-weight: 700;
   }
 
-  p {color: vars.$white;}
+  p {
+    font-size: 1em;
+    color: vars.$white;
+  }
 
   .bottom {
     border-top: 1px solid #343434;
-
-    p {color:#707070}
-
   }
 
 }
@@ -186,7 +186,9 @@ body {
 form {
   width: 50%;
 }
-
+.grecaptcha-badge {
+  left: 0 !important;
+}
 
 .bottom-action {
   z-index: 100;
