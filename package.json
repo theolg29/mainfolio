@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.1.5",
+    "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^5.1.4",
     "@astrojs/vercel": "^8.0.3",
     "@playform/compress": "^0.1.7",

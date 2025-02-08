@@ -4,8 +4,25 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout title="Plan du site" description="Plan du site web">
-    <div class="sitemap flex flex-col items-center justify-center gap-5 h-screen">
-        <h1>Plan du site</h1>
-        <p>Le plan du site web.</p>
-    </div>
-</MainLayout>
+  <div class="container legal flex flex-col justify-start">
+    <h1>Plan du site</h1>
+    <h2>Pages</h2>
+    <ul>
+      <li><a class="link" href="/">Accueil</a></li>
+      <li><a class="link" href="/projects">Projets</a></li>
+      <li><a class="link" href="/contact">Contact</a></li>
+      <h2>Projets</h2>
+      <ul>
+        <li><a class="link" href="/projects/projet1">Projet 1</a></li>
+        <li></li>
+      </ul>
+    </ul>
+    <h2>Informations légales</h2>
+      <ul>
+        <li><a class="link" href="/mentions-legales">Mentions légales</a></li>
+        <li><a class="link" href="/politique-de-confidentialite">Politique de confidentialité</a></li>
+        <li><a class="link" href="/plan-du-site">Plan du site</a></li>
+      </ul>
+    </ul>
+  </div></MainLayout
+>
