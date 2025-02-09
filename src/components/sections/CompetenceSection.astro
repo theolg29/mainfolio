@@ -5,7 +5,10 @@ import Button from "../Button.astro";
 import ProfilePicture from "@/assets/images/profile-picture.png";
 import downloadIcon from "@/assets/icons/dl-icon.svg";
 import { MagicCard } from "@/components/ui/magic-card";
-
+import devIcon from "@/assets/icons/dev.svg";
+import seoIcon from "@/assets/icons/seo.svg";
+import uiIcon from "@/assets/icons/ui.svg";
+import uxIcon from "@/assets/icons/ux.svg";
 ---
 
 <div class="head">
@@ -16,9 +19,9 @@ import { MagicCard } from "@/components/ui/magic-card";
 <div class="skill-container">
 
     <!-- Développement web -->
-    <MagicCard client:visible class="skill-card" gradientColor={"#D9D9D955"}>
+    <MagicCard client:visible className="skill-card" gradientColor={"#D9D9D955"}>
         <div class="skill-top">
-            <Image src={ProfilePicture} alt="Icône de téléchargement" />
+            <Image src={devIcon} alt="Icône de téléchargement" />
             <h3>Développement web</h3>
         </div>
         <div class="skill-desc">
@@ -27,9 +30,9 @@ import { MagicCard } from "@/components/ui/magic-card";
     </MagicCard>
 
     <!-- Référencement -->
-    <MagicCard client:visible class="skill-card" gradientColor={"#D9D9D955"}>
+    <MagicCard client:visible className="skill-card" gradientColor={"#D9D9D955"}>
         <div class="skill-top">
-            <Image src={ProfilePicture} alt="Icône de téléchargement" />
+            <Image src={seoIcon} alt="Icône de téléchargement" />
             <h3>Référencement</h3>
         </div>
         <div class="skill-desc">
@@ -38,9 +41,9 @@ import { MagicCard } from "@/components/ui/magic-card";
     </MagicCard>
 
     <!-- Design UI -->
-    <MagicCard client:visible class="skill-card" gradientColor={"#D9D9D955"}>
+    <MagicCard client:visible className="skill-card" gradientColor={"#D9D9D955"}>
         <div class="skill-top">
-            <Image src={ProfilePicture} alt="Icône de téléchargement" />
+            <Image src={uiIcon} alt="Icône de téléchargement" />
             <h3>Design UI</h3>
         </div>
         <div class="skill-desc">
@@ -49,9 +52,9 @@ import { MagicCard } from "@/components/ui/magic-card";
     </MagicCard>
 
     <!-- Design UX -->
-    <MagicCard client:visible class="skill-card" gradientColor={"#D9D9D955"}>
+    <MagicCard client:visible className="skill-card" gradientColor={"#D9D9D955"}>
         <div class="skill-top">
-            <Image src={ProfilePicture} alt="Icône de téléchargement" />
+            <Image src={uxIcon} alt="Icône de téléchargement" />
             <h3>Design UX</h3>
         </div>
         <div class="skill-desc">
