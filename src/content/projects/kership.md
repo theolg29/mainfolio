@@ -1,8 +1,8 @@
 ---
-title: "Pinfig"
-description: "Lorem ipsum dolor sit amet"
-pubDate: "Jul 08 2022"
-heroImage: "/thumbnails/pinfig.png"
+title: "Kership"
+description: "<desc>"
+pubDate: "<date>"
+heroImage: "<img-link>"
 tags: ["Design", "UI/UX"]
 pin: true
 ---

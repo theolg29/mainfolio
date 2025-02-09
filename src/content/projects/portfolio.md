@@ -1,6 +1,6 @@
 ---
-title: "<nom-du-projet>"
-description: "<description>"
+title: "Mon portfolio"
+description: "<desc>"
 pubDate: "<date>"
 heroImage: "<img-link>"
 tags: ["Design", "UI/UX"]

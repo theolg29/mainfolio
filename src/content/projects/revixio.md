@@ -1,8 +1,8 @@
 ---
-title: "<nom-du-projet>"
-description: "<description>"
+title: "Revixio"
+description: "Une platforme web permetant de centraliser les révisions"
 pubDate: "<date>"
-heroImage: "<img-link>"
+heroImage: "/thumbnails/revixio.png"
 tags: ["Design", "UI/UX"]
 pin: true
 ---
