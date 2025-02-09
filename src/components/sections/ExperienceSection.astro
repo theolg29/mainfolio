@@ -5,8 +5,8 @@ import Button from "../Button.astro";
 // Assets
 import { Image } from "astro:assets";
 import ProfilePicture from "@/assets/images/profile-picture.png";
-import downloadIcon from "@/assets/icons/dl-icon.svg"
-import mmiLogo from "@/assets/logo/logo-mmi.png";
+import extIcon from "@/assets/icons/arrow-ext.svg"
+import edeclicLogo from "@/assets/logo/edeclic.png";
 ---
 
 <script>
@@ -22,23 +22,20 @@ import mmiLogo from "@/assets/logo/logo-mmi.png";
 <div class="flex flex-col align-center gap-5 mb-12">
 
     <!-- Alternance - edeclic -->
+    <!-- BAC STI2D -->
     <div class="forma flex gap-5">
         <div class="left flex flex-col items-center">
-            <Image src={mmiLogo} alt="Photo de Théo Legourrierec" />
+            <Image src={edeclicLogo} alt="Photo de Théo Legourrierec" />
             <div class="line mt-4"></div>
         </div>
         <div class="right">
-            <p class="name">BUT MMI</p>
-            <p class="year">Lannion - 2022 à 2025</p>
+            <p class="name">Alternant Développeur Web chez e-declic</p>
+            <p class="year">Auray - 2023 à 2025</p>
             <div class="text-container">
-                <p class="text mt-4 truncated">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae tempore magni sequi dolores, tempora totam illum deserunt veritatis quisquam sit officiis earum unde voluptates at voluptate nemo exercitationem facere asperiores!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae tempore magni sequi dolores, tempora totam illum deserunt veritatis quisquam sit officiis earum unde voluptates at voluptate nemo exercitationem facere asperiores!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae tempore magni sequi dolores, tempora totam illum deserunt veritatis quisquam sit officiis earum unde voluptates at voluptate nemo exercitationem facere asperiores!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae tempore magni sequi dolores, tempora totam illum deserunt veritatis quisquam sit officiis earum unde voluptates at voluptate nemo exercitationem facere asperiores!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae tempore magni sequi dolores, tempora totam illum deserunt veritatis quisquam sit officiis earum unde voluptates at voluptate nemo exercitationem facere asperiores!
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae tempore magni sequi dolores, tempora totam illum deserunt veritatis quisquam sit officiis earum unde voluptates at voluptate nemo exercitationem facere asperiores!</p>
+                <p class="text mt-4 truncated">EXPLICATION</p>
                 <button class="read-more-btn">Lire plus</button>
             </div>
+            <Button id="edeclic" target="_blank" theme="black-button" link="https://mmi.iut-lannion.fr/" text="Découvrir l'agence" icon={extIcon.src} />
         </div>
     </div>
 
