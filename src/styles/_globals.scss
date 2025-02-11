@@ -1,4 +1,5 @@
 @use '_variables' as vars;
+@use 'sass:color';
 
 // ---------------
 // Global HTML Tags
@@ -39,6 +40,11 @@ p {
 
 .link:hover {
   text-decoration: underline;
+}
+
+::selection {
+  background-color: vars.$black;
+  color: vars.$white;
 }
 
 header {
@@ -158,10 +164,10 @@ body {
   border-radius: vars.$rounded;
   background: vars.$black;
   border: 1px solid #060606;
-  box-shadow: inset 0 5px 1px 1px rgba(255, 255, 255, 1);
-  box-shadow: inset 0 -3px 5px #000000;
+  box-shadow: inset 0 2px 0px 0px rgba(155, 155, 155, 0.5), inset 0 -5px 4px 0px rgb(24, 24, 24, 0.5);
+  transition: 200ms ease;
   &:hover {
-    cursor: pointer;
+    background-color: color.adjust(vars.$black, $lightness: 5%);
   }
 }
 
@@ -171,13 +177,10 @@ body {
   color: vars.$black;
   padding: 10px 23px;
   border-radius: vars.$rounded;
-  background-color: vars.$white;
+  background-color: vars.$grey;
   border: 1px solid vars.$border-stroke;
+  box-shadow: inset 0 2px 0px 0px rgba(255, 255, 255, 0.5), inset 0 -5px 4px 0px rgba(247, 247, 247, 0.5);
   transition: 200ms ease;
-
-  &:hover {
-    background-color: #f7f7f7;
-  }
 }
 
 #mmi {
@@ -185,20 +188,33 @@ body {
   margin-top: 10px;
   background: #A64288;
   border: 1px solid #811264;
-  box-shadow: inset 0 -2px 4px 0 rgba(0, 0, 0, 0.25);
-  box-shadow: inset 0 4px 4px 0 rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 2px 0px 0px rgba(155, 155, 155, 0.5), inset 0 -5px 4px 0px rgba(129, 18, 100, 0.5);
+  transition: 200ms ease;
+  &:hover {
+    background-color: color.adjust(#A64288, $lightness: 5%);
+  }
 }
+
 #sti {
   flex-direction: row-reverse;
   margin-top: 10px;
+  box-shadow: inset 0 2px 0px 0px rgba(155, 155, 155, 0.5), inset 0 -5px 4px 0px rgba(24, 24, 24, 0.5);
+  transition: 200ms ease;
+  &:hover {
+    background-color: color.adjust(#2A2A2A, $lightness: 5%);
+  }
 }
+
 #edeclic {
   flex-direction: row-reverse;
   margin-top: 10px;
   background: #2DEFE7;
   border: 1px solid #3fcfcb;
-  box-shadow: inset 0 -2px 4px 0 rgba(0, 0, 0, 0.25);
-  box-shadow: inset 0 4px 4px 0 rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 2px 0px 0px rgba(255, 255, 255, 0.5), inset 0 -5px 4px 0px rgba(63, 207, 203, 0.5);
+  transition: 200ms ease;
+  &:hover {
+    background-color: color.adjust(#2DEFE7, $lightness: 5%);
+  }
 }
 
 // ---------------
