@@ -1,6 +1,39 @@
+@use '_variables' as vars;
+
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 576px) {
   .projects-list ul {grid-template-columns: repeat(1, 1fr);}
+  
+  .main-nav {
+    display: none;
+  }
+  .mobile-nav {
+    z-index: 999;
+    display: block;
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: vars.$white;
+    padding: 10px;
+  
+    a {
+      padding: 10px;
+      border: 1px solid vars.$border-stroke;
+      margin-right: -1px;
+      border-radius: vars.$rounded;
+  
+      &:hover {
+        background-color: #f8f8f8;
+      }
+  
+      img {
+        width: 20px;
+        height: 20px;
+        filter: brightness(0) saturate(100%) invert(0%) sepia(15%) saturate(3269%) hue-rotate(346deg) brightness(87%) contrast(75%); 
+      }
+    }
+  }
 }
 
 // Medium devices (tablets, 768px and up)

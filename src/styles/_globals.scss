@@ -47,40 +47,33 @@ p {
   color: vars.$white;
 }
 
-header {
-  button {
-    padding: 20px;
-    border-radius: 100px;
-    background-color: #f0f0f0;
-
-    img {
-      width: 20px;
-      height: 20px;
-    }
-
-  }
-}
-
-nav {
-  border-bottom: 1px solid vars.$border-stroke;
+// Navigation
+.main-nav {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  width: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: vars.$white;
+  margin-bottom: 50px;
   a {
     text-align: center;
     display: block;
     width: 100%;
-    margin-bottom: -1px;
-    margin-left: -1px;
     padding: 20px 0px;
     border: 1px solid vars.$border-stroke;
     color: rgb(56, 55, 55, 0.6);
+    margin-bottom: 10px; // Added margin-bottom
   }
-  a:last-child {
-    margin-right: -1px;
-  }
-  :hover {
+  a:hover {
     background-color: #f8f8f8;
   }
 }
 
+.mobile-nav {
+  display: none;
+}
 
 footer {
   margin: 0 auto;
