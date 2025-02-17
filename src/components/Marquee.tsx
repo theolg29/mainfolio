@@ -3,32 +3,59 @@ import Marquee from "@/components/ui/marquee";
 
 const projects = [
   {
-      name: "Ghz",
-      img: "/thumbnails/ghz.png",
+      name: "bleep",
+      img: "/thumbnails/bleep.png",
+      link: "/projects/bleep"
   },
   {
-      name: "linkdup",
-      img: "/thumbnails/linkdup.png",
+      name: "ct-seo",
+      img: "/thumbnails/ct-seo.png",
+      link: "/projects/ct-seo"
   },
   {
-      name: "omnivore",
-      img: "/thumbnails/omnivore.png",
+      name: "kership",
+      img: "/thumbnails/kership.png",
+      link: "/projects/kership"
+  },
+  {
+      name: "kult",
+      img: "/thumbnails/kult.png",
+      link: "/projects/kult"
+  },
+  {
+      name: "mer-projets",
+      img: "/thumbnails/mer-projets.png",
+      link: "/projects/mer-projets"
+  },
+  {
+      name: "onfido",
+      img: "/thumbnails/onfido.png",
+      link: "https://example.com/onfido"
   },
   {
       name: "pinfig",
       img: "/thumbnails/pinfig.png",
+      link: "https://example.com/pinfig"
   },
   {
-      name: "placeholder",
+      name: "portfolio",
       img: "/thumbnails/placeholder.png",
+      link: "/projects/portfolio"
   },
   {
       name: "revixio",
       img: "/thumbnails/revixio.png",
+      link: "https://example.com/revixio"
   },
   {
-      name: "scopeo",
-      img: "/thumbnails/scopeo.png",
+      name: "solame",
+      img: "/thumbnails/solame.png",
+      link: "/projects/solame"
+  },
+  {
+      name: "webdocmmi",
+      img: "/thumbnails/webdocmmi.png",
+      link: "/projects/webdocmmi"
   },
 ];
 
@@ -37,24 +64,25 @@ const row = projects.slice(0, projects.length / 2);
 const ReviewCard = ({
   img,
   name,
+  link,
 }: {
   img: string;
   name: string;
+  link: string;
 }) => {
   return (
-    <figure
-      className={cn(
-        "relative cursor-pointer overflow-hidden rounded-xl border p-4",
-        // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
-      )}
-    >
-      <div className="flex flex-row items-center gap-2">
-        <img  width="300" height="350" alt="" src={img} />
-      </div>
-    </figure>
+    <a href={link}>
+      <figure
+        className={cn(
+          "relative cursor-pointer overflow-hidden rounded-xl border p-4",
+          "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
+        )}
+      >
+        <div className="flex flex-row items-center gap-2">
+          <img className="rounded-[11px]" width="300" height="350" alt={name} src={img} />
+        </div>
+      </figure>
+    </a>
   );
 };
 
