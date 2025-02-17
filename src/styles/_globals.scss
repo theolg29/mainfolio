@@ -252,7 +252,7 @@ form {
 // Projects
 // ---------------
 
-// Contain Projects List & One Project
+// Projects List
 .projects-list ul {
   width: 100%;
   display: grid;
@@ -288,14 +288,15 @@ form {
 .tag {
   border: 1px solid vars.$border-stroke;
   padding: 4px 10px;
-  border-radius: 100px;
+  border-radius: 10px;
 }
 
+// Project Content
 .content-project {
   gap: 20px;
   margin: 0 auto;
   padding-top: 100px;
-  width: 60%;
+  width: 70%;
   .back {
     width: 100%;
     border-bottom: 1px solid vars.$border-stroke;

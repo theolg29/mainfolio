@@ -2,8 +2,9 @@
 title: "Bleep"
 description: "<desc>"
 pubDate: "<date>"
-heroImage: "<img-link>"
+heroImage: "/thumbnails/bleep.png"
 tags: ["Design", "UI/UX"]
+video: ""
 pin: true
 ---
 

@@ -30,13 +30,18 @@ const { Content } = await project.render();
             <img src={project.data.heroImage} alt={project.data.title} />
           )
         }
-        <h1>{project.data.title}</h1>
+        <h1 class="mb-2">{project.data.title}</h1>
         <div class="tags">
           {project.data.tags.map((tag) => <span class="tag">{tag}</span>)}
         </div>
         <section class="markdown flex flex-col gap-12 mt-12">
           <Content />
         </section>
+        {
+          project.data.video && (
+            <iframe width="560" height="315" src={project.data.video} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          )
+        }
       </article>
     </section>
   </section>

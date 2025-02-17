@@ -7,6 +7,7 @@ const projectsCollection = defineCollection({
     description: z.string(),
     pubDate: z.string(),
     heroImage: z.string(),
+    video: z.string(),
     tags: z.array(z.string()),
     pin: z.boolean(),
   }),

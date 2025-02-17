@@ -2,9 +2,10 @@
 title: "Kult"
 description: "<desc>"
 pubDate: "<date>"
-heroImage: "<img-link>"
+heroImage: "/thumbnails/kult.png"
 tags: ["Design", "UI/UX"]
-pin: true
+video: "https://www.youtube.com/embed/FP4s0_ICoNs?si=l07X4LBXJ53e-Uw9"
+pin: false
 ---
 
 <div>

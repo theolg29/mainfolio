@@ -1,9 +1,10 @@
 ---
-title: "Linkdup"
-description: "<desc>"
+title: "Mer & Projets"
+description: "<description>"
 pubDate: "<date>"
-heroImage: "<img-link>"
+heroImage: "/thumbnails/mer-projets.png"
 tags: ["Design", "UI/UX"]
+video: "https://www.youtube.com/embed/15Yz6o90snY?si=Bf7o_1xzbJaMpW4Y"
 pin: true
 ---
 

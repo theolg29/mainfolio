@@ -2,9 +2,10 @@
 title: "C&T"
 description: "<desc>"
 pubDate: "<date>"
-heroImage: "<img-link>"
+heroImage: "/thumbnails/ct-seo.png"
 tags: ["Design", "UI/UX"]
-pin: true
+video: ""
+pin: false
 ---
 
 <div>

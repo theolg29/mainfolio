@@ -1,10 +1,11 @@
 ---
-title: "Kership"
+title: "Solâme"
 description: "<desc>"
 pubDate: "<date>"
-heroImage: "<img-link>"
+heroImage: "/thumbnails/solame.png"
 tags: ["Design", "UI/UX"]
-pin: true
+video: "https://www.youtube.com/embed/fzfVwGjh8X4?si=RPTueYOGG2dH68Ki"
+pin: false
 ---
 
 <div>

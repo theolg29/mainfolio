@@ -2,9 +2,10 @@
 title: "Mon portfolio"
 description: "<desc>"
 pubDate: "<date>"
-heroImage: "<img-link>"
+heroImage: "/thumbnails/placeholder.png"
 tags: ["Design", "UI/UX"]
-pin: true
+video: ""
+pin: false
 ---
 
 <div>

@@ -2,9 +2,10 @@
 title: "Webdoc MMI"
 description: "<desc>"
 pubDate: "<date>"
-heroImage: "<img-link>"
+heroImage: "/thumbnails/webdocmmi.png"
 tags: ["Design", "UI/UX"]
-pin: true
+video: "https://www.youtube.com/embed/9JShxhLd5XY?si=5L4N5CA6aDlwiIHL"
+pin: false
 ---
 
 <div>

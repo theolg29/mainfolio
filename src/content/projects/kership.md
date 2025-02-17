@@ -2,8 +2,9 @@
 title: "Kership"
 description: "<desc>"
 pubDate: "<date>"
-heroImage: "<img-link>"
+heroImage: "/thumbnails/kership.png"
 tags: ["Design", "UI/UX"]
+video: "https://www.youtube.com/embed/lcWugc-rqvg?si=1gRkQehjd9HNKxrA"
 pin: true
 ---
 
