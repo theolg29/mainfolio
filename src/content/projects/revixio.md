@@ -5,6 +5,8 @@ pubDate: "<date>"
 heroImage: "/thumbnails/revixio.png"
 tags: ["Design", "UI/UX"]
 video: "https://www.youtube.com/embed/MIjEo5Llo08?si=NUgDXoJrDx1nOYHb"
+url: ""
+archive: ""
 pin: true
 ---
 

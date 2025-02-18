@@ -5,6 +5,8 @@ pubDate: "Jul 08 2022"
 heroImage: "/thumbnails/pinfig.png"
 tags: ["Design", "UI/UX"]
 video: "https://www.youtube.com/embed/uiAU8YbB52c?si=sj3tuok1wvEuiW5v"
+url: ""
+archive: ""
 pin: true
 ---
 

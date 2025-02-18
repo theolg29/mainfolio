@@ -5,6 +5,8 @@ pubDate: "<date>"
 heroImage: "/thumbnails/onfido.png"
 tags: ["Design", "UI/UX"]
 video: "https://www.youtube.com/embed/Zjs7eX0c80w?si=4DFvO_yd_-VvjQW9"
+url: ""
+archive: ""
 pin: true
 ---
 

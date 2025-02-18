@@ -5,6 +5,8 @@ pubDate: "<date>"
 heroImage: "/thumbnails/webdocmmi.png"
 tags: ["Design", "UI/UX"]
 video: "https://www.youtube.com/embed/9JShxhLd5XY?si=5L4N5CA6aDlwiIHL"
+url: "https://mmi.iut-lannion.fr/"
+archive: ""
 pin: false
 ---
 

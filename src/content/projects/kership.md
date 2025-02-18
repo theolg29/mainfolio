@@ -5,6 +5,8 @@ pubDate: "<date>"
 heroImage: "/thumbnails/kership.png"
 tags: ["Design", "UI/UX"]
 video: "https://www.youtube.com/embed/lcWugc-rqvg?si=1gRkQehjd9HNKxrA"
+url: "https://www.kership.com/"
+archive: "https://web.archive.org/web/20240822111829/https://www.kership.com/"
 pin: true
 ---
 

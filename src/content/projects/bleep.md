@@ -5,6 +5,8 @@ pubDate: "<date>"
 heroImage: "/thumbnails/bleep.png"
 tags: ["Design", "UI/UX"]
 video: ""
+url: ""
+archive: ""
 pin: true
 ---
 

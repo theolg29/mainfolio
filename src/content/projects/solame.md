@@ -5,6 +5,8 @@ pubDate: "<date>"
 heroImage: "/thumbnails/solame.png"
 tags: ["Design", "UI/UX"]
 video: "https://www.youtube.com/embed/fzfVwGjh8X4?si=RPTueYOGG2dH68Ki"
+url: "https://www.solame.vet/"
+archive: ""
 pin: false
 ---
 

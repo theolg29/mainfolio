@@ -5,6 +5,8 @@ pubDate: "<date>"
 heroImage: "/thumbnails/ct-seo.png"
 tags: ["Design", "UI/UX"]
 video: ""
+url: ""
+archive: ""
 pin: false
 ---
 
