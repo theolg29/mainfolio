@@ -2,37 +2,9 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (max-width: 576px) {
-  .projects-list ul {grid-template-columns: repeat(1, 1fr);}
-  
-  .main-nav {
-    display: none;
-  }
-  .mobile-nav {
-    z-index: 999;
-    display: block;
-    position: fixed;
-    bottom: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: vars.$white;
-    padding: 10px;
-  
-    a {
-      padding: 10px;
-      border: 1px solid vars.$border-stroke;
-      margin-right: -1px;
-      border-radius: vars.$rounded;
-  
-      &:hover {
-        background-color: #f8f8f8;
-      }
-  
-      img {
-        width: 20px;
-        height: 20px;
-        filter: brightness(0) saturate(100%) invert(0%) sepia(15%) saturate(3269%) hue-rotate(346deg) brightness(87%) contrast(75%); 
-      }
-    }
+  .projects-list ul {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 100px;
   }
 }
 
@@ -57,6 +29,46 @@
       text-align: start;
     }
   }
+
+.nav-wrapper {
+    header {
+      width: 100%;
+    }
+  }
+
+  .menu-icon {
+    position: relative; // Changé de fixed à relative
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    
+    img {
+      filter: brightness(0) saturate(100%) invert(46%) sepia(73%) saturate(0%) hue-rotate(175deg) brightness(87%) contrast(81%);
+    }
+  }
+
+  .nav-links {
+    position: absolute; // Changé de fixed à absolute
+    top: 100%; // Pour qu'il apparaisse juste en dessous de la navbar
+    left: 0;
+    display: none !important;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    
+    a {
+      border-top: 1px solid vars.$border-stroke;
+      border-bottom: 1px solid vars.$border-stroke;
+      border-left: none;
+      border-right: none;
+    }
+  }
+
+  .nav-links.active {
+    display: flex !important;
+  }
+
 
   // Pages
   .forma {width: 100% !important;}

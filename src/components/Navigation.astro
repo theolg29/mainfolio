@@ -6,28 +6,45 @@ import experienceIcon from "../assets/icons/experience.svg";
 import toolsIcon from "../assets/icons/tools.svg";
 import folderIcon from "../assets/icons/folder.svg";
 import contactIcon from "../assets/icons/contact.svg";
+import burgerIcon from "../assets/icons/burger.svg";
+import crossIcon from "../assets/icons/cross.svg";
 ---
 
 <header>
-    <div class="mobile-nav">
-      <nav class="flex justify-between items-center gap-5">
-        <a href="/#about"><Image src={userIcon} alt="User Icon" /></a>
-        <a href="/#formations"><Image src={graduationIcon} alt="Graduation Icon" /></a>
-        <a href="/#experiences"><Image src={experienceIcon} alt="Experience Icon" /></a>
-        <a href="/#competences"><Image src={toolsIcon} alt="Tools Icon" /></a>
-        <a href="/projects"><Image src={folderIcon} alt="Folder Icon" /></a>
-        <a href="/contact"><Image src={contactIcon} alt="Contact Icon" /></a>
-      </nav>
-    </div>
-
-    <div class="main-nav">
-      <nav class="flex justify-between items-center">
-        <a href="/#about">Qui suis-je ?</a>
-        <a href="/#formations">Formations</a>
-        <a href="/#experiences">Expériences</a>
-        <a href="/#competences">Compétences</a>
-        <a href="/projects">Projets</a>
-        <a href="/contact">Contact</a>
-      </nav>
-    </div>
+  <div class="main-nav">
+    <a class="menu-icon" id="menu-icon" href="javascript:void(0);">
+      <Image 
+        src={burgerIcon} 
+        alt="Menu" 
+        id="menu-icon-img"
+        data-burger={burgerIcon.src}
+        data-cross={crossIcon.src}
+      />
+    </a>
+    <nav class="nav-links flex" id="nav-links">
+      <a href="/#about">Qui suis-je ?</a>
+      <a href="/#formations">Formations</a>
+      <a href="/#experiences">Expériences</a>
+      <a href="/#competences">Compétences</a>
+      <a href="/projects">Projets</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
 </header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.getElementById('menu-icon');
+    const menuIconImg = document.getElementById('menu-icon-img');
+    const navLinks = document.getElementById('nav-links');
+
+    menuIcon.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+      if (navLinks.classList.contains('active')) {
+        menuIconImg.src = menuIconImg.dataset.cross;
+      } else {
+        menuIconImg.src = menuIconImg.dataset.burger;
+      }
+    });
+  });
+</script>

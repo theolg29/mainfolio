@@ -49,30 +49,29 @@ p {
 
 // Navigation
 .main-nav {
-  z-index: 999;
-  position: fixed;
+  position: sticky;
   top: 0;
-  width: 60%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: vars.$white;
-  margin-bottom: 50px;
+  width: 100%;
+  z-index: 999;
+  margin-bottom: 100px;
+  .menu-icon {display: none;}
   a {
+    background-color: vars.$white;
     text-align: center;
     display: block;
     width: 100%;
+    margin-bottom: -1px;
+    margin-left: -1px;
     padding: 20px 0px;
     border: 1px solid vars.$border-stroke;
     color: rgb(56, 55, 55, 0.6);
-    margin-bottom: 10px; // Added margin-bottom
+  }
+  a:last-child {
+    margin-right: -1px;
   }
   a:hover {
     background-color: #f8f8f8;
   }
-}
-
-.mobile-nav {
-  display: none;
 }
 
 footer {
