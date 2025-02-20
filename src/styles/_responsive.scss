@@ -34,6 +34,7 @@
   }
 
 
+
   .menu-icon {
     position: relative;
     display: flex !important;
@@ -92,6 +93,10 @@
   body {
     width: 100%;
     border: none;
+  }
+
+  .main-nav {
+    max-width: none;
   }
 
 }
