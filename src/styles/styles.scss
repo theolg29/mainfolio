@@ -199,6 +199,14 @@
     object-fit: contain;
   }
 
+  // Tools list
+  .uiux .list, .devweb .list, .gdp .list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  
+
   .flex-col {
     position: relative;
     width: 50px;

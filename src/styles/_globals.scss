@@ -8,7 +8,7 @@
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
-  scroll-padding-top: 50px;
+  scroll-padding-top: 90px;
 }
 
 body {
@@ -49,7 +49,7 @@ p {
 
 // Navigation
 .main-nav {
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 999;
@@ -112,6 +112,7 @@ body {
   border-right: 1px solid vars.$border-stroke;
   width: 60%;
   margin: 0 auto;
+  padding-top: 150px;
 }
 
 .container {
@@ -142,6 +143,10 @@ body {
       -webkit-text-fill-color: transparent;
     }
   }
+}
+
+.hero-section {
+  margin-top: 0px;
 }
 
 // ---------------
@@ -265,7 +270,7 @@ form {
 
   .thumbnail {
     width:  100%;
-    height: 100%;
+    height: auto;
     max-width: 430px;
     max-height: 300px;
     object-fit: cover;
@@ -295,8 +300,6 @@ form {
 .content-project {
   gap: 20px;
   margin: 0 auto;
-  padding-top: 100px;
-  width: 70%;
 
   // Back to projects
   .back {

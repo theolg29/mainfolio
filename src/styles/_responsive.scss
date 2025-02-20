@@ -1,14 +1,17 @@
 @use '_variables' as vars;
 
+// --------------------------------------
 // Small devices (landscape phones, 576px and up)
+// --------------------------------------
 @media (max-width: 576px) {
   .projects-list ul {
     grid-template-columns: repeat(1, 1fr);
-    gap: 100px;
   }
 }
 
+// --------------------------------------
 // Medium devices (tablets, 768px and up)
+// --------------------------------------
 @media (max-width: 768px) {
   
   // My custom tailwind classes
@@ -30,18 +33,15 @@
     }
   }
 
-.nav-wrapper {
-    header {
-      width: 100%;
-    }
-  }
 
   .menu-icon {
-    position: relative; // Changé de fixed à relative
+    position: relative;
     display: flex !important;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    margin: 0;
+    border-right: none !important;
+    border-left: none !important;
     
     img {
       filter: brightness(0) saturate(100%) invert(46%) sepia(73%) saturate(0%) hue-rotate(175deg) brightness(87%) contrast(81%);
@@ -49,14 +49,13 @@
   }
 
   .nav-links {
-    position: absolute; // Changé de fixed à absolute
-    top: 100%; // Pour qu'il apparaisse juste en dessous de la navbar
+    position: absolute;
+    top: 99%;
     left: 0;
     display: none !important;
     flex-direction: column;
     width: 100%;
     background-color: white;
-    
     a {
       border-top: 1px solid vars.$border-stroke;
       border-bottom: 1px solid vars.$border-stroke;
@@ -86,7 +85,9 @@
 
 }
 
+// --------------------------------------
 // Large devices (desktops, 992px and up)
+// --------------------------------------
 @media (max-width: 992px) {
   body {
     width: 100%;

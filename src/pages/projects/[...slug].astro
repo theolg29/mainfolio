@@ -43,10 +43,10 @@ const { Content } = await project.render();
         </section>
         {
           project.data.video && (
-            <iframe width="560" height="315" src={project.data.video} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="100%" height="315" src={project.data.video} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           )
         }
-        <div class="flex justify-between mt-12">
+        <div class="flex flex-col items-start gap-5 mt-12">
           {
             project.data.url && (
             <Button id="project" target="_blank" theme="black-button" link={project.data.url} text={`Découvrir le site ${project.data.title} après`} icon={extIcon.src} />
@@ -58,7 +58,6 @@ const { Content } = await project.render();
             )
           }
         </div>
-
       </article>
     </section>
   </section>
