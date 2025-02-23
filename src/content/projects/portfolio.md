@@ -2,8 +2,8 @@
 title: "Mon portfolio"
 description: "<desc>"
 pubDate: "<date>"
-heroImage: "/thumbnails/placeholder.png"
-tags: ["Design", "UI/UX"]
+heroImage: "/thumbnails/portfolio.png"
+tags: ["Design", "Développement"]
 video: ""
 url: "https://theolegourrierec.fr/"
 archive: "https://web.archive.org/web/20241219084819/https://theolegourrierec.fr/"

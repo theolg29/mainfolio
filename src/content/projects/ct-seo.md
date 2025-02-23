@@ -3,40 +3,28 @@ title: "C&T"
 description: "<desc>"
 pubDate: "<date>"
 heroImage: "/thumbnails/ct-seo.png"
-tags: ["Design", "UI/UX"]
+tags: ["Rédaction", "SEO"]
 video: ""
 url: ""
 archive: ""
 pin: false
 ---
 
-<div>
-    <h2>Contexte</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
+## Contexte
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-<div>
-    <h2>Objectifs</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
+## Objectifs
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-<div>
-    <h2>Compétences mobilisés</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
+## Compétences mobilisés
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-<div>
-    <h2>Logiciels utilisé</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
+## Logiciels utilisé
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
+## Liens utiles
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-<div>
-    <h2>Liens utiles</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
-
-<div>
-    <h2>Galerie</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
+## Galerie
+![ct Image 1](src/assets/projects/ct/ct1.png)
+![ct Image 2](src/assets/projects/ct/ct2.png)

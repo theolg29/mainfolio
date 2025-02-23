@@ -336,7 +336,23 @@ form {
       border-bottom: 1px solid vars.$border-stroke;
       margin-bottom: 15px;
     }
+
+    p {
+      margin-bottom: 50px;
+    }
     
+    #galerie {
+      margin-bottom: 15px;
+    }
+
+    img {
+      border-radius: vars.$rounded;
+      border: 1px solid vars.$border-stroke;
+      margin-bottom: 15px;
+      width: 100%;
+      height: auto;
+    }
+
   }
 
   .head {
@@ -352,7 +368,6 @@ form {
 .legal {
 
   h1 {
-    margin-top: 100px;
     margin-bottom: 50px;
   }
 

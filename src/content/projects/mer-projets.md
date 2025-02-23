@@ -10,33 +10,21 @@ archive: "https://web.archive.org/web/20240825224433/https://www.mer-projets.com
 pin: true
 ---
 
-<div>
-    <h2>Contexte</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
+## Contexte
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-<div>
-    <h2>Objectifs</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
+## Objectifs
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-<div>
-    <h2>Compétences mobilisés</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
+## Compétences mobilisés
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-<div>
-    <h2>Logiciels utilisé</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
+## Logiciels utilisé
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
+## Liens utiles
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
-<div>
-    <h2>Liens utiles</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
-
-<div>
-    <h2>Galerie</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-</div>
+## Galerie
+![mer-projets Image 1](src/assets/projects/mer-projets/merprojets1.png)
+![mer-projets Image 2](src/assets/projects/mer-projets/merprojets2.png)
