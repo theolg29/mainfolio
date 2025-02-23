@@ -1,0 +1,89 @@
+---
+// Basics
+import MainLayout from "../layouts/MainLayout.astro";
+
+// Components
+import Button from "@/components/Button.astro";
+
+// Assets
+import { Image } from "astro:assets";
+
+// reCAPTCHA
+const RECAPTCHA_SITE_KEY = import.meta.env.RECAPTCHA_SITE_KEY;
+---
+
+<MainLayout
+  title="Contact - Théo Le Gourrierec"
+  description="Contactez Théo Le Gourrierec, Designer & Développeur Web"
+>
+  <section class="container">
+    <section class="content hero-section">
+      <div class="head">
+        <h1>Me contacter</h1>
+        <p>C’est simple, il suffit de remplir le formulaire juste en dessous</p>
+      </div>
+      <form action="" id="contact-form">
+        <iframe
+          data-tally-src="https://tally.so/embed/mKWJQA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+          loading="lazy"
+          width="100%"
+          title="Me contacter"></iframe>
+        
+        <!-- reCAPTCHA v3 -->
+        <script src={`https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`}></script>
+        
+        <script is:inline define:vars={{RECAPTCHA_SITE_KEY}}>
+          // Tally Form
+          function loadTally() {
+            var d = document,
+              w = "https://tally.so/widgets/embed.js",
+              v = function() {
+                if (typeof Tally !== "undefined") {
+                  Tally.loadEmbeds();
+                } else {
+                  d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e) {
+                    e.src = e.dataset.tallySrc;
+                  });
+                }
+              };
+            
+            if (typeof Tally !== "undefined") v();
+            else if (d.querySelector('script[src="' + w + '"]') == null) {
+              var s = d.createElement("script");
+              s.src = w;
+              s.onload = v;
+              s.onerror = v;
+              d.body.appendChild(s);
+            }
+          }
+
+          // reCAPTCHA
+          grecaptcha.ready(function() {
+            grecaptcha.execute(RECAPTCHA_SITE_KEY, {action: 'load_form'})
+              .then(function(token) {
+                loadTally();
+              });
+          });
+        </script>
+      </form>
+    </section>
+    <section class="content">
+    <h2 class="mb-6">Ou réserver un appel</h2>
+    <!-- Cal inline embed code begins -->
+    <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline"></div>
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "decouverte", {origin:"https://cal.com"});
+
+    Cal.ns.decouverte("inline", {
+      elementOrSelector:"#my-cal-inline",
+      config: {"layout":"month_view"},
+      calLink: "theolg/decouverte",
+    });
+
+    Cal.ns.decouverte("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
+  <!-- Cal inline embed code ends -->
+  </section>
+  </section>
+</MainLayout>

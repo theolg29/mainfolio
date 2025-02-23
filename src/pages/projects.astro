@@ -1,0 +1,52 @@
+---
+// Basics
+import MainLayout from "../layouts/MainLayout.astro";
+
+// Components
+import Button from "@/components/Button.astro";
+
+// Assets
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+const projects = await getCollection("projects");
+import arrowRight from '@/assets/icons/arrow-right.svg';
+---
+
+<MainLayout title="Mes Projets">
+  <section class="container">
+    <section class="content hero-section">
+      <div class="head">
+        <h1>Mes Projets</h1>
+        <p>C'est quand même mieux du concret</p>
+      </div>
+
+      <!-- Map des projets -->
+      <div class="projects-list">
+        <ul>
+          {
+            projects.map((project) => (
+            <li class="project-card">
+            <a href={`/projects/${project.slug}`}>
+              <img class="thumbnail" src={project.data.heroImage} alt={project.data.title} />
+              <div class="flex justify-between mt-3">
+                <h2>{project.data.title}</h2>
+                <div class="tags">
+                  {project.data.tags.map((tag) => (
+                    <span class="tag">{tag}</span>
+                  ))}
+                </div>
+                <Button
+                  theme="black-button"
+                  link={`/projects/${project.slug}`}
+                  icon={arrowRight.src} 
+                />
+              </div>
+            </a>
+          </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+  </section>
+</MainLayout>

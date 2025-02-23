@@ -1,0 +1,102 @@
+@use '_variables' as vars;
+
+// --------------------------------------
+// Small devices (landscape phones, 576px and up)
+// --------------------------------------
+@media (max-width: 576px) {
+  .projects-list ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+// --------------------------------------
+// Medium devices (tablets, 768px and up)
+// --------------------------------------
+@media (max-width: 768px) {
+  
+  // My custom tailwind classes
+  .me-col {flex-direction: column;}
+
+  // Globals
+  h1 {font-size: 3em;}
+  h2 {font-size: 2.5em;}
+
+  form {width: 100%;}
+
+  .content {
+    align-items: start;
+
+    .head h1, 
+    .head h2,
+    .head p {
+      text-align: start;
+    }
+  }
+
+
+
+  .menu-icon {
+    position: relative;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    border-right: none !important;
+    border-left: none !important;
+    
+    img {
+      filter: brightness(0) saturate(100%) invert(46%) sepia(73%) saturate(0%) hue-rotate(175deg) brightness(87%) contrast(81%);
+    }
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 99%;
+    left: 0;
+    display: none !important;
+    flex-direction: column;
+    width: 100%;
+    background-color: white;
+    a {
+      border-top: 1px solid vars.$border-stroke;
+      border-bottom: 1px solid vars.$border-stroke;
+      border-left: none;
+      border-right: none;
+    }
+  }
+
+  .nav-links.active {
+    display: flex !important;
+  }
+
+
+  // Pages
+  .forma {width: 100% !important;}
+
+  .tool-container {
+    h3 {font-size: 1.4em;}
+    img {
+      margin-bottom: 10px;
+      width: 30px !important;
+      height: 30px !important;
+    }
+  }
+
+  .skill-container {grid-template-columns: repeat(1, 1fr) !important;}
+
+}
+
+// --------------------------------------
+// Large devices (desktops, 992px and up)
+// --------------------------------------
+@media (max-width: 992px) {
+  body {
+    width: 100%;
+    border: none;
+  }
+
+  .main-nav {
+    max-width: none;
+  }
+
+}

@@ -1,0 +1,44 @@
+---
+// Components
+import Button from "@/components/Button.astro";
+import Marquee from "@/components/Marquee";
+import { ShimmerButton } from "@/components/ui/shimmer-button";
+import AvailabilityIndicator from "@/components/AvailabilityIndicator";
+
+// Assets
+import { Image } from "astro:assets";
+import ProfilePicture from "@/assets/images/profile-picture.png";
+import Map from "@/assets/images/map.png";
+import downloadIcon from "@/assets/icons/dl-icon.svg";
+---
+
+<div class="head flex items-center">
+  <Image src={ProfilePicture} alt="Photo de moi" />
+  <div class="ml-4">
+    <AvailabilityIndicator client:load />
+    <p>Théo Le Gourrierec</p>
+    <p><em>20 ans</em></p>
+  </div>
+</div>
+
+<h1 class="mt-8">
+  <!-- <Image class="map" src={Map} alt="Ma localisation" /> -->
+  Enchanté, je suis Théo, Designer & Développeur basé en Bretagne 
+</h1>
+
+<p class="mt-2">
+  Passionné par le Design UI/UX et le développement web, je crée des sites attrayants et performants.
+</p>
+
+<div class="flex items-start flex-col md:flex-row gap-5 mt-6">
+  <ShimmerButton client:load className="shimmer-black-button">
+    <a href="/contact">
+    Contactez-moi
+    </a>
+  </ShimmerButton>
+  <Button theme="white-button" link="#about" text="Découvrir mon portfolio" />
+</div>
+
+<div class="mt-8">
+  <Marquee />
+</div>

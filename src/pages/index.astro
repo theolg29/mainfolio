@@ -1,11 +1,69 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+// Basics
+import MainLayout from "../layouts/MainLayout.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Sections
+import HeroSection from "@/components/sections/HeroSection.astro";
+import AboutSection from "@/components/sections/AboutSection.astro";
+import FormationSection from "@/components/sections/FormationSection.astro";
+import ProjectsSection from "@/components/sections/ProjectsSection.astro";
+import ExeprienceSection from "@/components/sections/ExperienceSection.astro";
+import CompetenceSection from "@/components/sections/CompetenceSection.astro";
+import ToolsSection from "@/components/sections/ToolsSection.astro";
+
+// Components
+import { TextReveal } from "@/components/ui/text-reveal";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<MainLayout title="Portfolio - Théo Le Gourrierec" description="Portfolio de Théo Le Gourrierec, Designer & Développeur Web">
+
+
+  <section class="container">
+
+    <!-- Hero Section -->
+    <section>
+      <HeroSection />
+    </section>
+
+    <!-- About Section -->
+    <section class="content aboutmme-section" id="about">
+      <AboutSection />
+    </section>
+
+    <!-- Formation Section -->
+    <section class="content" id="formations">
+      <FormationSection />
+    </section>
+
+  <!-- Experience Section -->
+  <section class="content" id="experiences">
+    <ExeprienceSection />
+  </section>
+
+     <!-- Projets Section -->
+     <section class="content projects" id="projets">
+      <ProjectsSection />
+    </section>
+
+    <!-- Scroll Reveal - Outils -->
+    <div class="outil-reveal z-10 flex min-h-64 items-center justify-center">
+      <TextReveal client:visible text="Parce que le web regorge d'outils fantastiques, voici ceux que j'utilise" />
+    </div>
+
+    <!-- Outils Section -->
+    <section class="content" id="outils">
+      <ToolsSection />
+    </section>
+
+    <!-- Competences Section -->
+    <section class="content" id="competences">
+      <CompetenceSection />
+    </section>
+
+    <!-- Scroll Reveal - Mon Objectif -->
+    <div class="goal-reveal z-10 flex min-h-64 items-center justify-center">
+      <TextReveal client:visible text="Mon objectif est de créer des sites web modernes, rapides et optimisés pour le referencement." />
+    </div>
+
+  </section>
+</MainLayout>

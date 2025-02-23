@@ -1,0 +1,48 @@
+---
+// Components
+import Button from "../Button.astro";
+
+// Assets
+import { Image } from "astro:assets";
+import ProfilePicture from "@/assets/images/profile-picture.png";
+import extIcon from "@/assets/icons/arrow-ext.svg"
+import edeclicLogo from "@/assets/logo/edeclic.png";
+---
+
+<script>
+    import { initExpandText } from '../scripts/expandText.js';
+    document.addEventListener('DOMContentLoaded', initExpandText);
+</script>
+
+<div class="head">
+    <h2>Expériences</h2>
+    <p>Ou j'ai pu appliquer mes compétences</p>
+</div>
+  
+<div class="flex flex-col align-center gap-12 mb-12">
+
+    <!-- Alternance - edeclic -->
+    <!-- BAC STI2D -->
+    <div class="forma flex gap-5">
+        <div class="left flex flex-col items-center">
+            <Image src={edeclicLogo} alt="Photo de Théo Legourrierec" />
+            <div class="line mt-4"></div>
+        </div>
+        <div class="right">
+            <p class="name">Alternant Développeur Web chez e-declic</p>
+            <p class="year">Auray - 2023 à 2025</p>
+            <div class="text-container">
+                <p class="text mt-4 truncated">En lien donc avec MMI et le parcours Développement web et dispositifs interactifs, j'ai pu décrocher une alternance chez e-declic, une agence située à Auray dans le sud du Morbihan et spécialisée dans la création de sites web à forte visibilité. L'agence réalise à la fois des sites vitrines, des sites e-commerce et également des logiciels métiers sur mesure.<br><br>
+                Dans l'agence, mes missions sont assez variées. Je suis capable de réaliser en autonomie des sites sous WordPress Elementor, gérer la mise en place de l'environnement de pré-production et de la mise en ligne à l'aide de Docker, parfois la réalisation de maquettes UI/UX, de la maintenance, de l'intégration sur des sites e-commerce avec Prestashop et j'interviens également dans la réalisation des logiciels métiers.<br><br>
+                Ma toute première mission était la mise à jour d'une galerie photos sur WordPress, pas très compliquée mais cela m'a permis de me remettre dans WordPress car je vais beaucoup l'utiliser dans le futur.<br><br>
+                Ma polyvalence avec MMI m'a permis la réalisation en toute autonomie de Mer & Projets, une refonte de site vitrine avec WordPress Elementor. Je suis donc passé par la mise en place de l'environnement, la recherche de l'existant, la création de wireframes puis des maquettes, l'intégration du site avec la gestion du français et anglais, puis la mise en ligne. Cela a permis au client d'avoir un site plus rapide, simple à gérer, et surtout aux goûts du jour.<br><br>
+                L'expérience en entreprise m'a permis de découvrir son fonctionnement (la gestion de projet, la collaboration), les bonnes pratiques à avoir sur un site web afin qu'il soit le plus optimisé.</p>
+                <button class="read-more-btn">Lire plus</button>
+            </div>
+            <Button id="edeclic" target="_blank" theme="black-button" link="https://mmi.iut-lannion.fr/" text="Découvrir l'agence" icon={extIcon.src} />
+        </div>
+    </div>
+
+    <!-- BAC STI2D -->
+
+</div>

@@ -1,0 +1,10 @@
+---
+const { id, theme, link, text, icon, target = "_self" } = Astro.props;
+---
+
+<button>
+  <a id={id} class={`flex gap-2 ${theme}`} href={link} target={target}>
+    {icon && <img class="icon" src={icon} alt="icon" class="icon" />}
+    {text}
+  </a>
+</button>
