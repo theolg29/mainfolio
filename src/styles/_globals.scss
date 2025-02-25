@@ -58,7 +58,13 @@ p {
   margin: 0;
   padding: 0 1px;
   margin-bottom: 100px;
-  .menu-icon {display: none;}
+  .menu-icon {
+    display: none;
+    background-color: vars.$white;
+    padding: 20px 0;
+    width: 100%;
+    border: 1px solid vars.$border-stroke;
+  }
   a {
     background-color: vars.$white;
     text-align: center;
