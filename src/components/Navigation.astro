@@ -1,18 +1,12 @@
 ---
 import { Image } from "astro:assets";
-import userIcon from "../assets/icons/user.svg";
-import graduationIcon from "../assets/icons/graduation.svg";
-import experienceIcon from "../assets/icons/experience.svg";
-import toolsIcon from "../assets/icons/tools.svg";
-import folderIcon from "../assets/icons/folder.svg";
-import contactIcon from "../assets/icons/contact.svg";
 import burgerIcon from "../assets/icons/burger.svg";
 import crossIcon from "../assets/icons/cross.svg";
 ---
 
 <header>
   <div class="main-nav">
-    <a class="menu-icon" id="menu-icon" href="javascript:void(0);">
+    <button class="menu-icon" id="menu-icon">
       <Image 
         src={burgerIcon} 
         alt="Menu" 
@@ -20,7 +14,7 @@ import crossIcon from "../assets/icons/cross.svg";
         data-burger={burgerIcon.src}
         data-cross={crossIcon.src}
       />
-    </a>
+    </button>
     <nav class="nav-links flex" id="nav-links">
       <a href="/#about">Qui suis-je ?</a>
       <a href="/#formations">Formations</a>

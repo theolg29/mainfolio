@@ -36,6 +36,7 @@
 
 
   .menu-icon {
+
     position: relative;
     display: flex !important;
     justify-content: center;
@@ -43,9 +44,11 @@
     margin: 0;
     border-right: none !important;
     border-left: none !important;
-    
     img {
       filter: brightness(0) saturate(100%) invert(46%) sepia(73%) saturate(0%) hue-rotate(175deg) brightness(87%) contrast(81%);
+    }
+    &:hover {
+      background-color: #f8f8f8;
     }
   }
 
