@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  cursor: url('/home/theo/Documents/iut-lannion/mainfolio/src/assets/icons/cursor.svg'), auto;
+  cursor: url('/src/assets/icons/cursor.svg'), auto;
 }
 
 h1 {
@@ -74,7 +74,7 @@ p {
     margin-left: -1px;
     padding: 20px 0px;
     border: 1px solid vars.$border-stroke;
-    color: rgb(56, 55, 55, 0.6);
+    color: vars.$text;
   }
   a:last-child {
     margin-right: -1px;
@@ -241,6 +241,8 @@ form {
 }
 .grecaptcha-badge {
   left: 0 !important;
+  display: none;
+
 }
 
 .bottom-action {
@@ -328,6 +330,7 @@ form {
   // Image
   .featured {
     width: 100%;
+    height: auto;
     border-radius: vars.$rounded;
     border: 1px solid vars.$border-stroke;
     margin-bottom: 10px;
