@@ -7,6 +7,8 @@ import Button from "@/components/Button.astro";
 
 // Assets
 import { Image } from "astro:assets";
+import LinkedinIcon from "@/assets/icons/linkedin.svg";
+import GithubIcon from "@/assets/icons/github.svg";
 
 // reCAPTCHA
 const RECAPTCHA_SITE_KEY = import.meta.env.RECAPTCHA_SITE_KEY;
@@ -20,7 +22,15 @@ const RECAPTCHA_SITE_KEY = import.meta.env.RECAPTCHA_SITE_KEY;
     <section class="content hero-section">
       <div class="head">
         <h1>Me contacter</h1>
-        <p>C’est simple, il suffit de remplir le formulaire juste en dessous</p>
+        <p>C’est simple, il suffit de remplir le formulaire juste en dessous <br> Mon mail : <a href="mailto:theo.legourrierec@gmail.com">theo.legourrierec@gmail.com</a></p>
+        <div class="rezo mt-5 flex justify-center gap-5">
+          <a href="https://www.linkedin.com/in/theolegourrierec/" target="_blank">
+            <Image src={LinkedinIcon} alt="Icône LinkedIn" />
+          </a>
+          <a href="https://github.com/theolg29" target="_blank">
+            <Image src={GithubIcon} alt="Icône GitHub" />
+          </a>
+        </div>
       </div>
       <form action="" id="contact-form">
         <iframe
@@ -28,43 +38,7 @@ const RECAPTCHA_SITE_KEY = import.meta.env.RECAPTCHA_SITE_KEY;
           loading="lazy"
           width="100%"
           title="Me contacter"></iframe>
-        
-        <!-- reCAPTCHA v3 -->
-        <script src={`https://www.google.com/recaptcha/api.js?render=${RECAPTCHA_SITE_KEY}`}></script>
-        
-        <script is:inline define:vars={{RECAPTCHA_SITE_KEY}}>
-          // Tally Form
-          function loadTally() {
-            var d = document,
-              w = "https://tally.so/widgets/embed.js",
-              v = function() {
-                if (typeof Tally !== "undefined") {
-                  Tally.loadEmbeds();
-                } else {
-                  d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e) {
-                    e.src = e.dataset.tallySrc;
-                  });
-                }
-              };
-            
-            if (typeof Tally !== "undefined") v();
-            else if (d.querySelector('script[src="' + w + '"]') == null) {
-              var s = d.createElement("script");
-              s.src = w;
-              s.onload = v;
-              s.onerror = v;
-              d.body.appendChild(s);
-            }
-          }
-
-          // reCAPTCHA
-          grecaptcha.ready(function() {
-            grecaptcha.execute(RECAPTCHA_SITE_KEY, {action: 'load_form'})
-              .then(function(token) {
-                loadTally();
-              });
-          });
-        </script>
+          <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
       </form>
     </section>
     <section class="content">

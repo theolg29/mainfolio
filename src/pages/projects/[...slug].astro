@@ -34,10 +34,16 @@ const { Content } = await project.render();
             <img class="featured" src={project.data.heroImage} alt={project.data.title} />
           )
         }
-        <h1 class="mt-2 mb-3">{project.data.title}</h1>
+        <h1 class="mt-2">{project.data.title}</h1>
+        {
+          project.data.pubDate && (
+            <p class="date mb-3">{project.data.pubDate}</p>
+          )
+        }
         <div class="tags">
           {project.data.tags.map((tag) => <span class="tag">{tag}</span>)}
         </div>
+
         <section class="markdown flex flex-col mt-12">
           <Content />
         </section>

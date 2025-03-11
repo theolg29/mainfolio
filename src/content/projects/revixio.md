@@ -1,7 +1,7 @@
 ---
 title: "Revixio"
 description: "Une platforme web permetant de centraliser les révisions"
-pubDate: "<date>"
+pubDate: "Décembre 2024"
 heroImage: "/thumbnails/revixio.png"
 tags: ["Design", "UI/UX"]
 video: "https://www.youtube.com/embed/MIjEo5Llo08?si=NUgDXoJrDx1nOYHb"
@@ -10,21 +10,25 @@ archive: ""
 pin: true
 ---
 
-## Contexte
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+## Contexte :
+Dans le cadre d'un projet personnel, mon but était de réaliser une interface d'une application web permettant de centraliser tous les outils de révision pour les étudiants. Cela comprenait un dashboard, un chat, un système de flashcard et plus encore. L'application fonctionnait par ressource/matière, et chacune de celles-ci avait du contenu différent.
 
-## Objectifs
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+## Tâches :
+- Conception d'une maquette UI/UX  
+- Prototypage interactif  
 
-## Compétences mobilisés
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+## Résultats obtenus :  
+- Une maquette comprenant différentes pages  
+- Prototype interactif  
+- Un design moderne et facile à comprendre  
 
-## Logiciels utilisé
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+## Logiciels utilisés :  
+- Figma  
 
-## Liens utiles
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+## Réalisé par :  
+- Théo Le Gourrierec  
+
 
 ## Galerie
-![revixio Image 1](src/assets/projects/revixio/revixio1.png)
-![revixio Image 2](src/assets/projects/revixio/revixio2.png)
+![Capture d'écran de la maquette Revixio](src/assets/projects/revixio/revixio1.png)
+![Capture d'écran de la maquette Revixio](src/assets/projects/revixio/revixio2.png)
