@@ -100,7 +100,6 @@
 
 // ---- AboutMe Section ----
 .picture-card {
-  transform: rotate(-5deg);
   padding: 20px;
   background-color: vars.$white;
   height: fit-content;
@@ -291,7 +290,12 @@
 // ---------------
 // Contact Page
 // ---------------
-
+.rezo img {
+  width: 25px;
+  height: auto;
+  border-radius: 0;
+  filter: brightness(0) saturate(100%) invert(0%) sepia(36%) saturate(89%) hue-rotate(78deg) brightness(119%) contrast(75%);
+}
 
 // ---------------
 // 404 Page

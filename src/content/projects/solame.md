@@ -1,7 +1,7 @@
 ---
 title: "Solâme"
 description: "<desc>"
-pubDate: "<date>"
+pubDate: "Février 2024"
 heroImage: "/thumbnails/solame.png"
 tags: ["Design", "UI/UX"]
 video: "https://www.youtube.com/embed/fzfVwGjh8X4?si=RPTueYOGG2dH68Ki"
@@ -10,21 +10,25 @@ archive: ""
 pin: false
 ---
 
-## Contexte
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+## Contexte :
+Dans le cadre de mon alternance, je me suis occupé de l'intégration du site internet Solâme qui propose des services d'accompagnement pour les animaux en fin de vie.
 
-## Objectifs
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+## Tâches :
+- Intégration d'une maquette sur WordPress Elementor  
 
-## Compétences mobilisés
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+## Actions réalisées :  
+Après avoir reçu la maquette finale, je me suis occupé de l'intégration du site WordPress Elementor. Le problème que j'ai rencontré dans cette création est le positionnement des éléments externes. Pour régler cela, j'ai utilisé la position absolute, solution assez contraignante sur les différentes tailles d'écran. Une fois l'intégration faite, j'ai également créé différents templates à intégrer facilement pour que la cliente puisse gérer son site en totale autonomie.
 
-## Logiciels utilisé
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+## Résultats obtenus :  
+- Un site facile à maintenir pour la cliente  
 
-## Liens utiles
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+## Logiciels utilisés :  
+- WordPress avec Elementor  
+
+## Réalisé par :  
+- <a href="https://www.e-declic.com/" target="_blank">e-declic</a>  
+- Théo Le Gourrierec  
 
 ## Galerie
-![solame Image 1](src/assets/projects/solame/solame1.png)
-![solame Image 2](src/assets/projects/solame/solame2.png)
+![Capture d'écran du site Solâme](src/assets/projects/solame/solame1.png)
+![Capture d'écran du site Solâme](src/assets/projects/solame/solame2.png)

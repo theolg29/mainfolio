@@ -9,9 +9,6 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
-}
-
-body {
   cursor: url('/src/assets/icons/cursor.svg'), auto;
 }
 
@@ -151,6 +148,9 @@ body {
       background: vars.$gradient;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   }
 }
@@ -336,6 +336,10 @@ form {
     margin-bottom: 10px;
   }
 
+  .date {
+    font-style: italic;
+  }
+
   // Markdown content
   .markdown {
     h2 {
@@ -360,6 +364,21 @@ form {
       margin-bottom: 15px;
       width: 100%;
       height: auto;
+    }
+
+    ul {
+      list-style: disc;
+      margin-left: 20px;
+      margin-bottom: 50px;
+
+      li {
+        color: vars.$text;
+      }
+
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
   }

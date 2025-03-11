@@ -1,7 +1,7 @@
 ---
 title: "Kult"
 description: "<desc>"
-pubDate: "<date>"
+pubDate: "Novembre 2023"
 heroImage: "/thumbnails/kult.png"
 tags: ["Design", "UI/UX"]
 video: "https://www.youtube.com/embed/FP4s0_ICoNs?si=l07X4LBXJ53e-Uw9"
@@ -10,21 +10,24 @@ archive: ""
 pin: false
 ---
 
-## Contexte
-Lorem ipsum dolor sit amet, consekultetur adipiscing elit.
+## Contexte :
+Dans le cadre d'un projet en MMI, notre but, à deux, était de centraliser sur une application mobile toutes les activités culturelles du Trégor.
 
-## Objekultifs
-Lorem ipsum dolor sit amet, consekultetur adipiscing elit.
+## Tâches :
+- Recherche de l'existant  
+- Conception UI/UX d'une application mobile  
 
-## Compétences mobilisés
-Lorem ipsum dolor sit amet, consekultetur adipiscing elit.
+## Résultats obtenus :
+- Design d'une application mobile  
 
-## Logiciels utilisé
-Lorem ipsum dolor sit amet, consekultetur adipiscing elit.
+## Logiciels utilisés :
+- Figma  
 
-## Liens utiles
-Lorem ipsum dolor sit amet, consekultetur adipiscing elit.
+## Réalisé par :
+- Théo Le Gourrierec  
+- <a href="https://www.colinlallauret.fr/" target="_blank">Colin Lallauret</a> 
+
 
 ## Galerie
-![kult Image 1](src/assets/projects/kult/kult1.png)
-![kult Image 2](src/assets/projects/kult/kult2.png)
+![Captures d'écran de l'application Kult](src/assets/projects/kult/kult1.png)
+![Captures d'écran de l'application Kult](src/assets/projects/kult/kult2.png)
