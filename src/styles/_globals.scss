@@ -28,6 +28,14 @@ h2 {
   line-height: 110%;
 }
 
+h3 {
+  font-family: vars.$bricolage;
+  font-size: 2em;
+  color: vars.$black;
+  font-weight: bold;
+  line-height: 110%;
+}
+
 p {
   font-family: vars.$satoshi;
   font-size: 1.1em;
@@ -89,6 +97,7 @@ footer {
   color: vars.$white;
 
   h3 {
+    color: vars.$white;
     font-family: vars.$bricolage;
     font-size: 3em;
     font-weight: 700;
@@ -195,7 +204,6 @@ body {
 
 #mmi {
   flex-direction: row-reverse;
-  margin-top: 10px;
   background: #A64288;
   border: 1px solid #811264;
   box-shadow: inset 0 2px 0px 0px rgba(155, 155, 155, 0.5), inset 0 -5px 4px 0px rgba(129, 18, 100, 0.5);
@@ -207,7 +215,6 @@ body {
 
 #sti {
   flex-direction: row-reverse;
-  margin-top: 10px;
   box-shadow: inset 0 2px 0px 0px rgba(155, 155, 155, 0.5), inset 0 -5px 4px 0px rgba(24, 24, 24, 0.5);
   transition: 200ms ease;
   &:hover {
@@ -217,7 +224,6 @@ body {
 
 #edeclic {
   flex-direction: row-reverse;
-  margin-top: 10px;
   background: #2DEFE7;
   border: 1px solid #3fcfcb;
   box-shadow: inset 0 2px 0px 0px rgba(255, 255, 255, 0.5), inset 0 -5px 4px 0px rgba(63, 207, 203, 0.5);
@@ -290,8 +296,7 @@ form {
 
   }
 
-  h2 {
-    font-size: 2em;
+  h3 {
     margin-bottom: 10px;
   }
 }

@@ -7,7 +7,6 @@ import { SparklesText } from "@/components/ui/sparkles-text";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 const projects = await getCollection("projects");
-import ProfilePicture from "@/assets/images/profile-picture.png";
 import arrowRight from '../../assets/icons/arrow-right.svg';
 const pinnedProjects = projects.filter((project) => project.data.pin);
 

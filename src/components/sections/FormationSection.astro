@@ -4,7 +4,6 @@ import Button from "../Button.astro";
 
 // Assets
 import { Image } from "astro:assets";
-import ProfilePicture from "@/assets/images/profile-picture.png";
 import extIcon from "@/assets/icons/arrow-ext.svg"
 import mmiLogo from "@/assets/logo/logo-mmi.png";
 import stiLogo from "@/assets/logo/logo-sti.png";
@@ -40,7 +39,9 @@ import stiLogo from "@/assets/logo/logo-sti.png";
                 </p>
                 <button class="read-more-btn">Lire plus</button>
             </div>
-            <Button id="mmi" target="_blank" theme="black-button" link="https://iut-lannion.univ-rennes.fr/metiers-du-multimedia-et-de-linternet" text="Découvrir le BUT MMI" icon={extIcon.src} />
+            <div class="mt-3">
+                <Button id="mmi" target="_blank" theme="black-button" link="https://iut-lannion.univ-rennes.fr/metiers-du-multimedia-et-de-linternet" text="Découvrir le BUT MMI" icon={extIcon.src} />
+            </div>
         </div>
     </div>
 
@@ -60,8 +61,9 @@ import stiLogo from "@/assets/logo/logo-sti.png";
                 Pendant ce bac STI2D, je découvre le Design UI/UX. Ne sachant pas trop où aller dans mes études supérieures, je découvre le BUT MMI, une formation polyvalente avec des domaines variés qui me permettrait de découvrir ce que je souhaite exercer plus tard. Mais deux domaines m'attirent particulièrement : le Design UI/UX ainsi que le développement Web.</p>
                 <button class="read-more-btn">Lire plus</button>
             </div>
-            <Button id="sti" target="_blank" theme="black-button" link="https://lycee-serusier-carhaix.ac-rennes.fr/spip.php?article215" text="Découvrir le BAC STI2D" icon={extIcon.src} />
+            <div class="mt-3">
+                <Button id="sti" target="_blank" theme="black-button" link="https://lycee-serusier-carhaix.ac-rennes.fr/spip.php?article215" text="Découvrir le BAC STI2D" icon={extIcon.src} />
+            </div>
         </div>
     </div>
-
 </div>
