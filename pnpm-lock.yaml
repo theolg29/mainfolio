@@ -32,6 +32,9 @@ importers:
       astro:
         specifier: ^5.1.7
         version: 5.1.8(@types/node@22.10.5)(jiti@1.21.7)(lightningcss@1.28.2)(rollup@4.31.0)(sass@1.83.4)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0)
+      astro-integration-lottie:
+        specifier: ^0.3.2
+        version: 0.3.2(lottie-web@5.12.2)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -41,6 +44,9 @@ importers:
       lenis:
         specifier: ^1.1.19
         version: 1.1.20(react@19.0.0)
+      lottie-web:
+        specifier: ^5.12.2
+        version: 5.12.2
       lucide-react:
         specifier: ^0.473.0
         version: 0.473.0(react@19.0.0)
@@ -891,6 +897,11 @@ packages:
   array-iterate@2.0.1:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
 
+  astro-integration-lottie@0.3.2:
+    resolution: {integrity: sha512-YPE5XjWNbu+kKTlNm4+buvL6oZDwaECiS4Mo4m3kZnykZjHOJPNoStsIN2wLgJmryRUqPZxeKiIA+tIrT6HD1Q==}
+    peerDependencies:
+      lottie-web: ^5.10.0
+
   astro@5.1.8:
     resolution: {integrity: sha512-7fNNceI/dXqGIkkZQjxhH31alAfgf33cDv34cPLCGFVSHHOpYG0NSrofnxdYf0BvWRlddqkq393UqDM5cJlv1w==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
@@ -1574,6 +1585,9 @@ packages:
 
   longest-streak@3.1.0:
     resolution: {integrity: sha512-9Ri+o0JYgehTaVBBDoMqIl8GXtbWg711O3srftcHhZ0dqnETqLaoIK0x17fUw9rFSlK/0NlsKe0Ahhyl5pXE2g==}
+
+  lottie-web@5.12.2:
+    resolution: {integrity: sha512-uvhvYPC8kGPjXT3MyKMrL3JitEAmDMp30lVkuq/590Mw9ok6pWcFCwXJveo0t5uqYw1UREQHofD+jVpdjBv8wg==}
 
   lower-case@2.0.2:
     resolution: {integrity: sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==}
@@ -3367,6 +3381,10 @@ snapshots:
 
   array-iterate@2.0.1: {}
 
+  astro-integration-lottie@0.3.2(lottie-web@5.12.2):
+    dependencies:
+      lottie-web: 5.12.2
+
   astro@5.1.8(@types/node@22.10.5)(jiti@1.21.7)(lightningcss@1.28.2)(rollup@4.31.0)(sass@1.83.4)(terser@5.37.0)(typescript@5.7.3)(yaml@2.7.0):
     dependencies:
       '@astrojs/compiler': 2.10.3
@@ -4134,6 +4152,8 @@ snapshots:
       p-locate: 4.1.0
 
   longest-streak@3.1.0: {}
+
+  lottie-web@5.12.2: {}
 
   lower-case@2.0.2:
     dependencies:

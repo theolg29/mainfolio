@@ -99,7 +99,7 @@
 
 
 // ---- AboutMe Section ----
-.picture-card {
+.picture-card, .map-card {
   padding: 20px;
   background-color: vars.$white;
   height: fit-content;
@@ -118,6 +118,9 @@
   }
 
 }
+
+.picture-card {transform: rotate(-3deg);}
+.map-card {transform: rotate(3deg);}
 
 // ---- Formations & Experiences Section ----
 .forma {
@@ -206,7 +209,6 @@
     gap: 50px;
   }
   
-
   .flex-col {
     position: relative;
     width: 50px;
@@ -238,7 +240,6 @@
   }
 }
 
-
 // ---- Skills Section ----
 .skill-container {
   display: grid;
@@ -256,7 +257,6 @@
 .skill-top {
   padding-bottom: 10px;
   border-bottom: 1px solid vars.$border-stroke;
-
   display: flex;
   align-items: center;
   gap: 10px;
@@ -284,9 +284,6 @@
   }
 }
 
-
-
-
 // ---------------
 // Contact Page
 // ---------------
@@ -301,9 +298,7 @@
 // 404 Page
 // ---------------
 .page-404 {
-
   height: 65vh;
-
   h1 {
     font-size: 11em;
   }

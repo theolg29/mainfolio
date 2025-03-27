@@ -44,6 +44,21 @@
         "source": "/mentionslegales.html",
         "destination": "/mentions-legales",
         "permanent": true
+      },
+      {
+        "source": "/Assets/projets/marketing/loxam/audit.pdf",
+        "destination": "/projects",
+        "permanent": true
+      },
+      {
+        "source": "/Assets/presentation/CV.pdf",
+        "destination": "/CV_THEOLEGOURRIEREC.pdf",
+        "permanent": true
+      },
+      {
+        "source": "/Assets/presentation/Le Gourrierec Théo CV.pdf",
+        "destination": "/CV_THEOLEGOURRIEREC.pdf",
+        "permanent": true
       }
     ]
   }
