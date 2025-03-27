@@ -26,24 +26,24 @@ const pinnedProjects = projects.filter((project) => project.data.pin);
     <ul>
       {
         pinnedProjects.map((project) => (
-          <li class="project-card">
-            <a href={`/projects/${project.slug}`}>
-              <img class="thumbnail" src={project.data.heroImage} alt={project.data.title} />
-              <div class="flex justify-between mt-3">
-                <h2>{project.data.title}</h2>
-                <div class="tags">
-                  {project.data.tags.map((tag) => (
-                    <span class="tag">{tag}</span>
-                  ))}
-                </div>
-                <Button
-                  theme="black-button"
-                  link={`/projects/${project.slug}`}
-                  icon={arrowRight.src} 
-                />
-              </div>
-            </a>
-          </li>
+        <li class="project-card">
+                <a href={`/projects/${project.slug}`} class="project-link">
+                  <img class="thumbnail" src={project.data.heroImage} alt={project.data.title} />
+                  <div class="flex items-center justify-between mt-3">
+                    <div class="flex flex-col">
+                      <h3>{project.data.title}</h3>
+                      <div class="tags">
+                        {project.data.tags.map((tag) => (
+                          <span class="tag">{tag}</span>
+                        ))}
+                      </div>
+                    </div>
+                    <div class="black-button">
+                      <Image class="icon" src={arrowRight} alt="icon" />
+                    </div>
+                  </div>
+                </a>
+              </li>
         ))
       }
     </ul>
