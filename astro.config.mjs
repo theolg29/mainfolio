@@ -4,8 +4,8 @@ import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import vercel from "@astrojs/vercel";
 import playformCompress from "@playform/compress";
-
 import sitemap from "@astrojs/sitemap";
+import lottie from "astro-integration-lottie";
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,6 +17,7 @@ export default defineConfig({
     react(),
     playformCompress(),
     sitemap(),
+    lottie(),
   ],
   output: "static",
   adapter: vercel(),

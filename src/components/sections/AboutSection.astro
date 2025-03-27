@@ -4,6 +4,9 @@ import { Image } from "astro:assets";
 import Button from "../Button.astro";
 import ProfilePicture from "@/assets/images/profile-picture.png";
 import downloadIcon from "@/assets/icons/dl-icon.svg"
+import BentoLogo from "@/assets/logo/bentome.png";
+import LottieAnimation from "astro-integration-lottie/Lottie.astro";
+import MapLottie from "@/assets/lotties/map.json";
 ---
 
 <div class="head">
@@ -11,12 +14,16 @@ import downloadIcon from "@/assets/icons/dl-icon.svg"
     <p>Pour en savoir un peu plus qui je suis 👀</p>
   </div>
   
-  <div class="flex me-col align-center gap-5">
+  <div class="flex flex-col align-center gap-12 w-full md:w-8/12">
 
-    <div class="mr-12">
+    <div class="flex justify-between">
       <div class="picture-card">
         <Image src={ProfilePicture} alt="Photo de Théo Legourrierec" />
         <p class="text-center mt-4">Une photo de moi</p>
+      </div>
+      <div class="map-card">
+        <LottieAnimation src="src/assets/lotties/map.json" autoplay="visible" />
+        <p class="text-center mt-4">Je suis ici</p>
       </div>
     </div>
 
@@ -30,7 +37,10 @@ import downloadIcon from "@/assets/icons/dl-icon.svg"
             
       Aujourd'hui, mon objectif est de devenir Designer UI/UX & Intégrateur Web pour créer des sites internet attrayants et performants.</p>
     
-      <Button theme="black-button" target="_blank" link="/CV_THEOLEGOURRIEREC.pdf" text="Télécharger mon CV" icon={downloadIcon.src} />
+      <div class="flex flex-col md:flex-row gap-5">
+        <Button theme="black-button" target="_blank" link="/CV_THEOLEGOURRIEREC.pdf" text="Télécharger mon CV" icon={downloadIcon.src} />
+        <Button id="bento" theme="white-button" target="_blank" link="https://bento.me/theolegourrierec" text="Voir mon Bento" icon={BentoLogo.src} />
+      </div>
     </div>
 
   </div>

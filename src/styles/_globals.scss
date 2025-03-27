@@ -227,10 +227,8 @@ body {
   }
 }
 
-#project {flex-direction: row-reverse;}
-#archive {
-  flex-direction: row-reverse;
-}
+#project, #archive {flex-direction: row-reverse;}
+#bento {align-items: center;}
 
 // ---------------
 // Forms

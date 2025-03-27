@@ -99,7 +99,7 @@
 
 
 // ---- AboutMe Section ----
-.picture-card {
+.picture-card, .map-card {
   padding: 20px;
   background-color: vars.$white;
   height: fit-content;
@@ -117,7 +117,10 @@
     color: vars.$text;
   }
 
-}
+}*
+
+.picture-card {transform: rotate(-3deg);}
+.map-card {transform: rotate(3deg);}
 
 // ---- Formations & Experiences Section ----
 .forma {
