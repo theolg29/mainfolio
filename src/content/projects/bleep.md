@@ -2,7 +2,7 @@
 title: "Bleep"
 description: "<desc>"
 pubDate: "Mars 2024"
-heroImage: "/thumbnails/bleep.png"
+heroImage: "src/assets/projects/bleep/bleep.png"
 tags: ["Design", "UI/UX"]
 video: ""
 url: ""

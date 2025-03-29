@@ -2,7 +2,7 @@
 title: "Webdoc MMI"
 description: "<desc>"
 pubDate: "Janvier 2024"
-heroImage: "/thumbnails/webdocmmi.png"
+heroImage: "src/assets/projects/webdocmmi/webdocmmi.png"
 tags: ["Développement", "PHP"]
 video: "https://www.youtube.com/embed/9JShxhLd5XY?si=5L4N5CA6aDlwiIHL"
 url: "https://mmi.iutlan.univ-rennes1.fr/"

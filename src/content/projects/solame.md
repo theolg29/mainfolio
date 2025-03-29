@@ -2,7 +2,7 @@
 title: "Solâme"
 description: "<desc>"
 pubDate: "Février 2024"
-heroImage: "/thumbnails/solame.png"
+heroImage: "src/assets/projects/solame/solame.png"
 tags: ["Design", "UI/UX"]
 video: "https://www.youtube.com/embed/fzfVwGjh8X4?si=RPTueYOGG2dH68Ki"
 url: "https://www.solame.vet/"

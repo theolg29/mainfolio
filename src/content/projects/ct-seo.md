@@ -2,7 +2,7 @@
 title: "C&T"
 description: "<desc>"
 pubDate: "Novembre 2023"
-heroImage: "/thumbnails/ct-seo.png"
+heroImage: "src/assets/projects/ct/ct-seo.png"
 tags: ["Rédaction", "SEO"]
 video: ""
 url: ""
