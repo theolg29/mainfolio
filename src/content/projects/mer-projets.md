@@ -2,7 +2,7 @@
 title: "Mer & Projets"
 description: "<description>"
 pubDate: "Novembre 2024"
-heroImage: "/thumbnails/mer-projets.png"
+heroImage: "src/assets/projects/mer-projets/mer-projets.png"
 tags: ["Design", "UI/UX"]
 video: "https://www.youtube.com/embed/15Yz6o90snY?si=Bf7o_1xzbJaMpW4Y"
 url: "https://www.mer-projets.com/"

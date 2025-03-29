@@ -2,7 +2,7 @@
 title: "Mon portfolio"
 description: "<desc>"
 pubDate: "Mars 2025"
-heroImage: "/thumbnails/portfolio.png"
+heroImage: "src/assets/projects/portfolio/portfolio.png"
 tags: ["Design", "Développement"]
 video: ""
 url: "https://theolegourrierec.fr/"

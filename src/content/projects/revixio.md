@@ -2,7 +2,7 @@
 title: "Revixio"
 description: "Une platforme web permetant de centraliser les révisions"
 pubDate: "Décembre 2024"
-heroImage: "/thumbnails/revixio.png"
+heroImage: "src/assets/projects/revixio/revixio.png"
 tags: ["Design", "UI/UX"]
 video: "https://www.youtube.com/embed/MIjEo5Llo08?si=NUgDXoJrDx1nOYHb"
 url: ""

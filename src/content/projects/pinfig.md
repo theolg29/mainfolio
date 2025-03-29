@@ -2,7 +2,7 @@
 title: "Pinfig"
 description: "<desc>"
 pubDate: "Novembre 2024"
-heroImage: "/thumbnails/pinfig.png"
+heroImage: "src/assets/projects/pinfig/pinfig.png"
 tags: ["Design", "UI/UX"]
 video: "https://www.youtube.com/embed/uiAU8YbB52c?si=sj3tuok1wvEuiW5v"
 url: ""

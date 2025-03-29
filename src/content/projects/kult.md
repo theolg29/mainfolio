@@ -2,7 +2,7 @@
 title: "Kult"
 description: "<desc>"
 pubDate: "Novembre 2023"
-heroImage: "/thumbnails/kult.png"
+heroImage: "src/assets/projects/kult/kult.png"
 tags: ["Design", "UI/UX"]
 video: "https://www.youtube.com/embed/FP4s0_ICoNs?si=l07X4LBXJ53e-Uw9"
 url: ""

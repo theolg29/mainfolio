@@ -2,7 +2,7 @@
 title: "Onfido"
 description: "<desc>"
 pubDate: "Décembre 2024"
-heroImage: "/thumbnails/onfido.png"
+heroImage: "src/assets/projects/onfido/onfido.png"
 tags: ["Design", "UI/UX"]
 video: "https://www.youtube.com/embed/Zjs7eX0c80w?si=4DFvO_yd_-VvjQW9"
 url: ""

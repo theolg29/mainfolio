@@ -27,7 +27,7 @@ const pinnedProjects = projects.filter((project) => project.data.pin);
         pinnedProjects.map((project) => (
         <li class="project-card">
                 <a href={`/projects/${project.slug}`} class="project-link">
-                  <img class="thumbnail" src={project.data.heroImage} alt={project.data.title} />
+                  <Image class="thumbnail" src={project.data.heroImage} alt={project.data.title} />
                   <div class="flex items-center justify-between mt-3">
                     <div class="flex flex-col">
                       <h3>{project.data.title}</h3>

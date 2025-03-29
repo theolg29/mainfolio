@@ -2,7 +2,7 @@
 title: "Kership"
 description: "<desc>"
 pubDate: "Octobre 2024"
-heroImage: "/thumbnails/kership.png"
+heroImage: "src/assets/projects/kership/kership.png"
 tags: ["Intégration", "WordPress"]
 video: "https://www.youtube.com/embed/lcWugc-rqvg?si=1gRkQehjd9HNKxrA"
 url: "https://www.kership.com/"

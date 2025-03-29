@@ -1,0 +1,94 @@
+---
+import { Image } from "astro:assets";
+
+import bleep from '@/assets/projects/bleep/bleep.png';
+import ctSeo from '@/assets/projects/ct/ct-seo.png';
+import kership from '@/assets/projects/kership/kership.png';
+import kult from '@/assets/projects/kult/kult.png';
+import merProjets from '@/assets/projects/mer-projets/mer-projets.png';
+import onfido from '@/assets/projects/onfido/onfido.png';
+import pinfig from '@/assets/projects/pinfig/pinfig.png';
+import portfolio from '@/assets/projects/portfolio/portfolio.png';
+import revixio from '@/assets/projects/revixio/revixio.png';
+import solame from '@/assets/projects/solame/solame.png';
+import webdocmmi from '@/assets/projects/webdocmmi/webdocmmi.png';
+
+const images = [
+    { src: bleep, alt: "Bleep", link: "/projects/bleep" },
+    { src: ctSeo, alt: "CT SEO", link: "/projects/ct-seo" },
+    { src: kership, alt: "Kership", link: "/projects/kership" },
+    { src: kult, alt: "Kult", link: "/projects/kult" },
+    { src: merProjets, alt: "Mer Projets", link: "/projects/mer-projets" },
+    { src: onfido, alt: "Onfido", link: "/projects/onfido" },
+    { src: pinfig, alt: "Pinfig", link: "/projects/pinfig" },
+    { src: portfolio, alt: "Portfolio", link: "/projects/portfolio" },
+    { src: revixio, alt: "Revixio", link: "/projects/solame" },
+    { src: solame, alt: "Solame", link: "/projects/solame" },
+    { src: webdocmmi, alt: "Webdoc MMI", link: "/projects/webdocmmi" },
+];
+
+const duplicatedImages = [...images, ...images, ...images];
+---
+
+<div class="slider-container">
+    <div class="slider-track">
+        {duplicatedImages.map(({ src, alt, link }, index) => (
+            <div class="slider-card" id={`card-${index}`}>
+                <a href={link}>
+                    <Image src={src} alt={alt} />
+                </a>
+            </div>
+        ))}
+    </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.querySelector('.slider-container');
+    const track = document.querySelector('.slider-track');
+    
+    if (!track || !container) return;
+    
+    const cardCount = document.querySelectorAll('.slider-card').length / 3;
+    const firstCard = document.querySelector('.slider-card');
+    if (!firstCard) return;
+    
+    const cardWidth = firstCard.offsetWidth;
+    const cardStyle = window.getComputedStyle(firstCard);
+    const cardMargin = parseInt(cardStyle.marginRight) || 0;
+    const cardFullWidth = cardWidth + cardMargin + 20; // Gap
+    
+    const setWidth = cardFullWidth * cardCount;
+    
+    let currentPosition = 0;
+    const speed = 1; // Speed
+    
+    let isHovered = false;
+    
+    container.addEventListener('mouseenter', () => {
+      isHovered = true;
+    });
+    
+    container.addEventListener('mouseleave', () => {
+      isHovered = false;
+    });
+    
+    function animate() {
+      if (!isHovered) {
+        currentPosition -= speed;
+        
+        if (Math.abs(currentPosition) >= setWidth) {
+          currentPosition += setWidth;
+        }
+        
+        if (track) {
+          track.style.transform = `translateX(${currentPosition}px)`;
+        }
+      }
+      
+      requestAnimationFrame(animate);
+    }
+    
+    animate();
+  });
+</script>
