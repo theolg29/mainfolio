@@ -79,7 +79,7 @@ export function MagicCard({
       className={cn("group relative flex size-full rounded-[11px]", className)}
     >
       <div className="absolute inset-px z-10 rounded-[11px] bg-background" />
-      <div className="p-5 relative z-30">{children}</div>
+      <div className="p-5 relative z-30 w-full">{children}</div>
       <motion.div
       className="pointer-events-none absolute inset-px z-10 rounded-[11px] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
       style={{
