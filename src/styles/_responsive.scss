@@ -7,7 +7,20 @@
   .projects-list ul {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .available span {font-size: 0.7em !important;}
+
+
+
+
+
+  .tool-container {
+    h3 {font-size: 1em;}
+  }
+
 }
+
+
 
 // --------------------------------------
 // Medium devices (tablets, 768px and up)
@@ -18,14 +31,15 @@
   .me-col {flex-direction: column;}
 
   // Globals
-  h1 {font-size: 3em;}
-  h2 {font-size: 2.5em;}
+  h1 {font-size: 2.2em;}
+  h2 {font-size: 2em;}
+  h3 {font-size: 1.8em;}
+  p {font-size: 1em;}
 
   form {width: 100%;}
 
   .content {
     align-items: start;
-
     .head h1, 
     .head h2,
     .head p {
@@ -34,7 +48,6 @@
   }
 
   .menu-icon {
-
     position: relative;
     display: flex !important;
     justify-content: center;
@@ -71,11 +84,22 @@
   }
 
 
-  // Pages
-  .forma {width: 100% !important;}
+  // PAGES
+  .slider-card {
+    img {
+      max-width: 250px !important;
+    }
+  }
 
+  // Home - Formations / Experiences
+  .forma {
+    align-items: flex-start;
+    width: 100% !important;
+  }
+
+  // Home - Outils
   .tool-container {
-    h3 {font-size: 1.4em;}
+    h3 {font-size: 1em;}
     img {
       margin-bottom: 10px;
       width: 30px !important;
@@ -83,6 +107,7 @@
     }
   }
 
+  // Home - Compétences
   .skill-container {grid-template-columns: repeat(1, 1fr) !important;}
 
 }
