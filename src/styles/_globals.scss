@@ -110,6 +110,11 @@ footer {
 
   .bottom {
     border-top: 1px solid #343434;
+
+    img {
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7492%) hue-rotate(82deg) brightness(108%) contrast(100%);
+    }
+
   }
 
 }
