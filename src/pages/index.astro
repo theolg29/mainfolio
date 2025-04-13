@@ -15,52 +15,41 @@ import ToolsSection from "@/components/sections/ToolsSection.astro";
 import { TextReveal } from "@/components/ui/text-reveal";
 ---
 
-<MainLayout title="Portfolio - Théo Le Gourrierec" description="Portfolio de Théo Le Gourrierec, Designer & Développeur Web">
-
-
+<MainLayout title="Théo Le Gourrierec - Portfolio" description="Portfolio de Théo Le Gourrierec, Designer & Développeur Web, étudiant en troisème année de BUT MMI à l'IUT de Lannion.">
   <section class="container">
 
-    <!-- Hero Section -->
     <section>
       <HeroSection />
     </section>
 
-    <!-- About Section -->
     <section class="content aboutmme-section" id="about">
       <AboutSection />
     </section>
 
-    <!-- Formation Section -->
     <section class="content" id="formations">
       <FormationSection />
     </section>
 
-  <!-- Experience Section -->
-  <section class="content" id="experiences">
-    <ExeprienceSection />
-  </section>
+    <section class="content" id="experiences">
+      <ExeprienceSection />
+    </section>
 
-     <!-- Projets Section -->
-     <section class="content projects" id="projets">
+    <section class="content projects" id="projets">
       <ProjectsSection />
     </section>
 
-    <!-- Scroll Reveal - Outils -->
     <div class="outil-reveal z-10 flex min-h-64 items-center justify-center">
       <TextReveal client:visible text="Parce que le web regorge d'outils fantastiques, voici ceux que j'utilise" />
     </div>
 
-    <!-- Outils Section -->
     <section class="content" id="outils">
       <ToolsSection />
     </section>
 
-    <!-- Competences Section -->
     <section class="content" id="competences">
       <CompetenceSection />
     </section>
 
-    <!-- Scroll Reveal - Mon Objectif -->
     <div class="goal-reveal z-10 flex min-h-64 items-center justify-center">
       <TextReveal client:visible text="Mon objectif est de créer des sites web modernes, rapides et optimisés pour le referencement." />
     </div>

@@ -1,5 +1,8 @@
 ---
+import { Image } from "astro:assets";
 import Button from "@/components/Button.astro";
+import LinkedinIcon from "@/assets/icons/linkedin.svg";
+import GithubIcon from "@/assets/icons/github.svg";
 ---
 
 <footer class="flex flex-col justify-between mt-20 gap-10">
@@ -18,14 +21,17 @@ import Button from "@/components/Button.astro";
             <a class="link" href="/plan-du-site">Plan du site</a>
             </div>
             <div class="flex flex-col md:flex-row gap-5">
-            <a class="link" href="https://github.com/theolg29" target="_blank">Github</a>
-            <a class="link" href="https://www.linkedin.com/in/theolegourrierec/" target="_blank">Linkedin</a>
+                <a href="https://www.linkedin.com/in/theolegourrierec/" target="_blank">
+                    <Image src={LinkedinIcon} alt="Icône LinkedIn" />
+                  </a>
+                  <a href="https://github.com/theolg29" target="_blank">
+                    <Image src={GithubIcon} alt="Icône GitHub" />
+                  </a>
             </div>
         </div>
         <div class="mt-10">
             <p class="text-center">Design & Dev With ❤️ by Théo - 2025</p>
         </div>
     </div>
-
     
 </footer>
