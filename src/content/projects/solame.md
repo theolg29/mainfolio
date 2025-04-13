@@ -1,6 +1,6 @@
 ---
 title: "Solâme"
-description: "<desc>"
+description: "Intégration du site Solâme sous WordPress Elementor sur le thème de l'accompagnement des animaux en fin de vie."
 pubDate: "Février 2024"
 heroImage: "src/assets/projects/solame/solame.png"
 tags: ["Design", "UI/UX"]
@@ -11,23 +11,23 @@ pin: false
 ---
 
 ## Contexte :
-Dans le cadre de mon alternance, je me suis occupé de l'intégration du site internet Solâme qui propose des services d'accompagnement pour les animaux en fin de vie.
+Dans le cadre de mon alternance, je me suis occupé de l'intégration du site internet de Solâme qui propose des services d'accompagnement pour les animaux en fin de vie.
 
 ## Tâches :
-- Intégration d'une maquette sur WordPress Elementor  
+- Intégration d'une maquette sur WordPress Elementor
 
-## Actions réalisées :  
-Après avoir reçu la maquette finale, je me suis occupé de l'intégration du site WordPress Elementor. Le problème que j'ai rencontré dans cette création est le positionnement des éléments externes. Pour régler cela, j'ai utilisé la position absolute, solution assez contraignante sur les différentes tailles d'écran. Une fois l'intégration faite, j'ai également créé différents templates à intégrer facilement pour que la cliente puisse gérer son site en totale autonomie.
+## Actions réalisées :
+Après avoir reçu la maquette finale, je me suis occupé de l'intégration du site sur WordPress avec Elementor. Le problème que j'ai rencontré lors de cette intégration concernait le positionnement des éléments externes. Pour régler cela, j'ai utilisé la position absolute, solution assez contraignante sur les différentes tailles d'écran. Une fois l'intégration faite, j'ai également créé différents templates à intégrer facilement pour que la cliente puisse gérer son site en totale autonomie.
 
-## Résultats obtenus :  
-- Un site facile à maintenir pour la cliente  
+## Résultats obtenus :
+- Un site facile à maintenir pour la cliente
 
-## Logiciels utilisés :  
-- WordPress avec Elementor  
+## Logiciels utilisés :
+- WordPress avec Elementor
 
-## Réalisé par :  
-- <a href="https://www.e-declic.com/" target="_blank">e-declic</a>  
-- Théo Le Gourrierec  
+## Réalisé par :
+- Théo Le Gourrierec
+- <a href="https://www.e-declic.com/" target="_blank">e-declic</a>
 
 ## Galerie
 ![Capture d'écran du site Solâme](src/assets/projects/solame/solame1.png)
