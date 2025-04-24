@@ -100,6 +100,7 @@
   padding: 4px 15px;
 
   span {
+    font-family: vars.$satoshi;
     font-size: 0.9em;
     font-weight: 600; 
   }
@@ -170,9 +171,7 @@
   }
 
   p {
-    font-family: vars.$tartuffo;
-    font-style: italic;
-    font-weight: 300;
+    font-family: vars.$instrument;
     color: vars.$text;
   }
 
@@ -247,7 +246,6 @@
   h3 {
     font-family: 'BricolageGrotesque', sans-serif;
     font-size: 2.2em;
-    font-weight: 700;
     color: vars.$black;
     margin-bottom: 15px;
     border-bottom: 1px solid vars.$border-stroke;
@@ -322,7 +320,6 @@
 
   h3 {
     font-size: 1.3em;
-    font-weight: 600;
     color: vars.$black;
   }
 

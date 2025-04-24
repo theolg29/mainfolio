@@ -36,7 +36,7 @@ h3 {
   line-height: 110%;
 }
 
-p {
+p, a {
   font-family: vars.$satoshi;
   font-size: 1.1em;
   font-weight: 400;
@@ -100,10 +100,9 @@ footer {
     color: vars.$white;
     font-family: vars.$bricolage;
     font-size: 3em;
-    font-weight: 700;
   }
 
-  p {
+  p, a {
     font-size: 1em;
     color: vars.$white;
   }
@@ -122,6 +121,7 @@ footer {
 .icon {
   width: 16px;
   height: 16px;
+  transition: transform 0.2s ease;
 }
 
 // ---------------
@@ -157,8 +157,7 @@ body {
     }
     p {text-align: center;}
     .sparkles span {
-      font-family: vars.$tartuffo;
-      font-style: italic;
+      font-family: vars.$instrument;
       background: vars.$gradient;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -171,6 +170,76 @@ body {
 
 .hero-section {
   margin-top: 0px;
+}
+
+@keyframes fadeUpBlur {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  filter: blur(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease, filter 0.6s ease;
+
+  &.visible {
+    animation: fadeUpBlur 0.6s ease forwards;
+  }
+  &.hidden {
+    display: none;
+  }
+}
+
+.bottom-action {
+  z-index: 100;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  button {
+    background-color: vars.$black;
+    color: vars.$white;
+    padding: 15px;
+    border-radius: vars.$rounded;
+  }
+  img {
+    width: 20px;
+    height: 20px;
+  }
+  .to-top img {transform: rotate(-90deg);}
+}
+
+.popup {
+  color: vars.$white;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 300px;
+  padding: 20px;
+  z-index: 9;
+  border-radius: vars.$rounded;
+  background: vars.$black;
+  border: 1px solid #060606;
+  box-shadow: inset 0 2px 0px 0px rgba(155, 155, 155, 0.5), inset 0 -5px 4px 0px rgb(24, 24, 24, 0.5);
+  span {
+    font-weight: 600;
+  }
+  p {
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  .cross {
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(1%) hue-rotate(181deg) brightness(102%) contrast(101%);
+  }
 }
 
 // ---------------
@@ -190,6 +259,11 @@ body {
   &:hover {
     background-color: color.adjust(vars.$black, $lightness: 5%);
   }
+}
+
+.shimmer-black-button a {
+  color: vars.$white;
+  font-weight: 600;
 }
 
 .white-button {
@@ -238,7 +312,7 @@ body {
   }
 }
 
-#project, #archive {flex-direction: row-reverse;}
+#project, #archive, #popup-button {flex-direction: row-reverse;}
 #bento {align-items: center;}
 
 // ---------------
@@ -246,32 +320,7 @@ body {
 // ---------------
 
 form {
-  width: 50%;
-}
-.grecaptcha-badge {
-  left: 0 !important;
-  display: none;
-
-}
-
-.bottom-action {
-  z-index: 100;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-
-  button {
-    background-color: vars.$black;
-    color: vars.$white;
-    padding: 15px;
-    border-radius: vars.$rounded;
-  }
-
-  img {
-    width: 20px;
-    height: 20px;
-  }
-  .to-top img {transform: rotate(-90deg);}
+  width: 100%;
 }
 
 // ---------------
@@ -288,7 +337,7 @@ form {
 }
 
 .project-card {
-
+  transition: 0.6s ease;
   .thumbnail {
     width:  100%;
     height: auto;
@@ -298,12 +347,18 @@ form {
     object-position: center top;
     border-radius: vars.$rounded;
     border: 1px solid vars.$border-stroke;
-
   }
 
   h3 {
     margin-bottom: 10px;
   }
+
+  &:hover {
+    .icon {
+        transform: rotate(-30deg);
+    }
+  }
+
 }
 
 .tags {
@@ -314,6 +369,7 @@ form {
   border: 1px solid vars.$border-stroke;
   padding: 4px 10px;
   border-radius: 10px;
+  color: vars.$text;
 }
 
 // Project Content
@@ -437,8 +493,7 @@ form {
 .goal-reveal span:nth-child(10) span:nth-child(2),
 .goal-reveal span:nth-child(15) span:nth-child(1),
 .goal-reveal span:nth-child(15) span:nth-child(2) {
-  font-family: vars.$tartuffo;
-  font-style: italic;
+  font-family: vars.$instrument;
 }
 
 .outil-reveal span:nth-child(7) span:nth-child(2),
