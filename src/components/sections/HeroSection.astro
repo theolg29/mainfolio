@@ -8,9 +8,12 @@ import RealMarquee from "@/components/RealMarquee.astro";
 // Assets
 import { Image } from "astro:assets";
 import ProfilePicture from "@/assets/images/profile-picture.png";
+
+// Animation
+import AnimatedTitle from "@/components/AnimatedTitle";
 ---
 
-<div class="head flex items-center">
+<div class="head flex items-center fade-up" style="animation-delay: 0s;">
   <Image src={ProfilePicture} alt="Photo de moi" />
   <div class="ml-4">
     <AvailabilityIndicator client:load />
@@ -19,23 +22,19 @@ import ProfilePicture from "@/assets/images/profile-picture.png";
   </div>
 </div>
 
-<h1 class="mt-8">
-  Enchanté, je suis Théo, Designer & Développeur basé en Bretagne 
-</h1>
+<AnimatedTitle client:load />
 
-<p class="mt-2">
+<p class="mt-2 fade-up" style="animation-delay: 1.5s;">
   Passionné par le Design UI/UX et le développement web, je crée des sites attrayants et performants.
 </p>
 
-<div class="flex items-start flex-col md:flex-row gap-5 mt-6">
+<div class="flex items-start flex-col md:flex-row gap-5 mt-6 fade-up" style="animation-delay: 1.8s;">
   <ShimmerButton client:load className="shimmer-black-button">
-    <a href="/contact">
-    Contactez-moi
-    </a>
+    <a href="/contact">Contactez-moi</a>
   </ShimmerButton>
   <Button theme="white-button" link="#about" text="Découvrir mon portfolio" />
 </div>
 
-<div class="mt-12">
+<div class="mt-12 fade-up" style="animation-delay: 2s;">
   <RealMarquee />
 </div>

@@ -13,6 +13,7 @@ import ToolsSection from "@/components/sections/ToolsSection.astro";
 
 // Components
 import { TextReveal } from "@/components/ui/text-reveal";
+import Popup from "@/components/Popup.astro";
 ---
 
 <MainLayout title="Théo Le Gourrierec - Portfolio" description="Portfolio de Théo Le Gourrierec, Designer & Développeur Web, étudiant en troisème année de BUT MMI à l'IUT de Lannion.">
@@ -22,19 +23,19 @@ import { TextReveal } from "@/components/ui/text-reveal";
       <HeroSection />
     </section>
 
-    <section class="content aboutmme-section" id="about">
+    <section class="fade-up content aboutmme-section" id="about">
       <AboutSection />
     </section>
 
-    <section class="content" id="formations">
+    <section class="fade-up content" id="formations">
       <FormationSection />
     </section>
 
-    <section class="content" id="experiences">
+    <section class="fade-up content" id="experiences">
       <ExeprienceSection />
     </section>
 
-    <section class="content projects" id="projets">
+    <section class="fade-up content projects" id="projets">
       <ProjectsSection />
     </section>
 
@@ -42,17 +43,39 @@ import { TextReveal } from "@/components/ui/text-reveal";
       <TextReveal client:visible text="Parce que le web regorge d'outils fantastiques, voici ceux que j'utilise" />
     </div>
 
-    <section class="content" id="outils">
+    <section class="fade-up content" id="outils">
       <ToolsSection />
     </section>
 
-    <section class="content" id="competences">
+    <section class="fade-up content" id="competences">
       <CompetenceSection />
     </section>
 
     <div class="goal-reveal z-10 flex min-h-64 items-center justify-center">
-      <TextReveal client:visible text="Mon objectif est de créer des sites web modernes, rapides et optimisés pour le referencement." />
+      <TextReveal client:visible text="Mon objectif est de créer des sites web modernes, rapides et optimisés pour le référencement." />
     </div>
 
   </section>
+
+  <!-- <Popup /> -->
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll(".fade-up");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            } 
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      sections.forEach((section) => observer.observe(section));
+    });
+  </script>
+  
 </MainLayout>
