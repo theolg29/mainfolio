@@ -35,9 +35,27 @@ export default defineConfig({
       cssCodeSplit: false,
       rollupOptions: {
         output: {
-          manualChunks: {
-            "react-vendor": ["react", "react-dom"],
-            "animation-vendor": ["framer-motion", "motion", "lottie-web"],
+          manualChunks: (id) => {
+            if (id.includes("node_modules")) {
+              if (id.includes("react") || id.includes("jsx-runtime")) {
+                return "react-vendor";
+              }
+              if (id.includes("motion") || id.includes("framer-motion")) {
+                return "animation-vendor";
+              }
+              if (id.includes("lottie")) {
+                return "lottie-vendor";
+              }
+              return "vendor";
+            }
+
+            if (id.includes("sections/")) {
+              return "sections";
+            }
+
+            if (id.includes("scripts/")) {
+              return "scripts";
+            }
           },
         },
       },

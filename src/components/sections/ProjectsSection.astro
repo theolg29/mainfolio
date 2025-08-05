@@ -7,47 +7,57 @@ import { SparklesText } from "@/components/ui/sparkles-text";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 const projects = await getCollection("projects");
-import arrowRight from '../../assets/icons/arrow-right.svg';
+import arrowRight from "../../assets/icons/arrow-right.svg";
 const pinnedProjects = projects.filter((project) => project.data.pin);
-
 ---
 
 <div class="head">
-  <h2 class="inline-flex items-center gap-2">Mes projets <span><SparklesText className="sparkles" client:visible sparklesCount={5} colors={{ first: '#C8179B', second: '#E32E45' }} text="pépites" /></span></h2>
+  <h2 class="inline-flex items-center gap-2">
+    Mes projets <span
+      ><SparklesText
+        className="sparkles"
+        client:visible
+        sparklesCount={5}
+        colors={{ first: "#C8179B", second: "#E32E45" }}
+        text="pépites"
+      /></span>
+  </h2>
   <p>Mes plus beaux projets</p>
 </div>
 
-
 <div class="flex align-center gap-5">
-  
   <div class="projects-list">
     <ul>
       {
         pinnedProjects.map((project) => (
-        <li class="project-card">
-                <a href={`/projects/${project.slug}`} class="project-link">
-                  <Image class="thumbnail" src={project.data.heroImage} alt={project.data.title} />
-                  <div class="flex items-center justify-between mt-3">
-                    <div class="flex flex-col">
-                      <h3>{project.data.title}</h3>
-                      <div class="tags">
-                        {project.data.tags.map((tag) => (
-                          <span class="tag">{tag}</span>
-                        ))}
-                      </div>
-                    </div>
-                    <div class="black-button">
-                      <Image class="icon" src={arrowRight} alt="icon" />
-                    </div>
+          <li class="project-card">
+            <a href={`/projects/${project.slug}`} class="project-link">
+              <Image
+                class="thumbnail"
+                src={project.data.heroImage}
+                alt={project.data.title}
+              />
+              <div class="flex items-center justify-between mt-3">
+                <div class="flex flex-col">
+                  <h3>{project.data.title}</h3>
+                  <div class="tags">
+                    {project.data.tags.map((tag) => (
+                      <span class="tag">{tag}</span>
+                    ))}
                   </div>
-                </a>
-              </li>
+                </div>
+                <div class="black-button">
+                  <Image class="icon" src={arrowRight} alt="icon" />
+                </div>
+              </div>
+            </a>
+          </li>
         ))
       }
     </ul>
   </div>
 </div>
 <div class="flex flex-col items-center gap-5 mt-12 w-full">
-    <h3>Et bien plus encore</h3>
-    <Button theme="black-button" link="/projects" text="En cliquant juste ici"/>
+  <h3>Et bien plus encore</h3>
+  <Button theme="black-button" link="/projects" text="En cliquant juste ici" />
 </div>
