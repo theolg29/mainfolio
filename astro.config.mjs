@@ -9,16 +9,41 @@ import lottie from "astro-integration-lottie";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://theolegourrierec.fr',
+  site: "https://theolegourrierec.fr",
   integrations: [
     tailwind({
       applyBaseStyles: false,
     }),
     react(),
-    playformCompress(),
+    playformCompress({
+      CSS: true,
+      HTML: true,
+      Image: true,
+      JavaScript: true,
+      SVG: true,
+    }),
     sitemap(),
     lottie(),
   ],
   output: "static",
   adapter: vercel(),
+  build: {
+    inlineStylesheets: "auto",
+  },
+  vite: {
+    build: {
+      cssCodeSplit: false,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            "react-vendor": ["react", "react-dom"],
+            "animation-vendor": ["framer-motion", "motion", "lottie-web"],
+          },
+        },
+      },
+    },
+    ssr: {
+      noExternal: ["motion", "framer-motion"],
+    },
+  },
 });

@@ -21,7 +21,15 @@ import edeclicLogo from "@/assets/logo/edeclic.png";
 <div class="flex flex-col align-center gap-12 mb-12">
     <div class="forma flex flex-col md:flex-row gap-0 md:gap-5">
         <div class="left flex flex-col items-center">
-            <Image src={edeclicLogo} alt="Photo de Théo Legourrierec" />
+            <Image 
+                src={edeclicLogo} 
+                alt="Logo e-declic" 
+                loading="lazy"
+                format="webp"
+                quality={90}
+                width={80}
+                height={80}
+            />
             <div class="line mt-4"></div>
         </div>
         <div class="right">
@@ -33,7 +41,7 @@ import edeclicLogo from "@/assets/logo/edeclic.png";
                 Ma toute première mission était la mise à jour d'une galerie photo sur WordPress, pas très compliquée, mais cela m'a permis de me remettre à WordPress, car je vais beaucoup l'utiliser par la suite.<br><br>
                 Ma polyvalence avec MMI m'a permis la réalisation en toute autonomie de <a class="link" href="/projects/mer-projets">Mer & Projets</a>, une refonte de site vitrine avec WordPress Elementor. Je suis donc passé par la mise en place de l'environnement, la recherche de l'existant, la création de wireframes puis des maquettes, l'intégration du site avec la gestion du français et de l'anglais, puis la mise en ligne. Cela a permis au client d'avoir un site plus rapide, simple à gérer, et surtout aux goûts du jour.<br><br>
                 L'expérience en entreprise m'a permis de découvrir son fonctionnement (la gestion de projet, la collaboration), les bonnes pratiques à avoir sur un site web afin qu'il soit le plus optimisé possible.</p>
-                <button class="read-more-btn">Lire plus</button>
+                <button class="read-more-btn" aria-expanded="false" aria-label="Afficher plus d'informations sur l'expérience chez e-declic">Lire plus</button>
             </div>
             <div class="mt-3">
                 <Button id="edeclic" target="_blank" theme="black-button" link="https://www.e-declic.com/" text="Découvrir l'agence" icon={extIcon.src} />
