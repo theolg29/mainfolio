@@ -17,9 +17,9 @@ import DraggableCard from "../DraggableCard";
 <div class="flex flex-col align-center gap-12 w-full md:w-8/12">
   <div class="flex justify-between">
     <DraggableCard className="picture-card" initialRotation={-3} client:visible>
-      <Image 
-        src={ProfilePicture} 
-        alt="Photo de Théo Legourrierec" 
+      <Image
+        src={ProfilePicture}
+        alt="Photo de Théo Legourrierec"
         loading="lazy"
         format="webp"
         quality={80}
@@ -36,36 +36,33 @@ import DraggableCard from "../DraggableCard";
 
   <div class="flex flex-col gap-5 items-start">
     <p>
-      Salut, moi c'est Théo, j’ai 20 ans<br /><br />
+      Salut, moi c'est Théo, j’ai 20 ans.<br /><br />
+      Je suis actuellement en troisième et dernière année du BUT Métiers du Multimédia
+      et de l'Internet (MMI) à Lannion, avec une spécialité Développement Web et
+      Dispositifs Interactifs.<br /><br />
+      Depuis ma deuxième année, j'ai eu l'opportunité d'intégrer l'agence e-declic
+      en tant qu'alternant en développement web. Cette agence a pour objectif de
+      créer des sites web à forte visibilité.<br /><br />
+      Aujourd'hui, mon objectif est de devenir Designer UI/UX & Intégrateur Web afin
+      de créer des sites internet attrayants et performants.
+    </p>
 
-<div class="flex flex-col gap-5 items-start">
-  <p>
-    Salut, moi c'est Théo, j’ai 20 ans.<br /><br />
-    Je suis actuellement en troisième et dernière année du BUT Métiers du
-    Multimédia et de l'Internet (MMI) à Lannion, avec une spécialité
-    Développement Web et Dispositifs Interactifs.<br /><br />
-    Depuis ma deuxième année, j'ai eu l'opportunité d'intégrer l'agence
-    e-declic en tant qu'alternant en développement web. Cette agence a pour
-    objectif de créer des sites web à forte visibilité.<br /><br />
-    Aujourd'hui, mon objectif est de devenir Designer UI/UX & Intégrateur Web
-    afin de créer des sites internet attrayants et performants.
-  </p>
-
-  <div class="flex flex-col md:flex-row gap-5">
-    <Button
-      theme="black-button"
-      target="_blank"
-      link="/CV_THEOLEGOURRIEREC.pdf"
-      text="Télécharger mon CV"
-      icon={downloadIcon.src}
-    />
-    <Button
-      id="bento"
-      theme="white-button"
-      target="_blank"
-      link="https://bento.me/theolegourrierec"
-      text="Voir mon Bento"
-      icon={BentoLogo.src}
-    />
+    <div class="flex flex-col md:flex-row gap-5">
+      <Button
+        theme="black-button"
+        target="_blank"
+        link="/CV_THEOLEGOURRIEREC.pdf"
+        text="Télécharger mon CV"
+        icon={downloadIcon.src}
+      />
+      <Button
+        id="bento"
+        theme="white-button"
+        target="_blank"
+        link="https://bento.me/theolegourrierec"
+        text="Voir mon Bento"
+        icon={BentoLogo.src}
+      />
+    </div>
   </div>
 </div>

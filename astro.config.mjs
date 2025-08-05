@@ -33,14 +33,6 @@ export default defineConfig({
   vite: {
     build: {
       cssCodeSplit: false,
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            "react-vendor": ["react", "react-dom"],
-            "animation-vendor": ["framer-motion", "motion", "lottie-web"],
-          },
-        },
-      },
     },
     ssr: {
       noExternal: ["motion", "framer-motion"],
