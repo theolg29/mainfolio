@@ -5,10 +5,11 @@ import MainLayout from "@/layouts/MainLayout.astro";
 // Assets
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
-import extIcon from "@/assets/icons/arrow-ext.svg"
+import extIcon from "@/assets/icons/arrow-ext.svg";
 
 // Components
 import Button from "@/components/Button.astro";
+import ImageModal from "@/components/ImageModal.astro";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
@@ -22,17 +23,23 @@ const { project } = Astro.props;
 const { Content } = await project.render();
 ---
 
-<MainLayout title={`${project.data.title} - Théo Le gourrierec`} description={project.data.description}>
+<MainLayout
+  title={`${project.data.title} - Théo Le gourrierec`}
+  description={project.data.description}
+>
   <section class="container">
     <section class="content-project">
-      
       <article>
         <div class="back">
-            <a href="/projects"> ← Retour aux projets</a>
-          </div>
+          <a href="/projects"> ← Retour aux projets</a>
+        </div>
         {
           project.data.heroImage && (
-            <Image class="featured" src={project.data.heroImage} alt={project.data.title} />
+            <Image
+              class="featured"
+              src={project.data.heroImage}
+              alt={project.data.title}
+            />
           )
         }
         <h1 class="mt-2">{project.data.title}</h1>
@@ -50,13 +57,28 @@ const { Content } = await project.render();
         </section>
         {
           project.data.video && (
-            <iframe width="100%" height="500" src={project.data.video} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe
+              width="100%"
+              height="500"
+              src={project.data.video}
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            />
           )
         }
         <div class="flex flex-col items-start gap-5 mt-12">
           {
             project.data.url && (
-            <Button id="project" target="_blank" theme="black-button" link={project.data.url} text={`Découvrir ${project.data.title}`} icon={extIcon.src} />
+              <Button
+                id="project"
+                target="_blank"
+                theme="black-button"
+                link={project.data.url}
+                text={`Découvrir ${project.data.title}`}
+                icon={extIcon.src}
+              />
             )
           }
           <!-- {
@@ -68,4 +90,7 @@ const { Content } = await project.render();
       </article>
     </section>
   </section>
+
+  <!-- Modal pour l'agrandissement des images -->
+  <ImageModal />
 </MainLayout>

@@ -1,5 +1,5 @@
 ---
-import '../styles/styles.scss'; 
+import "../styles/styles.scss";
 const { title, description } = Astro.props;
 import Navigation from "@/components/Navigation.astro";
 import Footer from "@/components/Footer.astro";
@@ -9,31 +9,60 @@ import { Image } from "astro:assets";
 import contactIcon from "@/assets/icons/contact.svg";
 import arrowRightIcon from "@/assets/icons/arrow-right.svg";
 ---
+
 <!doctype html>
 <html lang="fr">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<meta name="description" content={description} />
-		<link rel="sitemap" href="/sitemap-index.xml" />
-		<script defer src="https://umami.theolegourrierec.fr/script.js" data-website-id="80d1ac04-b763-4ca7-84b4-2324ef2da70f"></script>
-	</head>
-	<body>
-		<Navigation />
-		<slot />
-		<Footer />
-		<div class="bottom-action flex flex-col md:flex-row gap-5 items-center justify-center">
-			<button class="black-button to-contact" onclick="window.location.href = '/contact'">
-				<Image src={contactIcon} alt="Icône de contact" />
-			  </button>
-			<button class="black-button to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
-			  <Image src={arrowRightIcon} alt="Icône de contact" />
-			</button>
-		</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
 
-	</body>
-	<script src="@/components/scripts/scrollSmooth.js"></script>
+    <link
+      rel="preload"
+      href="/src/assets/fonts/satoshi/Satoshi-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/src/assets/fonts/bricolage/BricolageGrotesque-Bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+
+    <script
+      defer
+      src="https://umami.theolegourrierec.fr/script.js"
+      data-website-id="80d1ac04-b763-4ca7-84b4-2324ef2da70f"></script>
+  </head>
+  <body>
+    <Navigation />
+    <slot />
+    <Footer />
+    <div
+      class="bottom-action flex flex-col md:flex-row gap-5 items-center justify-center"
+    >
+      <button
+        class="black-button to-contact"
+        onclick="window.location.href = '/contact'"
+      >
+        <Image src={contactIcon} alt="Icône de contact" />
+      </button>
+      <button
+        class="black-button to-top"
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      >
+        <Image src={arrowRightIcon} alt="Icône de contact" />
+      </button>
+    </div>
+  </body>
+  <script src="@/components/scripts/scrollSmooth.js"></script>
 </html>

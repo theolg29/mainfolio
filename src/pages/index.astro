@@ -16,9 +16,11 @@ import { TextReveal } from "@/components/ui/text-reveal";
 import Popup from "@/components/Popup.astro";
 ---
 
-<MainLayout title="Théo Le Gourrierec - Portfolio" description="Portfolio de Théo Le Gourrierec, Designer & Développeur Web, étudiant en troisème année de BUT MMI à l'IUT de Lannion.">
+<MainLayout
+  title="Théo Le Gourrierec - Portfolio"
+  description="Portfolio de Théo Le Gourrierec, Designer & Développeur Web, étudiant en troisème année de BUT MMI à l'IUT de Lannion."
+>
   <section class="container">
-
     <section>
       <HeroSection />
     </section>
@@ -40,7 +42,10 @@ import Popup from "@/components/Popup.astro";
     </section>
 
     <div class="outil-reveal z-10 flex min-h-64 items-center justify-center">
-      <TextReveal client:visible text="Parce que le web regorge d'outils fantastiques, voici ceux que j'utilise" />
+      <TextReveal
+        client:visible
+        text="Parce que le web regorge d'outils fantastiques, voici ceux que j'utilise"
+      />
     </div>
 
     <section class="fade-up content" id="outils">
@@ -52,30 +57,43 @@ import Popup from "@/components/Popup.astro";
     </section>
 
     <div class="goal-reveal z-10 flex min-h-64 items-center justify-center">
-      <TextReveal client:visible text="Mon objectif est de créer des sites web modernes, rapides et optimisés pour le référencement." />
+      <TextReveal
+        client:visible
+        text="Mon objectif est de créer des sites web modernes, rapides et optimisés pour le référencement."
+      />
     </div>
-
   </section>
 
   <!-- <Popup /> -->
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
+  <script type="module">
+    const initIntersectionObserver = () => {
       const sections = document.querySelectorAll(".fade-up");
+
+      if (!sections.length) return;
 
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               entry.target.classList.add("visible");
-            } 
+              observer.unobserve(entry.target);
+            }
           });
         },
-        { threshold: 0.2 }
+        {
+          threshold: 0.2,
+          rootMargin: "50px",
+        }
       );
 
       sections.forEach((section) => observer.observe(section));
-    });
+    };
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initIntersectionObserver);
+    } else {
+      initIntersectionObserver();
+    }
   </script>
-  
 </MainLayout>

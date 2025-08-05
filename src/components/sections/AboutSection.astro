@@ -3,43 +3,69 @@
 import { Image } from "astro:assets";
 import Button from "../Button.astro";
 import ProfilePicture from "@/assets/images/profile-picture.png";
-import downloadIcon from "@/assets/icons/dl-icon.svg"
+import downloadIcon from "@/assets/icons/dl-icon.svg";
 import BentoLogo from "@/assets/logo/bentome.png";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
+import DraggableCard from "../DraggableCard";
 ---
 
 <div class="head">
-    <h2>À propos de moi</h2>
-    <p>Pour en savoir un peu plus qui je suis 👀</p>
+  <h2>À propos de moi</h2>
+  <p>Pour en savoir un peu plus qui je suis 👀</p>
+</div>
+
+<div class="flex flex-col align-center gap-12 w-full md:w-8/12">
+  <div class="flex justify-between">
+    <DraggableCard className="picture-card" initialRotation={-3} client:visible>
+      <Image 
+        src={ProfilePicture} 
+        alt="Photo de Théo Legourrierec" 
+        loading="lazy"
+        format="webp"
+        quality={80}
+        width={200}
+        height={200}
+      />
+      <p class="text-center mt-4">Une photo de moi</p>
+    </DraggableCard>
+    <DraggableCard className="map-card" initialRotation={3} client:visible>
+      <LottieAnimation src="/lotties/map.json" autoplay="visible" />
+      <p class="text-center mt-4">Je suis ici</p>
+    </DraggableCard>
   </div>
-  
-  <div class="flex flex-col align-center gap-12 w-full md:w-8/12">
 
-    <div class="flex justify-between">
-      <div class="picture-card">
-        <Image src={ProfilePicture} alt="Photo de Théo Legourrierec" />
-        <p class="text-center mt-4">Une photo de moi</p>
-      </div>
-      <div class="map-card">
-        <LottieAnimation src="/lotties/map.json" autoplay="visible" />
-        <p class="text-center mt-4">Je suis ici</p>
-      </div>
-    </div>
+  <div class="flex flex-col gap-5 items-start">
+    <p>
+      Salut, moi c'est Théo, j’ai 20 ans<br /><br />
 
-    <div class="flex flex-col gap-5 items-start">
-      <p>Salut, moi c'est Théo, j’ai 20 ans.<br><br>
+<div class="flex flex-col gap-5 items-start">
+  <p>
+    Salut, moi c'est Théo, j’ai 20 ans.<br /><br />
+    Je suis actuellement en troisième et dernière année du BUT Métiers du
+    Multimédia et de l'Internet (MMI) à Lannion, avec une spécialité
+    Développement Web et Dispositifs Interactifs.<br /><br />
+    Depuis ma deuxième année, j'ai eu l'opportunité d'intégrer l'agence
+    e-declic en tant qu'alternant en développement web. Cette agence a pour
+    objectif de créer des sites web à forte visibilité.<br /><br />
+    Aujourd'hui, mon objectif est de devenir Designer UI/UX & Intégrateur Web
+    afin de créer des sites internet attrayants et performants.
+  </p>
 
-      Je suis actuellement en troisième et dernière année du BUT Métiers du multimédia et de l'internet (MMI) à Lannion avec une spécialité Développement Web et Dispositifs Interactifs.<br><br>
-      
-      Depuis ma deuxième année, j'ai eu l'opportunité d'intégrer l'agence e-declic en tant qu'alternant en développement web. 
-      Cette agence a pour objectif de créer des sites web à forte visibilité.<br><br>
-            
-      Aujourd'hui, mon objectif est de devenir Designer UI/UX & Intégrateur Web pour créer des sites internet attrayants et performants.</p>
-    
-      <div class="flex flex-col md:flex-row gap-5">
-        <Button theme="black-button" target="_blank" link="/CV_THEOLEGOURRIEREC.pdf" text="Télécharger mon CV" icon={downloadIcon.src} />
-        <Button id="bento" theme="white-button" target="_blank" link="https://bento.me/theolegourrierec" text="Voir mon Bento" icon={BentoLogo.src} />
-      </div>
-    </div>
-
+  <div class="flex flex-col md:flex-row gap-5">
+    <Button
+      theme="black-button"
+      target="_blank"
+      link="/CV_THEOLEGOURRIEREC.pdf"
+      text="Télécharger mon CV"
+      icon={downloadIcon.src}
+    />
+    <Button
+      id="bento"
+      theme="white-button"
+      target="_blank"
+      link="https://bento.me/theolegourrierec"
+      text="Voir mon Bento"
+      icon={BentoLogo.src}
+    />
   </div>
+</div>

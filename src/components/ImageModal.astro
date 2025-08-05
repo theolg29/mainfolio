@@ -1,0 +1,91 @@
+---
+
+---
+
+<div id="imageModal" class="image-modal">
+  <div class="modal-overlay">
+    <button id="closeModal" class="close-button" aria-label="Fermer">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M18 6L6 18M6 6l12 12"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </button>
+    <div class="modal-content">
+      <img id="modalImage" src="" alt="" />
+      <p id="modalCaption" class="image-caption"></p>
+    </div>
+  </div>
+</div>
+
+<!-- Bouton qui suit le curseur -->
+<div id="enlargeButton" class="enlarge-button">Agrandir l'image</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+    const modalCaption = document.getElementById("modalCaption");
+    const closeButton = document.getElementById("closeModal");
+    const enlargeButton = document.getElementById("enlargeButton");
+
+    // Ouvrir la modal
+    function openModal(imageSrc, imageAlt) {
+      modalImage.src = imageSrc;
+      modalImage.alt = imageAlt;
+      modalCaption.textContent = imageAlt;
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden";
+      enlargeButton.classList.remove("visible");
+    }
+
+    // Fermer la modal
+    function closeModal() {
+      modal.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+
+    // Ajouter les événements de clic sur toutes les images de la galerie
+    function addImageClickEvents() {
+      const galleryImages = document.querySelectorAll(".markdown img");
+      galleryImages.forEach((img) => {
+        img.style.cursor = "pointer";
+
+        img.addEventListener("click", function (e) {
+          e.preventDefault();
+          openModal(this.src, this.alt);
+        });
+
+        img.addEventListener("mouseenter", function () {
+          enlargeButton.classList.add("visible");
+        });
+
+        img.addEventListener("mouseleave", function () {
+          enlargeButton.classList.remove("visible");
+        });
+
+        img.addEventListener("mousemove", function (e) {
+          enlargeButton.style.left = e.clientX + "px";
+          enlargeButton.style.top = e.clientY + "px";
+        });
+      });
+    }
+
+    closeButton.addEventListener("click", closeModal);
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && modal.classList.contains("active")) {
+        closeModal();
+      }
+    });
+    addImageClickEvents();
+  });
+</script>

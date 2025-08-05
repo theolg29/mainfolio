@@ -16,9 +16,16 @@ import GithubIcon from "@/assets/icons/github.svg";
     <section class="content hero-section">
       <div class="head">
         <h1>Me contacter</h1>
-        <p>C’est simple, il suffit de remplir le formulaire juste en dessous <br> Mon mail : <a href="mailto:theo.legourrierec@gmail.com">theo.legourrierec@gmail.com</a></p>
+        <p>
+          C’est simple, il suffit de remplir le formulaire juste en dessous <br
+          /> Mon mail : <a href="mailto:theo.legourrierec@gmail.com"
+            >theo.legourrierec@gmail.com</a>
+        </p>
         <div class="rezo mt-5 flex md:justify-center gap-5">
-          <a href="https://www.linkedin.com/in/theolegourrierec/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/theolegourrierec/"
+            target="_blank"
+          >
             <Image src={LinkedinIcon} alt="Icône LinkedIn" />
           </a>
           <a href="https://github.com/theolg29" target="_blank">
@@ -32,26 +39,25 @@ import GithubIcon from "@/assets/icons/github.svg";
           loading="lazy"
           width="100%"
           title="Me contacter"></iframe>
-          <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+        <script>
+          var d = document,
+            w = "https://tally.so/widgets/embed.js",
+            v = function () {
+              "undefined" != typeof Tally
+                ? Tally.loadEmbeds()
+                : d
+                    .querySelectorAll("iframe[data-tally-src]:not([src])")
+                    .forEach(function (e) {
+                      e.src = e.dataset.tallySrc;
+                    });
+            };
+          if ("undefined" != typeof Tally) v();
+          else if (d.querySelector('script[src="' + w + '"]') == null) {
+            var s = d.createElement("script");
+            (s.src = w), (s.onload = v), (s.onerror = v), d.body.appendChild(s);
+          }
+        </script>
       </form>
     </section>
-    <section class="content">
-    <h2 class="mb-6">Ou réserver un appel</h2>
-    <!-- Cal inline embed code begins -->
-    <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline"></div>
-    <script type="text/javascript">
-      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-    Cal("init", "decouverte", {origin:"https://cal.com"});
-
-    Cal.ns.decouverte("inline", {
-      elementOrSelector:"#my-cal-inline",
-      config: {"layout":"month_view"},
-      calLink: "theolg/decouverte",
-    });
-
-    Cal.ns.decouverte("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
-    </script>
-  <!-- Cal inline embed code ends -->
-  </section>
   </section>
 </MainLayout>

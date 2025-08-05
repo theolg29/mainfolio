@@ -14,22 +14,30 @@ import AnimatedTitle from "@/components/AnimatedTitle";
 ---
 
 <div class="head flex items-center fade-up" style="animation-delay: 0s;">
-  <Image src={ProfilePicture} alt="Photo de moi" />
+  <Image 
+    src={ProfilePicture} 
+    alt="Photo de moi" 
+    loading="eager"
+    format="webp"
+    quality={80}
+    width={150}
+    height={150}
+  />
   <div class="ml-4">
-    <AvailabilityIndicator client:load />
+    <AvailabilityIndicator client:visible />
     <p>Théo Le Gourrierec</p>
     <p><em>20 ans</em></p>
   </div>
 </div>
 
-<AnimatedTitle client:load />
+<AnimatedTitle client:visible />
 
 <p class="mt-2 fade-up" style="animation-delay: 1.5s;">
   Passionné par le Design UI/UX et le développement web, je crée des sites attrayants et performants.
 </p>
 
 <div class="flex items-start flex-col md:flex-row gap-5 mt-6 fade-up" style="animation-delay: 1.8s;">
-  <ShimmerButton client:load className="shimmer-black-button">
+  <ShimmerButton client:visible className="shimmer-black-button">
     <a href="/contact">Contactez-moi</a>
   </ShimmerButton>
   <Button theme="white-button" link="#about" text="Découvrir mon portfolio" />

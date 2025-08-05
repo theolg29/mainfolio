@@ -31,7 +31,6 @@
   border-radius: vars.$rounded;
 }
 
-
 .slider-container {
   padding: 20px 0;
   background-color: vars.$white;
@@ -47,7 +46,7 @@
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     bottom: 0;
@@ -58,12 +57,20 @@
 
   &::before {
     left: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0)
+    );
   }
 
   &::after {
     right: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    background: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 1),
+      rgba(255, 255, 255, 0)
+    );
   }
 }
 
@@ -75,13 +82,13 @@
 
 .slider-card {
   flex: 0 0 auto;
-  background-color: #FCFCFC;
+  background-color: #fcfcfc;
   border: 1px solid vars.$border-stroke;
   border-radius: vars.$rounded;
   padding: 20px;
-  
+
   &:hover {
-    background-color: #F3F3F4;
+    background-color: #f3f3f4;
   }
 
   img {
@@ -102,18 +109,21 @@
   span {
     font-family: vars.$satoshi;
     font-size: 0.9em;
-    font-weight: 600; 
+    font-weight: 600;
   }
-
 }
 
 .available-day {
-  background: linear-gradient(to top, rgba(34, 182, 5, 0.05), rgba(34, 182, 5, 0));
-  border: 1px solid #22B605;
+  background: linear-gradient(
+    to top,
+    rgba(34, 182, 5, 0.05),
+    rgba(34, 182, 5, 0)
+  );
+  border: 1px solid #22b605;
 }
 .available-night {
   background: linear-gradient(to top, rgb(255, 0, 0, 0.05), rgb(255, 0, 0, 0));
-  border: 1px solid #FF0000;
+  border: 1px solid #ff0000;
 }
 
 .dot {
@@ -124,7 +134,7 @@
   border-radius: 100%;
   position: relative;
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 50%;
@@ -137,13 +147,17 @@
 }
 
 .dot-day {
-  background-color: #22B605;
-  &::after {background-color: rgba(34, 182, 5, 0.5);}
+  background-color: #22b605;
+  &::after {
+    background-color: rgba(34, 182, 5, 0.5);
+  }
 }
 
 .dot-night {
-  background-color: #FF0000;
-  &::after {background-color: rgba(255, 0, 0, 0.5);}
+  background-color: #ff0000;
+  &::after {
+    background-color: rgba(255, 0, 0, 0.5);
+  }
 }
 
 @keyframes pulse {
@@ -157,28 +171,49 @@
   }
 }
 
-
 // ---- AboutMe Section ----
-.picture-card, .map-card {
+.picture-card,
+.map-card {
   padding: 20px;
   background-color: vars.$white;
   height: fit-content;
   width: 250px;
   box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.25);
- 
+  transition: box-shadow 0.15s ease;
+  position: relative;
+  will-change: transform;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+
   img {
     width: 100%;
+    pointer-events: none;
+    will-change: auto;
   }
 
   p {
     font-family: vars.$instrument;
     color: vars.$text;
+    pointer-events: none;
   }
 
+  // Amélioration de l'effet hover avec optimisation
+  &:hover {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  // État pendant le drag
+  &:active {
+    cursor: grabbing !important;
+  }
 }
 
-.picture-card {transform: rotate(-3deg);}
-.map-card {transform: rotate(3deg);}
+.picture-card {
+  transform: rotate(-3deg);
+}
+.map-card {
+  transform: rotate(3deg);
+}
 
 // ---- Formations & Experiences Section ----
 .forma {
@@ -198,7 +233,6 @@
       object-fit: cover;
     }
   }
-  
 
   .line {
     width: 1px;
@@ -242,9 +276,8 @@
 
 // ---- Tools Section ----
 .tool-container {
-
   h3 {
-    font-family: 'BricolageGrotesque', sans-serif;
+    font-family: "BricolageGrotesque", sans-serif;
     font-size: 2.2em;
     color: vars.$black;
     margin-bottom: 15px;
@@ -260,40 +293,12 @@
   }
 
   // Tools list
-  .uiux .list, .devweb .list, .gdp .list {
+  .uiux .list,
+  .devweb .list,
+  .gdp .list {
     display: flex;
     flex-wrap: wrap;
     gap: 50px;
-  }
-  
-  .flex-col {
-    position: relative;
-    width: 50px;
-    text-align: center;
-
-    &::after {
-      content: attr(data-tooltip);
-      position: absolute;
-      bottom: 120%;
-      left: 50%;
-      transform: translate(-50%, 10px) scale(0.8);
-      background-color: vars.$white;
-      color: vars.$black;
-      padding: 5px 10px;
-      border-radius: 5px;
-      border: 1px solid vars.$border-stroke;
-      white-space: nowrap;
-      box-shadow: 0 8px 8px 0px rgba(27, 33, 44, 0.1);
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s, transform 0.3s;
-    }
-
-    &:hover::after {
-      opacity: 1;
-      visibility: visible;
-      transform: translate(-50%, 0) scale(1);
-    }
   }
 }
 
@@ -327,7 +332,6 @@
     width: 25px;
     height: 100%;
   }
-
 }
 
 .skill-desc ul {
@@ -347,7 +351,8 @@
   width: 25px;
   height: auto;
   border-radius: 0;
-  filter: brightness(0) saturate(100%) invert(0%) sepia(36%) saturate(89%) hue-rotate(78deg) brightness(119%) contrast(75%);
+  filter: brightness(0) saturate(100%) invert(0%) sepia(36%) saturate(89%)
+    hue-rotate(78deg) brightness(119%) contrast(75%);
 }
 
 // ---------------

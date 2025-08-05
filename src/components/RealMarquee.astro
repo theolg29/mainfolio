@@ -35,7 +35,15 @@ const duplicatedImages = [...images, ...images, ...images];
         {duplicatedImages.map(({ src, alt, link }, index) => (
             <div class="slider-card" id={`card-${index}`}>
                 <a href={link}>
-                    <Image src={src} alt={alt} />
+                    <Image 
+                        src={src} 
+                        alt={alt} 
+                        loading="lazy"
+                        format="webp"
+                        quality={75}
+                        width={300}
+                        height={200}
+                    />
                 </a>
             </div>
         ))}

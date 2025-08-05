@@ -23,7 +23,15 @@ import stiLogo from "@/assets/logo/logo-sti.png";
 
     <div class="forma flex flex-col md:flex-row gap-0 md:gap-5">
         <div class="left flex flex-col items-center">
-            <Image src={mmiLogo} alt="Logo BUT MMI Lannion" />
+            <Image 
+                src={mmiLogo} 
+                alt="Logo BUT MMI Lannion" 
+                loading="lazy"
+                format="webp"
+                quality={90}
+                width={80}
+                height={80}
+            />
             <div class="line mt-4"></div>
         </div>
         <div class="right">
@@ -36,7 +44,7 @@ import stiLogo from "@/assets/logo/logo-sti.png";
                 Depuis la deuxième année jusqu'à aujourd'hui, j'ai découvert de nombreux domaines liés au web : Design UI/UX - Référencement (SEO) - Création de jeux et d'expériences en réalité virtuelle/augmentée avec Unity et bien sûr le développement web avec NodeJS et React.<br><br>
                 Découvrez mes différents projets accessibles dans le menu juste en haut !
                 </p>
-                <button class="read-more-btn">Lire plus</button>
+                <button class="read-more-btn" aria-expanded="false" aria-label="Afficher plus d'informations sur la formation MMI">Lire plus</button>
             </div>
             <div class="mt-3">
                 <Button id="mmi" target="_blank" theme="black-button" link="https://iut-lannion.univ-rennes.fr/metiers-du-multimedia-et-de-linternet" text="Découvrir le BUT MMI" icon={extIcon.src} />
@@ -46,7 +54,15 @@ import stiLogo from "@/assets/logo/logo-sti.png";
 
     <div class="forma flex flex-col md:flex-row gap-0 md:gap-5">
         <div class="left flex flex-col items-center">
-            <Image src={stiLogo} alt="Logo STI2D Paul Sérusier" />
+            <Image 
+                src={stiLogo} 
+                alt="Logo STI2D Paul Sérusier" 
+                loading="lazy"
+                format="webp"
+                quality={90}
+                width={80}
+                height={80}
+            />
             <div class="line mt-4"></div>
         </div>
         <div class="right">
@@ -57,7 +73,7 @@ import stiLogo from "@/assets/logo/logo-sti.png";
                 C'est aussi à cette période que je crée mon tout premier site web.<br><br>
                 En dernière année et pour le grand oral, on a eu pour objectif de créer une serre autonome. En équipe et à l'aide de différents capteurs/contrôleurs, notre serre était capable de s'ouvrir automatiquement, de pulvériser de l'eau selon l'humidité de la terre, de nous transmettre différentes données sur notre téléphone. En bref, un projet passionnant et surtout enrichissant.<br><br>
                 Pendant ce bac STI2D, je découvre le Design UI/UX. Ne sachant pas trop où aller dans mes études supérieures, je découvre le BUT MMI, une formation polyvalente avec des domaines variés qui me permettrait de découvrir ce que je souhaite exercer plus tard. Mais deux domaines m'attirent particulièrement : le Design UI/UX ainsi que le Développement Web.</p>
-                <button class="read-more-btn">Lire plus</button>
+                <button class="read-more-btn" aria-expanded="false" aria-label="Afficher plus d'informations sur le bac STI2D">Lire plus</button>
             </div>
             <div class="mt-3">
                 <Button id="sti" target="_blank" theme="black-button" link="https://lycee-serusier-carhaix.ac-rennes.fr/spip.php?article215" text="Découvrir le BAC STI2D" icon={extIcon.src} />
