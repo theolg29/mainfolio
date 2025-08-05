@@ -7,15 +7,16 @@ import crossIcon from "../assets/icons/cross.svg";
 <header>
   <div class="main-nav">
     <button class="menu-icon" id="menu-icon">
-      <Image 
-        src={burgerIcon} 
-        alt="Menu" 
+      <Image
+        src={burgerIcon}
+        alt="Menu"
         id="menu-icon-img"
         data-burger={burgerIcon.src}
         data-cross={crossIcon.src}
       />
     </button>
     <nav class="nav-links flex" id="nav-links">
+      <div class="nav-indicator" id="nav-indicator"></div>
       <a href="/#about">Qui suis-je ?</a>
       <a href="/#formations">Formations</a>
       <a href="/#experiences">Expériences</a>
@@ -27,18 +28,133 @@ import crossIcon from "../assets/icons/cross.svg";
 </header>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const menuIcon = document.getElementById('menu-icon');
-    const menuIconImg = document.getElementById('menu-icon-img');
-    const navLinks = document.getElementById('nav-links');
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuIcon = document.getElementById("menu-icon") as HTMLButtonElement;
+    const menuIconImg = document.getElementById(
+      "menu-icon-img"
+    ) as HTMLImageElement;
+    const navLinks = document.getElementById("nav-links") as HTMLElement;
+    const navIndicator = document.getElementById(
+      "nav-indicator"
+    ) as HTMLElement;
 
-    menuIcon.addEventListener('click', function() {
-      navLinks.classList.toggle('active');
-      if (navLinks.classList.contains('active')) {
-        menuIconImg.src = menuIconImg.dataset.cross;
-      } else {
-        menuIconImg.src = menuIconImg.dataset.burger;
+    if (menuIcon && menuIconImg && navLinks) {
+      menuIcon.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+        if (navLinks.classList.contains("active")) {
+          menuIconImg.src = menuIconImg.dataset.cross || "";
+        } else {
+          menuIconImg.src = menuIconImg.dataset.burger || "";
+        }
+      });
+    }
+
+    if (navIndicator && navLinks) {
+      const links = navLinks.querySelectorAll("a");
+      let currentLink: HTMLElement | null = null;
+      let isHovering = false;
+
+      function getCurrentLink() {
+        const currentPath = window.location.pathname;
+        const currentHash = window.location.hash;
+
+        for (const link of links) {
+          const href = link.getAttribute("href");
+
+          if (currentPath === "/" && href?.startsWith("/#")) {
+            if (
+              currentHash === href.substring(1) ||
+              (currentHash === "" && href === "/#about")
+            ) {
+              return link as HTMLElement;
+            }
+          } else if (href === currentPath) {
+            return link as HTMLElement;
+          } else if (
+            currentPath.startsWith("/projects/") &&
+            href === "/projects"
+          ) {
+            return link as HTMLElement;
+          }
+        }
+
+        if (currentPath === "/") {
+          return links[0] as HTMLElement;
+        }
+
+        return null;
       }
-    });
+
+      function getLinkBySection(sectionId: string): HTMLElement | null {
+        for (const link of links) {
+          const href = link.getAttribute("href");
+          if (href === `/#${sectionId}`) {
+            return link as HTMLElement;
+          }
+        }
+        return null;
+      }
+
+      currentLink = getCurrentLink();
+      if (currentLink) {
+        moveIndicator(currentLink);
+        navIndicator.style.opacity = "1";
+      }
+
+      function moveIndicator(targetLink: HTMLElement) {
+        const linkRect = targetLink.getBoundingClientRect();
+        const navRect = navLinks.getBoundingClientRect();
+
+        const left = linkRect.left - navRect.left;
+        const width = linkRect.width;
+
+        navIndicator.style.transform = `translateX(${left}px)`;
+        navIndicator.style.width = `${width}px`;
+      }
+
+      if (window.location.pathname === "/") {
+        const sections = document.querySelectorAll(
+          "#about, #formations, #experiences, #competences"
+        );
+
+        const sectionObserver = new IntersectionObserver(
+          (entries) => {
+            if (isHovering) return;
+
+            entries.forEach((entry) => {
+              if (entry.isIntersecting && entry.intersectionRatio > 0.3) {
+                const sectionId = entry.target.getAttribute("id");
+                const correspondingLink = getLinkBySection(sectionId || "");
+
+                if (correspondingLink) {
+                  currentLink = correspondingLink;
+                  moveIndicator(correspondingLink);
+                }
+              }
+            });
+          },
+          {
+            threshold: [0.3, 0.7],
+            rootMargin: "-100px 0px -100px 0px",
+          }
+        );
+
+        sections.forEach((section) => sectionObserver.observe(section));
+      }
+
+      links.forEach((link) => {
+        link.addEventListener("mouseenter", () => {
+          isHovering = true;
+          moveIndicator(link as HTMLElement);
+        });
+      });
+
+      navLinks.addEventListener("mouseleave", () => {
+        isHovering = false;
+        if (currentLink) {
+          moveIndicator(currentLink);
+        }
+      });
+    }
   });
 </script>
