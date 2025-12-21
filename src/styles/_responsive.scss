@@ -1,4 +1,4 @@
-@use '_variables' as vars;
+@use "_variables" as vars;
 
 // --------------------------------------
 // Small devices (landscape phones, 576px and up)
@@ -8,37 +8,37 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .available span {font-size: 0.7em !important;}
-
-
-
-
-
-  .tool-container {
-    h3 {font-size: 1em;}
+  .available span {
+    font-size: 0.7em !important;
   }
-
 }
-
-
 
 // --------------------------------------
 // Medium devices (tablets, 768px and up)
 // --------------------------------------
 @media (max-width: 768px) {
-  
   // My custom tailwind classes
-  .me-col {flex-direction: column;}
+  .me-col {
+    flex-direction: column;
+  }
 
   // Globals
-  h1 {font-size: 2.2em;}
-  h2 {font-size: 2em;}
-  h3 {font-size: 1.8em;}
-  p {font-size: 1em;}
+  h1 {
+    font-size: 2.2em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.8em;
+  }
+  p {
+    font-size: 1em;
+  }
 
   .content {
     align-items: start;
-    .head h1, 
+    .head h1,
     .head h2,
     .head p {
       text-align: start;
@@ -54,7 +54,8 @@
     border-right: none !important;
     border-left: none !important;
     img {
-      filter: brightness(0) saturate(100%) invert(46%) sepia(73%) saturate(0%) hue-rotate(175deg) brightness(87%) contrast(81%);
+      filter: brightness(0) saturate(100%) invert(46%) sepia(73%) saturate(0%)
+        hue-rotate(175deg) brightness(87%) contrast(81%);
     }
     &:hover {
       background-color: #f8f8f8;
@@ -81,7 +82,6 @@
     display: flex !important;
   }
 
-
   // PAGES
   .slider-card {
     img {
@@ -95,19 +95,10 @@
     width: 100% !important;
   }
 
-  // Home - Outils
-  .tool-container {
-    h3 {font-size: 1em;}
-    img {
-      margin-bottom: 10px;
-      width: 30px !important;
-      height: 30px !important;
-    }
-  }
-
   // Home - Compétences
-  .skill-container {grid-template-columns: repeat(1, 1fr) !important;}
-
+  .skill-container {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
 }
 
 // --------------------------------------
@@ -122,5 +113,4 @@
   .main-nav {
     max-width: none;
   }
-
 }

@@ -1,98 +1,67 @@
 ---
 import { Image } from "astro:assets";
+import { ToolsDock } from "@/components/ToolsDock";
 import FigmaLogo from "@/assets/logo/figma.svg";
-import PenpotLogo from "@/assets/logo/penpot.svg";
 import AffinityLogo from "@/assets/logo/affinity.svg";
 import ElementorLogo from "@/assets/logo/elementor.svg";
 import FramerLogo from "@/assets/logo/framer.svg";
 import WordPressLogo from "@/assets/logo/wordpress.svg";
-import SupabaseLogo from "@/assets/logo/supabase.svg";
-import ReactLogo from "@/assets/logo/react.svg";
-import PhpLogo from "@/assets/logo/php.svg";
-import JavascriptLogo from "@/assets/logo/javascript.svg";
-import NotesnookLogo from "@/assets/logo/notesnook.svg";
-import NotionLogo from "@/assets/logo/notion.svg";
-import ObsidianLogo from "@/assets/logo/obsidian.svg";
-import SprintLogo from "@/assets/logo/sprint.svg";
-import TicktickLogo from "@/assets/logo/ticktick.svg";
+import ShopifyLogo from "@/assets/logo/shopify.svg";
+import GeminiLogo from "@/assets/logo/gemini.svg";
+
+const tools = [
+  {
+    id: 1,
+    name: "Affinity",
+    designation: "Création graphique",
+    image: AffinityLogo.src,
+    link: "https://affinity.serif.com/",
+  },
+  {
+    id: 2,
+    name: "Framer",
+    designation: "Intégration",
+    image: FramerLogo.src,
+    link: "https://www.framer.com/",
+  },
+  {
+    id: 3,
+    name: "Shopify",
+    designation: "CMS e-commerce",
+    image: ShopifyLogo.src,
+    link: "https://www.shopify.com/",
+  },
+  {
+    id: 4,
+    name: "Figma",
+    designation: "Conception UI & UX",
+    image: FigmaLogo.src,
+    link: "https://www.figma.com/",
+  },
+  {
+    id: 5,
+    name: "Gemini",
+    designation: "Génération d'images",
+    image: GeminiLogo.src,
+    link: "https://gemini.google/",
+  },
+  {
+    id: 6,
+    name: "WordPress",
+    designation: "CMS Site vitrine",
+    image: WordPressLogo.src,
+    link: "https://wordpress.org/",
+  },
+  {
+    id: 7,
+    name: "Elementor",
+    designation: "Builder WordPress",
+    image: ElementorLogo.src,
+    link: "https://elementor.com/",
+  },
+];
 ---
 
-<div class="tool-container flex flex-col gap-10">
-  <div class="uiux">
-    <h3>Design UI / UX</h3>
-    <div class="list">
-      <div class="flex flex-col items-center">
-        <Image src={FigmaLogo} alt="Figma" />
-        <p>Figma</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <Image src={PenpotLogo} alt="Penpot" />
-        <p>Penpot</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <Image src={AffinityLogo} alt="Affinity" />
-        <p>Affinity</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <Image src={ElementorLogo} alt="Elementor" />
-        <p>Elementor</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <Image src={FramerLogo} alt="Framer" />
-        <p>Framer</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="devweb">
-    <h3>Développement web</h3>
-    <div class="list">
-      <div class="flex flex-col items-center">
-        <Image src={WordPressLogo} alt="WordPress" />
-        <p>WordPress</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <Image src={SupabaseLogo} alt="Supabase" />
-        <p>Supabase</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <Image src={ReactLogo} alt="React" />
-        <p>React</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <Image src={PhpLogo} alt="PHP" />
-        <p>PHP</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <Image src={JavascriptLogo} alt="JavaScript" />
-        <p>JavaScript</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="gdp">
-    <h3>Gestion de projets</h3>
-    <div class="list">
-      <div class="flex flex-col items-center">
-        <Image src={NotesnookLogo} alt="Notesnook" />
-        <p>Notesnook</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <Image src={NotionLogo} alt="Notion" />
-        <p>Notion</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <Image src={ObsidianLogo} alt="Obsidian" />
-        <p>Obsidian</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <Image src={SprintLogo} alt="Sprint" />
-        <p>Sprint</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <Image src={TicktickLogo} alt="Ticktick" />
-        <p>Ticktick</p>
-      </div>
-    </div>
-  </div>
+<div class="tool-container w-full pt-[20px]">
+  <ToolsDock items={tools} client:visible />
 </div>

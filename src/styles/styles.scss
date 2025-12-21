@@ -271,29 +271,12 @@
 
 // ---- Tools Section ----
 .tool-container {
-  h3 {
-    font-family: "BricolageGrotesque", sans-serif;
-    font-size: 2.2em;
-    color: vars.$black;
-    margin-bottom: 15px;
-    border-bottom: 1px solid vars.$border-stroke;
-  }
-
   img {
     margin-bottom: 10px;
     width: 50px;
     height: auto;
     aspect-ratio: 1;
     object-fit: contain;
-  }
-
-  // Tools list
-  .uiux .list,
-  .devweb .list,
-  .gdp .list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
   }
 }
 

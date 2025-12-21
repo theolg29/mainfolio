@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, MotionValue, useScroll, useTransform } from "motion/react";
+import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import type { ComponentPropsWithoutRef, FC, ReactNode } from "react";
 
@@ -28,7 +28,7 @@ export const TextReveal: FC<TextRevealProps> = ({ text, className }) => {
         <p
           ref={targetRef}
           className={
-            "flex flex-wrap p-5 text-3xl font-bold text-black/80 dark:text-white/80 md:p-8 md:text-4xl lg:p-10 lg:text-5xl xl:text-5xl"
+            "flex flex-wrap p-5 !text-xl !font-bold md:p-8 md:!text-2xl lg:p-10 lg:!text-3xl xl:!text-4xl"
           }
         >
           {words.map((word, i) => {
@@ -57,12 +57,15 @@ const Word: FC<WordProps> = ({ children, progress, range }) => {
   const baseOpacity = useTransform(progress, range, [0.75, 0]);
   return (
     <span className="xl:lg-3 relative mx-1 lg:mx-2.5">
-      <motion.span style={{ opacity: baseOpacity }} className={"absolute"}>
+      <motion.span
+        style={{ opacity: baseOpacity, color: "#666666" }}
+        className={"absolute !font-bold"}
+      >
         {children}
       </motion.span>
       <motion.span
-        style={{ opacity: opacity }}
-        className={"text-black dark:text-white"}
+        style={{ opacity: opacity, color: "#000000" }}
+        className={"!font-bold"}
       >
         {children}
       </motion.span>

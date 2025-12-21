@@ -116,7 +116,6 @@ a {
 }
 
 footer {
-  margin: 0 auto;
   background-color: vars.$black;
   border-radius: 50px 50px 0 0;
   padding: 50px 50px 20px 50px;
@@ -137,7 +136,7 @@ footer {
   .bottom {
     border-top: 1px solid #343434;
 
-    img {
+    .social-icons img {
       filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
         saturate(7492%) hue-rotate(82deg) brightness(108%) contrast(100%);
     }
@@ -448,6 +447,18 @@ body {
   transition: 200ms ease;
   &:hover {
     background-color: color.adjust(#a64288, $lightness: 5%);
+  }
+}
+
+#dedi {
+  flex-direction: row-reverse;
+  background: #1e3664;
+  border: 1px solid #1c4ba1;
+  box-shadow: inset 0 2px 0px 0px rgba(155, 155, 155, 0.5),
+    inset 0 -5px 4px 0px rgb(30, 54, 100, 0.5);
+  transition: 200ms ease;
+  &:hover {
+    background-color: color.adjust(#1e3664, $lightness: 5%);
   }
 }
 

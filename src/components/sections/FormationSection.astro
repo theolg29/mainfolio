@@ -7,6 +7,7 @@ import { Image } from "astro:assets";
 import extIcon from "@/assets/icons/arrow-ext.svg";
 import mmiLogo from "@/assets/logo/logo-mmi.png";
 import stiLogo from "@/assets/logo/logo-sti.png";
+import ingemediaLogo from "@/assets/logo/ingemedia.png";
 ---
 
 <script>
@@ -20,6 +21,37 @@ import stiLogo from "@/assets/logo/logo-sti.png";
 </div>
 
 <div class="flex flex-col align-center gap-12 mb-12">
+  <div class="forma flex flex-col md:flex-row gap-0 md:gap-5">
+    <div class="left flex flex-col items-center">
+      <Image
+        src={ingemediaLogo}
+        alt="Logo UFR Ingémedia Toulon"
+        loading="lazy"
+        format="webp"
+        quality={90}
+        width={80}
+        height={80}
+      />
+      <div class="line mt-4"></div>
+    </div>
+    <div class="right">
+      <p class="name">
+        <strong>MASTER CRÉATION NUMÉRIQUE</strong><br />Parcours Design
+        d’expérience et Design d’Interface (DEDI)
+      </p>
+      <p class="year">Toulon - 2025 à 2027</p>
+      <div class="mt-3">
+        <Button
+          id="dedi"
+          target="_blank"
+          theme="black-button"
+          link="https://www.ingemedia.net/formations/master-cn-parcours-design-d-experience-et-design-d-interface-alternance"
+          text="Découvrir le Master CN DEDI"
+          icon={extIcon.src}
+        />
+      </div>
+    </div>
+  </div>
   <div class="forma flex flex-col md:flex-row gap-0 md:gap-5">
     <div class="left flex flex-col items-center">
       <Image
@@ -114,8 +146,8 @@ import stiLogo from "@/assets/logo/logo-sti.png";
           l'eau selon l'humidité de la terre, de nous transmettre différentes données
           sur notre téléphone. En bref, un projet passionnant et surtout enrichissant.<br
           /><br />
-          Pendant ce bac STI2D, je découvre le Design UI/UX. Ne sachant pas trop
-          où aller dans mes études supérieures, je découvre le BUT MMI, une formation
+          Pendant ce bac STI2D, je découvre le Design UI/UX. Ne sachant pas trop où
+          aller dans mes études supérieures, je découvre le BUT MMI, une formation
           polyvalente avec des domaines variés qui me permettrait de découvrir ce
           que je souhaite exercer plus tard. Mais deux domaines m'attirent particulièrement
           : le Design UI/UX ainsi que le Développement Web.
