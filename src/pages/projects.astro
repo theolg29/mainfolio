@@ -23,7 +23,7 @@ import arrowRight from '@/assets/icons/arrow-right.svg';
           {
             projects.map((project) => (
               <li class="project-card">
-                <a href={`/projects/${project.slug}`} class="project-link">
+                <a href={`/projects/${project.id}`} class="project-link">
                   <Image class="thumbnail" src={project.data.heroImage} alt={project.data.title} />
                   <div class="flex items-center justify-between mt-3">
                     <div class="flex flex-col">
