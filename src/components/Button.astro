@@ -1,10 +1,10 @@
 ---
-const { id, theme, link, text, icon, target = "_self" } = Astro.props;
+const { id, theme, link, text, icon: Icon, target = "_self" } = Astro.props;
 ---
 
 <button class="h-fit">
-  <a id={id} class={`flex gap-2 justify-center ${theme}`} href={link} target={target}>
-    {icon && <img class="icon" src={icon} alt="icon" class="icon" />}
+  <a id={id} class={`flex gap-2 justify-center items-center ${theme}`} href={link} target={target}>
+    {Icon && <Icon className="icon" size={16} strokeWidth={1.5} />}
     {text}
   </a>
 </button>

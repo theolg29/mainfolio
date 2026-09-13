@@ -6,7 +6,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 const projects = await getCollection("projects");
-import arrowRight from '@/assets/icons/arrow-right.svg';
+import { ArrowUpRight } from "lucide-react";
 ---
 
 <MainLayout title="Mes Projets - Théo Le Gourrierec" description="La liste de tous mes projets">
@@ -35,7 +35,7 @@ import arrowRight from '@/assets/icons/arrow-right.svg';
                       </div>
                     </div>
                     <div class="black-button">
-                      <Image class="icon" src={arrowRight} alt="icon" />
+                      <ArrowUpRight className="icon" size={16} strokeWidth={1.5} />
                     </div>
                   </div>
                 </a>

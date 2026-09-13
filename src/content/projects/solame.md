@@ -10,27 +10,27 @@ archive: ""
 pin: false
 ---
 
-## Contexte :
+## Contexte
 
 Dans le cadre de mon alternance, je me suis occupé de l'intégration du site internet de Solâme qui propose des services d'accompagnement pour les animaux en fin de vie.
 
-## Tâches :
+## Tâches
 
 - Intégration d'une maquette sur WordPress Elementor
 
-## Actions réalisées :
+## Actions réalisées
 
 Après avoir reçu la maquette finale, je me suis occupé de l'intégration du site sur WordPress avec Elementor. Le problème que j'ai rencontré lors de cette intégration concernait le positionnement des éléments externes. Pour régler cela, j'ai utilisé la position absolute, solution assez contraignante sur les différentes tailles d'écran. Une fois l'intégration faite, j'ai également créé différents templates à intégrer facilement pour que la cliente puisse gérer son site en totale autonomie.
 
-## Résultats obtenus :
+## Résultats obtenus
 
 - Un site facile à maintenir pour la cliente
 
-## Logiciels utilisés :
+## Logiciels utilisés
 
 - WordPress avec Elementor
 
-## Réalisé par :
+## Réalisé par
 
 - Théo Le Gourrierec
 - <a href="https://www.e-declic.com/" target="_blank">e-declic</a>

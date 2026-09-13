@@ -10,18 +10,18 @@ archive: ""
 pin: true
 ---
 
-## Contexte :
+## Contexte
 
 Dans le cadre d'une SAE, nous avons participé en groupe de 4 personnes au "Identity Wallet Workshop", un design sprint d'une semaine où chaque groupe devait concevoir 3 cas d’usage autour d'un système de stockage des identités numériques. Nous avons été encadrés par les Product Designers d'Onfido.
 
-## Tâches :
+## Tâches
 
 - Trouver un concept
 - Conception d'une interface mobile UI/UX
 - Réalisation d'un motion design afin de présenter l'app
 - Prototypage avancé
 
-## Actions réalisées :
+## Actions réalisées
 
 Le projet a débuté par une phase de recherche documentaire, c'est-à-dire lister l'ensemble des ressources utiles autour du stockage d'identité numérique. Une fois cela établi, nous avons proposé plusieurs cas d’usage et 3 y ont été retenus :
 
@@ -31,18 +31,18 @@ Le projet a débuté par une phase de recherche documentaire, c'est-à-dire list
 
 C'est le **VitalWallet** qui a été retenu. Nous avons donc listé tous les besoins/fonctionnalités puis nous sommes passés sur la création de la charte graphique, puis de l'application mobile. Au moment des résultats, nous avons été retenus comme ayant réalisé le meilleur travail de notre promotion.
 
-## Résultats obtenus :
+## Résultats obtenus
 
 - Meilleure production de la promo
 - Un design d'application mobile
 - Un motion design
 
-## Logiciels utilisés :
+## Logiciels utilisés
 
 - Figma
 - Adobe After Effects
 
-## Réalisé par :
+## Réalisé par
 
 - Théo Le Gourrierec
 - <a href="https://melvynlepape.fr/" target="_blank">Melvyn Le Pape</a>

@@ -1,13 +1,12 @@
 ---
-import { Image } from "astro:assets";
 import Button from '@/components/Button.astro';
-import crossIcon from "@/assets/icons/cross.svg";
+import { X } from "lucide-react";
 ---
 
 <div class="popup fade-up" data-popup>
   <div class="flex w-full justify-between items-center">
     <span>Nouveau projet : Plouvier</span>
-    <Image class="cross" src={crossIcon} alt="Icône de croix" />
+    <X className="cross" strokeWidth={1.5} />
   </div>
   <p class="mt-1">Voir le projet en cliquant sur le bouton juste en dessous</p>
   <div class="mt-3">

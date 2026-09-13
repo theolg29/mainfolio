@@ -1,28 +1,31 @@
 ---
 import { Image } from "astro:assets";
-import burgerIcon from "../assets/icons/burger.svg";
-import crossIcon from "../assets/icons/cross.svg";
+import { Menu, X } from "lucide-react";
+import ProfilePicture from "@/assets/images/profile-picture.png";
 ---
 
 <header>
-  <div class="main-nav">
-    <button class="menu-icon" id="menu-icon">
+  <div class="main-nav flex items-center">
+    <a href="/" class="nav-avatar-wrap" aria-label="Accueil">
       <Image
-        src={burgerIcon}
-        alt="Menu"
-        id="menu-icon-img"
-        data-burger={burgerIcon.src}
-        data-cross={crossIcon.src}
+        src={ProfilePicture}
+        alt="Photo de Théo Le Gourrierec"
+        format="webp"
+        quality={80}
+        width={120}
+        height={120}
+        class="nav-avatar"
       />
+    </a>
+    <button class="menu-icon" id="menu-icon" aria-label="Menu">
+      <Menu className="icon icon-open" strokeWidth={1.5} />
+      <X className="icon icon-close" strokeWidth={1.5} />
     </button>
     <nav class="nav-links flex" id="nav-links">
       <div class="nav-indicator" id="nav-indicator"></div>
-      <a href="/#about">Qui suis-je ?</a>
-      <a href="/#formations">Formations</a>
-      <a href="/#experiences">Expériences</a>
-      <a href="/#competences">Compétences</a>
+      <a href="/#about">Bio</a>
       <a href="/projects">Projets</a>
-      <a href="/contact">Contact</a>
+      <a href="/contact" class="nav-link-cta">Contact</a>
     </nav>
   </div>
 </header>
@@ -30,22 +33,15 @@ import crossIcon from "../assets/icons/cross.svg";
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     const menuIcon = document.getElementById("menu-icon") as HTMLButtonElement;
-    const menuIconImg = document.getElementById(
-      "menu-icon-img"
-    ) as HTMLImageElement;
     const navLinks = document.getElementById("nav-links") as HTMLElement;
     const navIndicator = document.getElementById(
       "nav-indicator"
     ) as HTMLElement;
 
-    if (menuIcon && menuIconImg && navLinks) {
+    if (menuIcon && navLinks) {
       menuIcon.addEventListener("click", function () {
         navLinks.classList.toggle("active");
-        if (navLinks.classList.contains("active")) {
-          menuIconImg.src = menuIconImg.dataset.cross || "";
-        } else {
-          menuIconImg.src = menuIconImg.dataset.burger || "";
-        }
+        menuIcon.classList.toggle("active");
       });
     }
 
@@ -113,9 +109,7 @@ import crossIcon from "../assets/icons/cross.svg";
       }
 
       if (window.location.pathname === "/") {
-        const sections = document.querySelectorAll(
-          "#about, #formations, #experiences, #competences"
-        );
+        const sections = document.querySelectorAll("#about");
 
         const sectionObserver = new IntersectionObserver(
           (entries) => {

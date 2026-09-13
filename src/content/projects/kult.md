@@ -10,24 +10,24 @@ archive: ""
 pin: false
 ---
 
-## Contexte :
+## Contexte
 
 Dans le cadre d'un projet en MMI, notre objectif, en binôme, était de centraliser au sein d’une application mobile toutes les activités culturelles du Trégor.
 
-## Tâches :
+## Tâches
 
 - Recherche de l'existant
 - Conception UI/UX d'une application mobile
 
-## Résultats obtenus :
+## Résultats obtenus
 
 - Design d'une application mobile
 
-## Logiciels utilisés :
+## Logiciels utilisés
 
 - Figma
 
-## Réalisé par :
+## Réalisé par
 
 - Théo Le Gourrierec
 - <a href="https://www.colinlallauret.fr/" target="_blank">Colin Lallauret</a>

@@ -78,7 +78,7 @@ export const ToolsDock = ({
         }}
       />
 
-      <div className="relative flex w-full flex-wrap justify-around gap-4 rounded-[11px] bg-white p-4 sm:flex-nowrap sm:gap-0 sm:px-4 sm:py-3">
+      <div className="tools-dock-surface relative flex w-full flex-wrap justify-around gap-4 rounded-[11px] p-4 sm:flex-nowrap sm:gap-0 sm:px-4 sm:py-3">
         <AnimatedTooltip items={items} imageClassName="rounded-md" />
       </div>
     </div>

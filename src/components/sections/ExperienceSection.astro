@@ -4,9 +4,9 @@ import Button from "../Button.astro";
 
 // Assets
 import { Image } from "astro:assets";
-import extIcon from "@/assets/icons/arrow-ext.svg";
-import edeclicLogo from "@/assets/logo/edeclic.png";
-import teapsLogo from "@/assets/logo/teaps.png";
+import { ArrowUpRight } from "lucide-react";
+import edeclicLogo from "@/assets/logo/edeclic.svg";
+import teapsLogo from "@/assets/logo/teaps.svg";
 ---
 
 <script>
@@ -34,10 +34,11 @@ import teapsLogo from "@/assets/logo/teaps.png";
       <div class="line mt-4"></div>
     </div>
     <div class="right">
-      <p class="name">
-        <strong>Designer UI / UX - Teaps</strong><br />Contrat en alternance
-      </p>
-      <p class="year">Toulon - 2025 à 2027</p>
+      <div class="name-row">
+        <strong class="title">Designer UI / UX - Teaps</strong>
+        <span class="year">Toulon - 2025 à 2027</span>
+      </div>
+      <p class="subtitle">Contrat en alternance</p>
       <div class="text-container">
         <p class="text mt-4 truncated">
           Avec le Master DEDI, j'ai eu l'opportunité d'intégrer l'agence Teaps
@@ -61,7 +62,7 @@ import teapsLogo from "@/assets/logo/teaps.png";
           theme="black-button"
           link="https://teaps.fr/"
           text="Découvrir l'agence"
-          icon={extIcon.src}
+          icon={ArrowUpRight}
         />
       </div>
     </div>
@@ -80,11 +81,11 @@ import teapsLogo from "@/assets/logo/teaps.png";
       <div class="line mt-4"></div>
     </div>
     <div class="right">
-      <p class="name">
-        <strong>DÉVELOPPEUR WEB CHEZ e-declic</strong><br />Contrat en
-        alternance
-      </p>
-      <p class="year">Auray - 2023 à 2025</p>
+      <div class="name-row">
+        <strong class="title">Développeur Web chez e-declic</strong>
+        <span class="year">Auray - 2023 à 2025</span>
+      </div>
+      <p class="subtitle">Contrat en alternance</p>
       <div class="text-container">
         <p class="text mt-4 truncated">
           En lien avec MMI et le parcours Développement web et dispositifs
@@ -128,7 +129,7 @@ import teapsLogo from "@/assets/logo/teaps.png";
           theme="black-button"
           link="https://www.e-declic.com/"
           text="Découvrir l'agence"
-          icon={extIcon.src}
+          icon={ArrowUpRight}
         />
       </div>
     </div>

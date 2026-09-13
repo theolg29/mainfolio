@@ -1,22 +1,52 @@
 // ---------------
 // COLORS
 // ---------------
+// Color tokens are exposed as CSS custom properties (see :root / html.dark
+// below) so the whole palette can flip at runtime when AnimatedThemeToggler
+// toggles the `dark` class on <html>, without editing every usage site.
 
-$black : #202020;
-$light-black: #333333;
-$border-stroke: #E8E8E8;
-$text: #656565;
-$white: #FFFFFF;
-$grey: #fdfdfd;
+:root {
+  --theme-black: #202020;
+  --theme-light-black: #333333;
+  --theme-border-stroke: #e8e8e8;
+  --theme-text: rgba(0, 0, 0, 0.58);
+  --theme-white: #ffffff;
+  --theme-grey: #fdfdfd;
+  --theme-muted: #9a9a9a;
+  --theme-frame-bg: #f2f2f2;
+}
+
+html.dark {
+  --theme-black: #f2f2f2;
+  --theme-light-black: #d4d4d4;
+  --theme-border-stroke: #2e2e2e;
+  --theme-text: rgba(255, 255, 255, 0.65);
+  --theme-white: #121212;
+  --theme-grey: #191919;
+  --theme-muted: #7a7a7a;
+  --theme-frame-bg: #1c1c1c;
+}
+
+$black: var(--theme-black);
+$light-black: var(--theme-light-black);
+$border-stroke: var(--theme-border-stroke);
+$text: var(--theme-text);
+$white: var(--theme-white);
+$grey: var(--theme-grey);
+$muted: var(--theme-muted);
+$frame-bg: var(--theme-frame-bg);
 $rounded: 11px;
 $gradient: linear-gradient(90deg, #C8179B 0%, #E32E45 50%, #C8179B 100%);
+$shadow-soft: rgba(0, 0, 0, 0.05) 0px 0.602187px 3.01094px -0.833333px,
+  rgba(0, 0, 0, 0.05) 0px 2.28853px 11.4427px -1.66667px,
+  rgba(0, 0, 0, 0.05) 0px 10px 50px -2.5px;
 
 // ---------------
 // FONTS
 // ---------------
 
 $bricolage: 'BricolageGrotesque', sans-serif;
-$satoshi: 'Satoshi', sans-serif;
+$figtree: 'Figtree', sans-serif;
 $instrument: 'InstrumentSerif';
 
 
@@ -28,25 +58,20 @@ $instrument: 'InstrumentSerif';
     font-display: swap;
 }
 
-/* Satoshi  */
+/* Figtree */
 @font-face {
-    font-family: 'Satoshi';
-    src: url('../assets/fonts/satoshi/Satoshi-Bold.woff2') format('woff2');
-    font-weight: bold;
+    font-family: 'Figtree';
+    src: url('../assets/fonts/figtree/Figtree-Variable.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 300 900;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Satoshi';
-    src: url('../assets/fonts/satoshi/Satoshi-Medium.woff2') format('woff2');
-    font-weight: 500;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Satoshi';
-    src: url('../assets/fonts/satoshi/Satoshi-Regular.woff2') format('woff2');
-    font-weight: normal;
+    font-family: 'Figtree';
+    src: url('../assets/fonts/figtree/Figtree-VariableItalic.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 300 900;
     font-display: swap;
 }
 

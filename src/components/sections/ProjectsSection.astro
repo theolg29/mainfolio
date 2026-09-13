@@ -1,63 +1,71 @@
 ---
-// Components
-import Button from "../Button.astro";
-import { SparklesText } from "@/components/ui/sparkles-text";
-
 // Assets
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 const projects = await getCollection("projects");
-import arrowRight from "../../assets/icons/arrow-right.svg";
 const pinnedProjects = projects.filter((project) => project.data.pin);
 ---
 
-<div class="head">
-  <h2 class="inline-flex items-center gap-2">
-    Mes projets <span
-      ><SparklesText
-        className="sparkles"
-        client:visible
-        sparklesCount={5}
-        colors={{ first: "#C8179B", second: "#E32E45" }}
-        text="pépites"
-      /></span>
-  </h2>
-  <p>Mes plus beaux projets</p>
-</div>
+<script>
+  import { initProjectsShowcase } from "../scripts/projectsShowcase.js";
+  document.addEventListener("DOMContentLoaded", initProjectsShowcase);
+</script>
 
-<div class="flex align-center gap-5">
-  <div class="projects-list">
-    <ul>
+<div class="projects-showcase">
+  <div class="showcase-grid">
+    <div class="showcase-list-wrap">
+      <div class="head">
+        <h2>Mes projets pépites</h2>
+      </div>
+
+      <ul class="showcase-list">
+        {
+          pinnedProjects.map((project) => (
+            <li class="showcase-item" data-project={project.id}>
+              <button type="button" class="showcase-item-title">
+                <h3>{project.data.title}</h3>
+              </button>
+              <div class="showcase-item-body">
+                <div class="showcase-item-body-inner">
+                  <p>{project.data.description}</p>
+                  <a
+                    href={`/projects/${project.id}`}
+                    class="showcase-item-link inline-flex items-center gap-1"
+                  >
+                    Voir le projet
+                  </a>
+                </div>
+              </div>
+            </li>
+          ))
+        }
+      </ul>
+
+      <div class="showcase-all">
+        <a href="/projects" class="showcase-item-all-link">
+          <span>Voir tous les projets</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="showcase-media">
       {
         pinnedProjects.map((project) => (
-          <li class="project-card">
-            <a href={`/projects/${project.id}`} class="project-link">
+          <a
+            href={`/projects/${project.id}`}
+            class="showcase-media-item"
+            data-project={project.id}
+          >
+            <div class="showcase-image-frame">
               <Image
-                class="thumbnail"
+                class="showcase-image"
                 src={project.data.heroImage}
                 alt={project.data.title}
               />
-              <div class="flex items-center justify-between mt-3">
-                <div class="flex flex-col">
-                  <h3>{project.data.title}</h3>
-                  <div class="tags">
-                    {project.data.tags.map((tag) => (
-                      <span class="tag">{tag}</span>
-                    ))}
-                  </div>
-                </div>
-                <div class="black-button">
-                  <Image class="icon" src={arrowRight} alt="icon" />
-                </div>
-              </div>
-            </a>
-          </li>
+            </div>
+          </a>
         ))
       }
-    </ul>
+    </div>
   </div>
-</div>
-<div class="flex flex-col items-center gap-5 mt-12 w-full">
-  <h3>Et bien plus encore</h3>
-  <Button theme="black-button" link="/projects" text="En cliquant juste ici" />
 </div>

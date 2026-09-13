@@ -10,30 +10,30 @@ archive: ""
 pin: false
 ---
 
-## Contexte :
+## Contexte
 
 Dans le cadre d'un projet en MMI avec la promotion des alternants, nous devions créer un site web pour présenter la formation Métiers du Multimédia et de l'Internet (MMI) de l'IUT de Lannion. Réparti entre quatre pôles : Graphistes, UX/Gestion, Audiovisuel et développeurs web (dont j'en faisais partie). Au départ, nous devions créer un webdocumentaire immersif. Mais par manque de temps, nous avons opté pour un site plus classique avec des vidéos, des PDF, des interviews...
 
-## Tâches :
+## Tâches
 
 - Intégration et développement du site
 
-## Actions réalisées :
+## Actions réalisées
 
 Notre objectif était d'intégrer au fur et à mesure les différents contenus qui nous étaient envoyés par les différentes équipes. Au début du projet, n'ayant pas encore de contenu, nous avons effectué différentes recherches sur comment intégrer des vidéos avec des contrôles personnalisés. Nous avons ensuite reçu la charte graphique que nous avons intégrée en CSS (typographies, couleurs...), puis sont arrivées les premières versions des maquettes que nous avons également intégrées. Après quelques ajustements de design, nous avons ajouté les différents contenus au site. Selon le profil choisi (lycéen - parents - entreprise), le code couleur s'ajuste automatiquement.
 
-## Résultats obtenus :
+## Résultats obtenus
 
 - Un site web complet avec du contenu
 - Répond à la demande de comprendre ce qu'est MMI
 
-## Technologies utilisées :
+## Technologies utilisées
 
 - PHP
 - CSS
 - JS
 
-## Réalisé par :
+## Réalisé par
 
 - Promotion MMI alternants
 

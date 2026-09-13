@@ -1,18 +1,23 @@
 ---
 // Assets
 import { Image } from "astro:assets";
-import Button from "../Button.astro";
 import ProfilePicture from "@/assets/images/profile-picture.png";
-import downloadIcon from "@/assets/icons/dl-icon.svg";
+import { ChevronDown } from "lucide-react";
 import BentoLogo from "@/assets/logo/bentome.png";
+import teapsLogo from "@/assets/logo/teaps.svg";
+import edeclicLogo from "@/assets/logo/edeclic.svg";
+import ingemediaLogo from "@/assets/logo/ingemedia.svg";
+import mmiLogo from "@/assets/logo/logo-mmi.svg";
+import stiLogo from "@/assets/logo/logo-sti.png";
 import LottieAnimation from "astro-integration-lottie/Lottie.astro";
 import DraggableCard from "../DraggableCard";
 ---
 
-<div class="head">
-  <h2>À propos de moi</h2>
-  <p>Pour en savoir un peu plus qui je suis 👀</p>
-</div>
+<script>
+  import { initExperienceAccordion } from "../scripts/experienceAccordion.js";
+  document.addEventListener("DOMContentLoaded", initExperienceAccordion);
+</script>
+
 
 <div class="flex flex-col align-center gap-12 w-full md:w-8/12">
   <div class="flex justify-between">
@@ -35,23 +40,307 @@ import DraggableCard from "../DraggableCard";
   </div>
 
   <div class="flex flex-col gap-5 items-start">
+    <p class="exp-label">Biographie</p>
     <p>
-      Salut, moi c'est Théo, j’ai 21 ans.<br /><br />
+      Salut, moi c'est Théo, j'ai 21 ans.<br /><br />
       Je suis actuellement en première année de Master Création Numérique parcours
-      Design d'Expérience et Design d'Interface (DEDI). J'ai eu l'opportunité d'intégrer
-      l'agence Teaps en tant qu'alternant en Design UI / UX.<br /><br />
-      Aujourd'hui, mon objectif est de devenir Designer UI/UX & Intégrateur Web afin
-      de créer des sites internet attrayants et performants.
+      Design d'Expérience et Design d'Interface (DEDI) à Ingémedia, à Toulon. Cette
+      formation m'a permis d'allier ce qui me passionne le plus : le design UI/UX et
+      le développement web.<br /><br />
+      En parallèle de mon master, j'ai eu l'opportunité d'intégrer l'agence Teaps en
+      tant qu'alternant Designer UI/UX. J'y participe à la conception de maquettes et
+      de prototypes pour des projets web variés, du wireframe jusqu'à l'interface
+      finale.<br /><br />
+      Avant ça, j'ai passé deux ans chez e-declic en tant que développeur web, où
+      j'ai pu toucher à un peu de tout : intégration, WordPress, maquettage et mise
+      en ligne de sites clients.<br /><br />
+      Aujourd'hui, je me considère avant tout comme designer UI/UX, avec une bonne
+      compréhension du développement, ce qui me permet de concevoir des interfaces
+      à la fois soignées et réalistes à intégrer. Mon objectif est de devenir Designer
+      UI/UX & Intégrateur Web afin de créer des sites internet attrayants et
+      performants.
     </p>
 
-    <div class="flex flex-col md:flex-row gap-5">
-      <Button
-        theme="black-button"
-        target="_blank"
-        link="/CV_THEOLEGOURRIEREC.pdf"
-        text="Télécharger mon CV"
-        icon={downloadIcon.src}
-      />
+    <a href="/CV_THEOLEGOURRIEREC.pdf" target="_blank" class="exp-link">
+      Télécharger mon CV
+    </a>
+  </div>
+
+  <div class="flex flex-col gap-4 w-full">
+    <p class="exp-label">Expériences</p>
+    <div class="exp-list">
+      <div class="exp-item">
+        <button
+          type="button"
+          class="exp-header"
+          aria-expanded="false"
+          aria-label="Afficher le détail de l'expérience chez Teaps"
+        >
+          <span class="exp-date">2025 - 2027</span>
+          <span class="exp-company">
+            <span class="exp-logo-wrap exp-logo-wrap--plain">
+              <Image
+                src={teapsLogo}
+                alt="Logo Teaps"
+                loading="lazy"
+                width={26}
+                height={26}
+                class="exp-logo"
+              />
+            </span>
+            <span class="exp-name">Teaps</span>
+          </span>
+          <ChevronDown className="exp-chevron" size={18} strokeWidth={1.5} />
+        </button>
+        <div class="exp-body">
+          <div class="exp-body-inner">
+            <strong class="exp-role">Designer UI / UX</strong>
+            <span class="exp-location">Toulon</span>
+            <p class="exp-desc">
+              Avec le Master DEDI, j'ai eu l'opportunité d'intégrer l'agence Teaps
+              en tant qu'alternant en Design UI / UX.<br /><br />
+              Teaps est une agence web située à Toulon, spécialisée dans la création de
+              sites web, d'applications et de solutions e-commerce.<br /><br />
+              En tant que Designer UI / UX chez Teaps, je participe à la conception de
+              maquettes et prototypes pour tout type de projet.
+            </p>
+            <a
+              href="https://teaps.fr/"
+              target="_blank"
+              class="exp-link"
+            >
+              Découvrir l'agence
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <button
+          type="button"
+          class="exp-header"
+          aria-expanded="false"
+          aria-label="Afficher le détail de l'expérience chez e-declic"
+        >
+          <span class="exp-date">2023 - 2025</span>
+          <span class="exp-company">
+            <span class="exp-logo-wrap">
+              <Image
+                src={edeclicLogo}
+                alt="Logo e-declic"
+                loading="lazy"
+                width={26}
+                height={26}
+                class="exp-logo"
+              />
+            </span>
+            <span class="exp-name">e-declic</span>
+          </span>
+          <ChevronDown className="exp-chevron" size={18} strokeWidth={1.5} />
+        </button>
+        <div class="exp-body">
+          <div class="exp-body-inner">
+            <strong class="exp-role">Développeur Web</strong>
+            <span class="exp-location">Auray</span>
+            <p class="exp-desc">
+              En lien avec MMI et le parcours Développement web et dispositifs
+              interactifs, j'ai pu décrocher une alternance chez e-declic, une
+              agence située à Auray dans le sud du Morbihan et spécialisée dans la
+              création de sites web à forte visibilité. L'agence réalise à la fois
+              des sites vitrine, des sites e-commerce et également des logiciels
+              métiers sur mesure.<br /><br />
+              Dans l'agence, mes missions sont assez variées. Je suis capable de réaliser
+              en autonomie des sites sous WordPress Elementor, gérer la mise en place
+              de l'environnement de pré-production et de la mise en ligne à l'aide de
+              Docker, parfois la réalisation de maquettes UI/UX, de la maintenance, de
+              l'intégration sur des sites e-commerce avec Prestashop et j'interviens également
+              dans la réalisation des logiciels métiers.<br /><br />
+              Ma toute première mission était la mise à jour d'une galerie photo sur WordPress,
+              pas très compliquée, mais cela m'a permis de me remettre à WordPress, car
+              je vais beaucoup l'utiliser par la suite.<br /><br />
+              Ma polyvalence avec MMI m'a permis la réalisation en toute autonomie de
+              <a class="link" href="/projects/mer-projets">Mer & Projets</a>, une
+              refonte de site vitrine avec WordPress Elementor. Je suis donc passé
+              par la mise en place de l'environnement, la recherche de l'existant,
+              la création de wireframes puis des maquettes, l'intégration du site
+              avec la gestion du français et de l'anglais, puis la mise en ligne.
+              Cela a permis au client d'avoir un site plus rapide, simple à gérer,
+              et surtout aux goûts du jour.<br /><br />
+              L'expérience en entreprise m'a permis de découvrir son fonctionnement (la
+              gestion de projet, la collaboration), les bonnes pratiques à avoir sur un
+              site web afin qu'il soit le plus optimisé possible.
+            </p>
+            <a
+              href="https://www.e-declic.com/"
+              target="_blank"
+              class="exp-link"
+            >
+              Découvrir l'agence
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-4 w-full">
+    <p class="exp-label">formations</p>
+    <div class="exp-list">
+      <div class="exp-item">
+        <button
+          type="button"
+          class="exp-header"
+          aria-expanded="false"
+          aria-label="Afficher le détail du Master Création Numérique"
+        >
+          <span class="exp-date">2025 - 2027</span>
+          <span class="exp-company">
+            <span class="exp-logo-wrap">
+              <Image
+                src={ingemediaLogo}
+                alt="Logo Ingémedia"
+                loading="lazy"
+                width={26}
+                height={26}
+                class="exp-logo"
+              />
+            </span>
+            <span class="exp-name">Ingémedia</span>
+          </span>
+          <ChevronDown className="exp-chevron" size={18} strokeWidth={1.5} />
+        </button>
+        <div class="exp-body">
+          <div class="exp-body-inner">
+            <strong class="exp-role">Master Création Numérique</strong>
+            <span class="exp-location">Toulon</span>
+            <p class="exp-desc">
+              Parcours Design d'expérience et Design d'Interface (DEDI).
+            </p>
+            <a
+              href="https://www.ingemedia.net/formations/master-cn-parcours-design-d-experience-et-design-d-interface-alternance"
+              target="_blank"
+              class="exp-link"
+            >
+              Découvrir le Master CN DEDI
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <button
+          type="button"
+          class="exp-header"
+          aria-expanded="false"
+          aria-label="Afficher le détail du BUT MMI"
+        >
+          <span class="exp-date">2022 - 2025</span>
+          <span class="exp-company">
+            <span class="exp-logo-wrap">
+              <Image
+                src={mmiLogo}
+                alt="Logo BUT MMI Lannion"
+                loading="lazy"
+                width={26}
+                height={26}
+                class="exp-logo"
+              />
+            </span>
+            <span class="exp-name">IUT de Lannion</span>
+          </span>
+          <ChevronDown className="exp-chevron" size={18} strokeWidth={1.5} />
+        </button>
+        <div class="exp-body">
+          <div class="exp-body-inner">
+            <strong class="exp-role">Bachelor Universitaire de Technologie</strong>
+            <span class="exp-location">Lannion</span>
+            <p class="exp-desc">
+              Métiers du Multimédia et de l'Internet (MMI).<br /><br />
+              En terminal, je découvre le domaine du Webdesign. Je découvre puis
+              m'inscris dans le BUT MMI pour sa polyvalence vers de nombreux
+              domaines tous intéressants : audiovisuel, gestion de projet, design,
+              marketing, développement web...<br /><br />
+              Durant cette première année, j'apprends énormément de choses mais une spécialité
+              m'intéresse plus que les autres : le développement web. Je redécouvre les
+              bases HTML et CSS et j'approfondis JavaScript en passant par PHP et MySQL.<br /><br />
+              Ce domaine m'intéressait beaucoup, c'est aux trois quarts de la première
+              année que je décide de rechercher une alternance pour intégrer en deuxième
+              année la spécialité Développement Web et Dispositifs Interactifs. Après
+              de nombreuses recherches, j'intègre l'équipe de chez e-declic, une agence
+              web située à Auray dans le Morbihan.<br /><br />
+              Depuis la deuxième année jusqu'à aujourd'hui, j'ai découvert de nombreux
+              domaines liés au web : Design UI/UX - Référencement (SEO) - Création de
+              jeux et d'expériences en réalité virtuelle/augmentée avec Unity et bien
+              sûr le développement web avec NodeJS et React.<br /><br />
+              Découvrez mes différents projets accessibles dans le menu juste en haut !
+            </p>
+            <a
+              href="https://iut-lannion.univ-rennes.fr/metiers-du-multimedia-et-de-linternet"
+              target="_blank"
+              class="exp-link"
+            >
+              Découvrir le BUT MMI
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <button
+          type="button"
+          class="exp-header"
+          aria-expanded="false"
+          aria-label="Afficher le détail du Bac STI2D"
+        >
+          <span class="exp-date">2019 - 2022</span>
+          <span class="exp-company">
+            <span class="exp-logo-wrap">
+              <Image
+                src={stiLogo}
+                alt="Logo STI2D Paul Sérusier"
+                loading="lazy"
+                format="webp"
+                quality={90}
+                width={26}
+                height={26}
+                class="exp-logo"
+              />
+            </span>
+            <span class="exp-name">Lycée Paul Sérusier</span>
+          </span>
+          <ChevronDown className="exp-chevron" size={18} strokeWidth={1.5} />
+        </button>
+        <div class="exp-body">
+          <div class="exp-body-inner">
+            <strong class="exp-role">Baccalauréat Technologique</strong>
+            <span class="exp-location">Carhaix-Plouguer</span>
+            <p class="exp-desc">
+              Sciences et technologies de l'industrie et du développement durable (STI2D).<br /><br />
+              Grâce au bac STI2D et à la spécialité SIN (Système d'Information et
+              Numérique), j'ai pu découvrir plein de domaines tous intéressants
+              (réseaux, modélisation 3D, étude de l'énergie, développement durable).<br /><br />
+              C'est aussi à cette période que je crée mon tout premier site web.<br /><br />
+              En dernière année et pour le grand oral, on a eu pour objectif de créer
+              une serre autonome. En équipe et à l'aide de différents capteurs/contrôleurs,
+              notre serre était capable de s'ouvrir automatiquement, de pulvériser de
+              l'eau selon l'humidité de la terre, de nous transmettre différentes données
+              sur notre téléphone. En bref, un projet passionnant et surtout enrichissant.<br /><br />
+              Pendant ce bac STI2D, je découvre le Design UI/UX. Ne sachant pas trop où
+              aller dans mes études supérieures, je découvre le BUT MMI, une formation
+              polyvalente avec des domaines variés qui me permettrait de découvrir ce
+              que je souhaite exercer plus tard. Mais deux domaines m'attirent particulièrement
+              : le Design UI/UX ainsi que le Développement Web.
+            </p>
+            <a
+              href="https://lycee-serusier-carhaix.ac-rennes.fr/spip.php?article215"
+              target="_blank"
+              class="exp-link"
+            >
+              Découvrir le BAC STI2D
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

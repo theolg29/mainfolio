@@ -1,52 +1,57 @@
 ---
 // Components
 import Button from "@/components/Button.astro";
-import { ShimmerButton } from "@/components/ui/shimmer-button";
-import AvailabilityIndicator from "@/components/AvailabilityIndicator";
-import RealMarquee from "@/components/RealMarquee.astro";
+import { DotPattern } from "@/components/ui/dot-pattern";
+import { BeforeAfterGallery } from "@/components/ui/before-after-gallery";
 
-// Assets
-import { Image } from "astro:assets";
-import ProfilePicture from "@/assets/images/profile-picture.png";
-
-// Animation
-import AnimatedTitle from "@/components/AnimatedTitle";
+// Data
+// Pas encore de vraies images avant/après disponibles : on place des photos
+// placeholder (Lorem Picsum) au format portrait sur plusieurs projets en
+// attendant — à remplacer plus tard par les vraies captures.
+const beforeAfterItems = [
+  "Mer & Projets",
+  "Kership",
+  "Pinfig",
+  "Bleep",
+  "Onfido",
+  "Solame",
+].map((title) => {
+  const seed = title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+  return {
+    title,
+    before: `https://picsum.photos/seed/${seed}-before/600/800`,
+    after: `https://picsum.photos/seed/${seed}-after/600/800`,
+  };
+});
 ---
 
-<div class="head flex items-center fade-up" style="animation-delay: 0s;">
-  <Image
-    src={ProfilePicture}
-    alt="Photo de moi"
-    loading="eager"
-    format="webp"
-    quality={80}
-    width={150}
-    height={150}
-  />
-  <div class="ml-4">
-    <AvailabilityIndicator client:idle />
-    <p>Théo Le Gourrierec</p>
-    <p><em>21 ans</em></p>
+<div class="hero-text-col flex flex-col items-center w-full">
+  <h1 class="fade-up slide-reveal" style="animation-delay: 0.1s;">
+    <span class="slide-reveal-inner inline-block"
+      >Votre prochain designer UI/UX.</span
+    >
+  </h1>
+
+  <p class="mt-2 fade-up slide-reveal" style="animation-delay: 1.2s;">
+    <span class="slide-reveal-inner inline-block"
+      >Je conçois et intègre des interfaces claires, rapides et pensées pour
+      l'utilisateur.</span
+    >
+  </p>
+
+  <div class="mt-6 fade-up slide-reveal" style="animation-delay: 2.3s;">
+    <div
+      class="slide-reveal-inner flex items-center justify-center flex-col md:flex-row gap-5"
+    >
+      <Button theme="black-button" link="/contact" text="Contactez-moi" />
+      <Button theme="white-button" link="#about" text="Découvrir mon portfolio" />
+    </div>
   </div>
 </div>
 
-<AnimatedTitle client:idle />
-
-<p class="mt-2 fade-up" style="animation-delay: 1.5s;">
-  Passionné par le Design UI / UX, je conçois et intègre des maquettes
-  d'interfaces utilisateurs optimisées et performantes.
-</p>
-
-<div
-  class="flex items-start flex-col md:flex-row gap-5 mt-6 fade-up"
-  style="animation-delay: 1.8s;"
->
-  <ShimmerButton client:idle className="shimmer-black-button">
-    <a href="/contact">Contactez-moi</a>
-  </ShimmerButton>
-  <Button theme="white-button" link="#about" text="Découvrir mon portfolio" />
-</div>
-
-<div class="mt-12 fade-up" style="animation-delay: 2s;">
-  <RealMarquee />
+<div class="hero-media fade-up" style="animation-delay: 2.6s;">
+  <div class="showcase-image-frame hero-ba-frame">
+    <DotPattern client:load className="hero-dot-pattern" />
+    <BeforeAfterGallery client:load items={beforeAfterItems} />
+  </div>
 </div>

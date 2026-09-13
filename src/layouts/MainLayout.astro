@@ -3,11 +3,10 @@ import "../styles/styles.scss";
 const { title, description } = Astro.props;
 import Navigation from "@/components/Navigation.astro";
 import Footer from "@/components/Footer.astro";
-import { Image } from "astro:assets";
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 
-// Assets
-import contactIcon from "@/assets/icons/contact.svg";
-import arrowRightIcon from "@/assets/icons/arrow-right.svg";
+// Icons
+import { Mail, ArrowUp } from "lucide-react";
 ---
 
 <!doctype html>
@@ -24,6 +23,18 @@ import arrowRightIcon from "@/assets/icons/arrow-right.svg";
     <link rel="preconnect" href="https://www.theolegourrierec.fr" />
     <link rel="preconnect" href="https://umami.theolegourrierec.fr" />
     <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+
+    <script is:inline>
+      (function () {
+        var stored = localStorage.getItem("theme");
+        var prefersDark =
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (stored === "dark" || (!stored && prefersDark)) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
 
     <script>
       window.addEventListener("load", function () {
@@ -43,6 +54,11 @@ import arrowRightIcon from "@/assets/icons/arrow-right.svg";
 </html>
 <body>
   <Navigation />
+  <div class="visitor-pill">
+    <span class="visitor-pill-dot"></span>
+    <span class="visitor-pill-count">1 visiteur</span>
+  </div>
+  <AnimatedThemeToggler client:load className="theme-toggler" />
   <slot />
   <Footer />
   <div
@@ -51,15 +67,25 @@ import arrowRightIcon from "@/assets/icons/arrow-right.svg";
     <button
       class="black-button to-contact"
       onclick="window.location.href = '/contact'"
+      aria-label="Contact"
     >
-      <Image src={contactIcon} alt="Icône de contact" />
+      <Mail className="icon" strokeWidth={1.5} />
     </button>
     <button
       class="black-button to-top"
       onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+      aria-label="Retour en haut"
     >
-      <Image src={arrowRightIcon} alt="Icône de contact" />
+      <ArrowUp className="icon" strokeWidth={1.5} />
     </button>
   </div>
 </body>
 <script src="@/components/scripts/scrollSmooth.js"></script>
+<script>
+  import { initTextSlideHover } from "@/components/scripts/textSlideHover.js";
+  document.addEventListener("DOMContentLoaded", initTextSlideHover);
+</script>
+<script>
+  import { initMultiplayerCursors } from "@/components/scripts/multiplayerCursors.js";
+  document.addEventListener("DOMContentLoaded", initMultiplayerCursors);
+</script>

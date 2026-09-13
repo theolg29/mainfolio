@@ -10,29 +10,29 @@ archive: ""
 pin: false
 ---
 
-## Contexte :
+## Contexte
 
 Dans le cadre d'un projet MMI en rédaction web, nous avions pour objectif de présenter des solutions pour auditer et améliorer le SEO d'un site web gratuitement.
 
-## Tâches :
+## Tâches
 
 - Recherches
 - Rédaction du contenu
 - Design d'un faux site de présentation
 
-## Actions réalisées :
+## Actions réalisées
 
 Nous avons commencé par une phase de recherche sur les différentes façons d'analyser et d'améliorer son site internet. Nous sommes passés ensuite à la rédaction de contenus en présentant les différents outils et techniques possibles. Pour finir, nous avons conçu un faux site web servant de support à notre travail.
 
-## Résultats obtenus :
+## Résultats obtenus
 
 - Un article sur les solutions SEO
 
-## Logiciels utilisés :
+## Logiciels utilisés
 
 - Figma
 
-## Réalisé par :
+## Réalisé par
 
 - Théo Le Gourrierec
 - <a href="https://www.colinlallauret.fr/" target="_blank">Colin Lallauret</a>

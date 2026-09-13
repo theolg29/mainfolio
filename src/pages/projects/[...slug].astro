@@ -5,7 +5,7 @@ import MainLayout from "@/layouts/MainLayout.astro";
 // Assets
 import { Image } from "astro:assets";
 import { getCollection, render } from "astro:content";
-import extIcon from "@/assets/icons/arrow-ext.svg";
+import { ArrowUpRight, Undo2 } from "lucide-react";
 
 // Components
 import Button from "@/components/Button.astro";
@@ -20,7 +20,8 @@ export async function getStaticPaths() {
 }
 
 const { project } = Astro.props;
-const { Content } = await render(project);
+const { Content, headings } = await render(project);
+const toc = headings.filter((heading) => heading.depth === 2);
 ---
 
 <MainLayout
@@ -29,10 +30,24 @@ const { Content } = await render(project);
 >
   <section class="container">
     <section class="content-project">
+      <aside class="project-toc">
+        <a href="/projects" class="toc-back flex items-center gap-2">
+          <Undo2 size={16} strokeWidth={1.5} />
+          Retour aux projets
+        </a>
+        {
+          toc.length > 0 && (
+            <nav id="project-toc-nav">
+              {toc.map((heading) => (
+                <a href={`#${heading.slug}`} data-toc-slug={heading.slug}>
+                  {heading.text}
+                </a>
+              ))}
+            </nav>
+          )
+        }
+      </aside>
       <article>
-        <div class="back">
-          <a href="/projects"> ← Retour aux projets</a>
-        </div>
         {
           project.data.heroImage && (
             <Image
@@ -77,7 +92,7 @@ const { Content } = await render(project);
                 theme="black-button"
                 link={project.data.url}
                 text={`Découvrir ${project.data.title}`}
-                icon={extIcon.src}
+                icon={ArrowUpRight}
               />
             )
           }
@@ -94,3 +109,40 @@ const { Content } = await render(project);
   <!-- Modal pour l'agrandissement des images -->
   <ImageModal />
 </MainLayout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const tocLinks = document.querySelectorAll<HTMLAnchorElement>(
+      "#project-toc-nav a"
+    );
+    if (!tocLinks.length) return;
+
+    const sections = Array.from(tocLinks)
+      .map((link) => {
+        const slug = link.dataset.tocSlug;
+        return slug ? document.getElementById(slug) : null;
+      })
+      .filter((el): el is HTMLElement => el !== null);
+
+    function setActive(slug: string) {
+      tocLinks.forEach((link) => {
+        link.classList.toggle("active", link.dataset.tocSlug === slug);
+      });
+    }
+
+    if (sections[0]) setActive(sections[0].id);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-100px 0px -70% 0px" }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+  });
+</script>

@@ -5,10 +5,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 // Sections
 import HeroSection from "@/components/sections/HeroSection.astro";
 import AboutSection from "@/components/sections/AboutSection.astro";
-import FormationSection from "@/components/sections/FormationSection.astro";
 import ProjectsSection from "@/components/sections/ProjectsSection.astro";
-import ExeprienceSection from "@/components/sections/ExperienceSection.astro";
-import CompetenceSection from "@/components/sections/CompetenceSection.astro";
 import ToolsSection from "@/components/sections/ToolsSection.astro";
 
 // Components
@@ -21,7 +18,7 @@ import Popup from "@/components/Popup.astro";
   description="Portfolio de Théo Le Gourrierec, Designer & Développeur Web, étudiant en troisème année de BUT MMI à l'IUT de Lannion."
 >
   <section class="container">
-    <section>
+    <section class="hero-content">
       <HeroSection />
     </section>
 
@@ -29,27 +26,11 @@ import Popup from "@/components/Popup.astro";
       <AboutSection />
     </section>
 
-    <section class="fade-up content" id="formations">
-      <FormationSection />
-    </section>
-
-    <section class="fade-up content" id="experiences">
-      <ExeprienceSection />
-    </section>
-
-    <section class="fade-up content projects" id="projets">
+    <section class="fade-up projects-section" id="projets">
       <ProjectsSection />
     </section>
 
-    <!-- <div class="outil-reveal z-10 flex min-h-64 items-center justify-center">
-      <TextReveal
-        client:visible
-        text="Parce que le web regorge d'outils fantastiques, voici ceux que j'utilise"
-      />
-    </div> -->
-
-    <section class="fade-up content" id="competences">
-      <CompetenceSection />
+    <section class="fade-up content" id="outils">
       <ToolsSection />
     </section>
 

@@ -10,26 +10,26 @@ archive: ""
 pin: true
 ---
 
-## Contexte :
+## Contexte
 
 Dans le cadre d'un projet personnel, mon but était de réaliser une interface d'une application web permettant de centraliser tous les outils de révision pour les étudiants. Cela comprenait un dashboard, un chat, un système de flashcard et plus encore. L'application fonctionnait par ressource/matière, et chacune de celles-ci avait du contenu différent.
 
-## Tâches :
+## Tâches
 
 - Conception d'une maquette UI/UX
 - Prototypage interactif
 
-## Résultats obtenus :
+## Résultats obtenus
 
 - Une maquette comprenant différentes pages
 - Prototype interacti
 - Un design moderne et facile à comprendre
 
-## Logiciels utilisés :
+## Logiciels utilisés
 
 - Figma
 
-## Réalisé par :
+## Réalisé par
 
 - Théo Le Gourrierec
 
